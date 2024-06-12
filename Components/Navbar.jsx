@@ -131,7 +131,7 @@ const Navbar = () => {
           
         >
           <Box component={"div"}>
-            <Typography fontWeight={"bold"} color={"white"} variant="h4">
+            <Typography style={{cursor:"pointer"}} fontWeight={"bold"} color={"white"} variant="h4">
               {"<Talha Khurram />"}
             </Typography>
           </Box>
