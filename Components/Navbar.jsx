@@ -48,6 +48,8 @@ const NAVBAR_LINKS = [
 const GithubButton = () => {
   return (
     <Button
+    target="_blank"
+    href="https://github.com/Talha12Shiekh"
       style={{
         borderRadius: 50,
         color: ACCENT_COLOR,
