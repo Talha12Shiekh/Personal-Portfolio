@@ -15,6 +15,8 @@ import { ACCENT_COLOR, BACKGROUND_COLOR } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+export const NAVBAR_HEIGHT = "15vh"
+
 const NAVBAR_LINKS = [
   {
     text: "About",
@@ -68,7 +70,7 @@ const Navbar = () => {
  
 
   return (
-    <Box height={"100vh"} component={"section"} bgcolor={BACKGROUND_COLOR}>
+    <>
       <SwipeableDrawer PaperProps={{
         sx:{
             backgroundColor:'rgba(0,0,0,.5)'
@@ -84,7 +86,7 @@ const Navbar = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="white" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"></path></svg>
                 </Typography>
             </IconButton>
-        <Box padding={5} height="100%">
+        <Box padding={5} height="100%" >
             {NAVBAR_LINKS.map(({ text, key }, index) => {
                 return (
                   <List>
@@ -113,17 +115,20 @@ const Navbar = () => {
             
         </Box>
       </SwipeableDrawer>
+      <Box width="100%" bgcolor={BACKGROUND_COLOR}>
       <Container
         maxWidth={checkingWidthContainer ? "sm" : "lg"}
         sx={{ height: "100%", padding: "0 !important" }}
         component={"section"}
+        
       >
         <Box
           display={"flex"}
           justifyContent={"space-between"}
           alignItems={"center"}
           width={"100%"}
-          height={"15vh"}
+          height={NAVBAR_HEIGHT}
+          
         >
           <Box component={"div"}>
             <Typography fontWeight={"bold"} color={"white"} variant="h4">
@@ -177,6 +182,8 @@ const Navbar = () => {
         </Box>
       </Container>
     </Box>
+
+    </>
   );
 };
 
