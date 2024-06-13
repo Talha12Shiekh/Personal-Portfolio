@@ -1,8 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Box, CssBaseline } from "@mui/material";
-import Home from "../Screens/Home";
 import { BACKGROUND_COLOR } from "../Constants";
 const Navbar = lazy(() => import("../Components/Navbar"));
+const Home = lazy(() => import("../Screens/Home"));
+const About = lazy(() => import("../Screens/About"));
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <CssBaseline />
         <Navbar />
         <Home />
+        <About />
       </Suspense>
     </Box>
   );
