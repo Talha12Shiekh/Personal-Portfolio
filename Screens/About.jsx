@@ -2,6 +2,7 @@ import { Container, Box, Grid,Typography ,Button, useMediaQuery} from "@mui/mate
 import React from "react";
 import { ACCENT_COLOR } from "../Constants";
 import { useTheme } from "@emotion/react";
+import Banner from "../Components/Banner";
 
 const About = () => {
 
@@ -10,6 +11,7 @@ const About = () => {
 
   return (
     <>
+      {/* <Banner /> */}
       <Container
         maxWidth={"lg"}
         sx={{ padding: "0 !important" }}

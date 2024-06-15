@@ -14,6 +14,7 @@ import React, { useState } from "react";
 import { ACCENT_COLOR, BACKGROUND_COLOR } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import CustomBubblyLink from "./CustomBubblyLink";
 
 export const NAVBAR_HEIGHT = "15vh"
 
@@ -21,27 +22,27 @@ const NAVBAR_LINKS = [
   {
     text: "About",
     key: 1,
-    onClick: () => {},
+    path: "/about",
   },
   {
     text: "Skills",
     key: 2,
-    onClick: () => {},
+    path: "/skills",
   },
   {
     text: "Experience",
     key: 3,
-    onClick: () => {},
+    path:"/",
   },
   {
     text: "Projects",
     key: 4,
-    onClick: () => {},
+    path:"/",
   },
   {
     text: "Education",
     key: 5,
-    onClick: () => {},
+    path:"/",
   },
 ];
 
@@ -134,16 +135,19 @@ const Navbar = () => {
           
         >
           <Box component={"div"}>
+            <CustomBubblyLink to={"/"}>
             <Typography style={{cursor:"pointer"}} fontWeight={"bold"} color={"white"} variant="h4">
               {"<Talha Khurram />"}
             </Typography>
+            </CustomBubblyLink>
           </Box>
           {matches ? (
             <>
               <Box display="flex" gap={5} component={"div"}>
-                {NAVBAR_LINKS.map(({ text, key }) => {
+                {NAVBAR_LINKS.map(({ text, key,path }) => {
                   return (
                     <Button variant="text" key={key}>
+                      <CustomBubblyLink to={path}>
                       <Typography
                         color={"white"}
                         fontWeight={500}
@@ -153,6 +157,7 @@ const Navbar = () => {
                       >
                         {text}
                       </Typography>
+                      </CustomBubblyLink>
                     </Button>
                   );
                 })}
