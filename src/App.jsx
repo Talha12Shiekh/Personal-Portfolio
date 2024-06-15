@@ -4,6 +4,7 @@ import { BACKGROUND_COLOR } from "../Constants";
 const Navbar = lazy(() => import("../Components/Navbar"));
 const Home = lazy(() => import("../Screens/Home"));
 const About = lazy(() => import("../Screens/About"));
+const Skills = lazy(() => import("../Screens/Skills"));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Home />
         <About />
+        <Skills />
       </Suspense>
     </Box>
   );

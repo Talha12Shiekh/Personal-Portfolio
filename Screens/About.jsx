@@ -6,7 +6,6 @@ import { useTheme } from "@emotion/react";
 const About = () => {
 
     const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down("md"));
     const SMmatches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
@@ -28,7 +27,7 @@ const About = () => {
             justifyContent="space-around"
             spacing={2}
           >
-            <Grid item xs={10} sm={10} md={4} lg={4}>
+            <Grid data-aos="fade-right" data-aos-delay="300" item xs={10} sm={10} md={4} lg={4}>
             <img
               loading="lazy"
                 height={"420vh"}
@@ -45,6 +44,8 @@ const About = () => {
             </Grid>
             <Grid item xs={10} sm={10} md={6} lg={6}>
               <Typography
+                data-aos="fade-left"
+                data-aos-delay="100"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
@@ -53,7 +54,9 @@ const About = () => {
                 About me
               </Typography>
               <Typography
-                color="white"
+              data-aos="fade-right"
+              data-aos-delay="200"
+                color={ACCENT_COLOR}
                 gutterBottom
                 fontWeight="bold"
                 variant={SMmatches ?"h5" : "h3"}
@@ -87,7 +90,7 @@ const About = () => {
                     fontWeight="bold"
                     color="white"
                   >
-                    See more
+                    Contact me
                   </Typography>
                 </Button>
               </Box>

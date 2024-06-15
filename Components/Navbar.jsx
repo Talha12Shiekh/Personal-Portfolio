@@ -73,13 +73,14 @@ const Navbar = () => {
 
   return (
     <>
-      <SwipeableDrawer PaperProps={{
+      <SwipeableDrawer
+      PaperProps={{
         sx:{
-            backgroundColor:'rgba(0,0,0,.5)'
+            backgroundColor:'rgba(0,0,0,.5)',
+            width:innerWidth
         }
       }} open={openDrawer} onClose={() => setopenDrawer(false)}>
             <IconButton
-            
                 onClick={() => setopenDrawer(p => !p)}
                 color="info"
                 size="large"
