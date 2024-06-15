@@ -22,7 +22,7 @@ const ContactMe = () => {
           fontWeight="bold"
           color={"white"}
         >
-          Dont worry for contact i`m available
+          Have a project on your mind
         </Typography>
       </Box>
       <Box>

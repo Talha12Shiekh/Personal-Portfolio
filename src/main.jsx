@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -7,7 +7,13 @@ import {
   responsiveFontSizes,
   ThemeProvider,
 } from "@mui/material/styles";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+const Home = lazy(() => import("../Screens/Home"));
+const About = lazy(() => import("../Screens/About"));
+const Skills = lazy(() => import("../Screens/Skills"));
+const BannerAndContact = lazy(() =>
+  import("../Components/BannerAndContact.jsx")
+);
 
 let theme = createTheme({
   typography: {
@@ -16,12 +22,46 @@ let theme = createTheme({
 });
 theme = responsiveFontSizes(theme);
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <h1>Error</h1>,
+    children: [
+      {
+        path: "/",
+        element: (
+          <>
+            <Home />
+            <About />
+            <Skills />
+          </>
+        ),
+      },
+      {
+        path: "about",
+        element: (
+          <BannerAndContact>
+            <About />
+          </BannerAndContact>
+        ),
+      },
+      {
+        path: "skills",
+        element: (
+          <BannerAndContact>
+            <Skills />
+          </BannerAndContact>
+        ),
+      },
+    ],
+  },
+]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
