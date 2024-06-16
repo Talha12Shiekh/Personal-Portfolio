@@ -11,6 +11,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("../Screens/Home"));
 const About = lazy(() => import("../Screens/About"));
 const Skills = lazy(() => import("../Screens/Skills"));
+const Services = lazy(() => import("../Screens/Services"));
 const BannerAndContact = lazy(() =>
   import("../Components/BannerAndContact.jsx")
 );
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
             <Home />
             <About />
             <Skills />
+            <Services/>
           </>
         ),
       },

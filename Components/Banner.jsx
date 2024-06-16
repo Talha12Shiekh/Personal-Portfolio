@@ -2,12 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
 import CustomBubblyLink from "./CustomBubblyLink";
-
-export const center = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
+import { center } from "../Helpers";
 
 const Banner = ({heading,description}) => {
   return (

@@ -7,8 +7,11 @@ import {
   useMediaQuery,
   useTheme
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState,lazy } from "react";
 import { ACCENT_COLOR, BOXES_COLOR, SKILLS_FIRST_ROW ,SKILLS_SECOND_ROW,SKILLS_THIRD_ROW,SKILLS_FOURTH_ROW} from "../Constants";
+
+const HeadingAndDescription = lazy(() => import("../Components/HeadingAndDescription"));
+
 
 const BOXES_WIDTH = 200;
 const BOXES_HEIGHT = 180;
@@ -72,22 +75,7 @@ const Skills = () => {
       sx={{ padding: "0 !important" }}
       component={"section"}
     >
-      <Typography
-        data-aos="fade-right"
-        data-aos-delay="200"
-        color={"white"}
-        gutterBottom
-        fontWeight="bold"
-        variant={"h3"}
-        textAlign="center"
-        mt={5}
-        mb={2}
-      >
-        Skills
-      </Typography>
-      <Typography data-aos="fade-left" data-aos-delay="200" px={5} textAlign="center" mb={5} variant={matches ? "h6":"h5"} color="white">
-      Here are some of my skills on which I have been working on for the past 2 years.
-      </Typography>
+      <HeadingAndDescription heading="Skills" description="Here are some of my skills on which I have been working on for the past 2 years."/>
       <Grid container px={matches ? 5 : 0}>
         <Grid my={5} justifyContent={matches ? "center" : ""} container columnSpacing={matches ? 10 : 40} rowSpacing={5} item>
           {[...SKILLS_FIRST_ROW,...SKILLS_SECOND_ROW,...SKILLS_THIRD_ROW,...SKILLS_FOURTH_ROW].map((element,index) => {

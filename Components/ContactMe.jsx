@@ -1,8 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
-import { center } from "./Banner";
+import { BOXES_COLOR } from "../Constants";
+import { center } from "../Helpers";
 import CustomBubblyLink from "./CustomBubblyLink";
+import CustomButton from "./CustomButton";
 
 const ContactMe = () => {
   return (
@@ -26,28 +27,22 @@ const ContactMe = () => {
         </Typography>
       </Box>
       <Box>
-        <Button
-          target="_blank"
-          style={{
-            backgroundColor: ACCENT_COLOR,
-            borderRadius: 10,
-            paddingInline: 40,
-            boxShadow: "3px 3px 15px rgb(5, 196, 188)",
-            transition: "all 0.5s linear",
-          }}
-          variant="contained"
-        >
-          <CustomBubblyLink to="/">
-            <Typography
-              textTransform="capitalize"
-              fontSize={23}
-              fontWeight="bold"
-              color="white"
-            >
-              Contact me
-            </Typography>
-          </CustomBubblyLink>
-        </Button>
+        <CustomButton
+          href=""
+          onClick={() => {}}
+          children={
+            <CustomBubblyLink to="/">
+              <Typography
+                textTransform="capitalize"
+                fontSize={23}
+                fontWeight="bold"
+                color="white"
+              >
+                Contact me
+              </Typography>
+            </CustomBubblyLink>
+          }
+        />
       </Box>
     </Box>
   );

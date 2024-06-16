@@ -1,6 +1,6 @@
 import { Box, CircularProgress } from "@mui/material";
 import React from "react";
-import { center } from "../Components/Banner";
+import { center } from "../Helpers";
 
 const Loading = () => {
   return (
