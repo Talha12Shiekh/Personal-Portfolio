@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import { center } from "../Helpers";
 import { BOXES_COLOR, ICON_BACKGROUND_COLOR, SKILLS } from "../Constants";
+import "../src/index.css";
+
 
 const Services = () => {
   const theme = useTheme();
@@ -25,15 +27,18 @@ const Services = () => {
         description="Here are the services that i provide to my clients"
       />
       <Grid container {...center} columnSpacing={5}>
-        {SKILLS.map(({ icon, heading, description, key }) => {
+        {SKILLS.map(({ icon, heading, description, key },index) => {
           return (
             <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} xs={10}>
               <Box
+               data-aos="zoom-in"
+               data-aos-delay={index * 10}
+               data-aos-duration="500"
                 p={3}
                 {...center}
                 flexDirection="column"
-                bgcolor={BOXES_COLOR}
                 borderRadius={5}
+                className="servicesBox"
               >
                 <Box
                   width={100}

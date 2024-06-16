@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 import CustomButton from "../Components/CustomButton";
+import "../src/index.css";
 
 const WritingText = () => {
   return (
@@ -31,10 +32,6 @@ const WritingText = () => {
 const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
-  const [scale, setscale] = useState({
-    image: 1,
-    button: 1,
-  });
   AOS.init();
 
   const ICONS_SIZE = "1.8em";
@@ -229,30 +226,11 @@ const Home = () => {
             </Grid>
             <Grid data-aos="fade-left" item xs={10} sm={10} md={5} lg={4}>
               <img
+              className="talhaImage"
                 loading="lazy"
-                onMouseOver={() =>
-                  setscale((p) => ({
-                    ...p,
-                    image: 1.2,
-                  }))
-                }
-                onMouseLeave={() =>
-                  setscale((p) => ({
-                    ...p,
-                    image: 1,
-                  }))
-                }
                 height={"420vh"}
                 width={"400vw"}
                 src="./Talha.png"
-                style={{
-                  filter: "drop-shadow(2px 2px 9px white)",
-                  maxWidth: "100%",
-                  padding: 0,
-                  margin: 0,
-                  transform: `scale(${scale.image})`,
-                  transition: "all 0.5s linear",
-                }}
                 alt="Loading..."
               />
             </Grid>

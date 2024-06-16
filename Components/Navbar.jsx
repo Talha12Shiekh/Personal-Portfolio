@@ -44,6 +44,11 @@ const NAVBAR_LINKS = [
     key: 5,
     path:"/",
   },
+  {
+    text: "Services",
+    key: 6,
+    path:"/",
+  },
 ];
 
 const GithubButton = () => {
@@ -124,8 +129,7 @@ const Navbar = () => {
         maxWidth={checkingWidthContainer ? "sm" : "lg"}
         sx={{ height: "100%", padding: "0 !important" }}
         component={"section"}
-        
-      >
+        >
         <Box
           display={"flex"}
           justifyContent={"space-between"}
@@ -143,7 +147,7 @@ const Navbar = () => {
           </Box>
           {matches ? (
             <>
-              <Box display="flex" gap={5} component={"div"}>
+              <Box display="flex" gap={2} component={"div"}>
                 {NAVBAR_LINKS.map(({ text, key,path }) => {
                   return (
                     <Button variant="text" key={key}>
