@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useState, lazy } from "react";
+import React, { useState, lazy,Suspense } from "react";
 import {
   ACCENT_COLOR,
   BOXES_COLOR,
@@ -16,7 +16,7 @@ import {
   SKILLS_FOURTH_ROW,
 } from "../Constants";
 import "../src/index.css";
-
+import Loading from "../Screens/Loading";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
@@ -62,10 +62,12 @@ const Skills = () => {
       sx={{ padding: "0 !important" }}
       component={"section"}
     >
+      <Suspense fallback={<Loading/>}>
       <HeadingAndDescription
         heading="Skills"
         description="Here are some of my skills on which I have been working on for the past 2 years."
       />
+      </Suspense>
       <Grid container px={matches ? 5 : 0}>
         <Grid
           my={5}
@@ -80,8 +82,9 @@ const Skills = () => {
             ...SKILLS_SECOND_ROW,
             ...SKILLS_THIRD_ROW,
             ...SKILLS_FOURTH_ROW,
-          ].map((element, index) => {
-            return <SingleSkill index={index} key={element.key} {...element} />;
+          ].map(({image, text,key}, index) => {
+            const element = {image, text};
+            return <SingleSkill index={index} key={key} {...element} />;
           })}
         </Grid>
       </Grid>

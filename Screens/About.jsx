@@ -6,11 +6,12 @@ import {
   Button,
   useMediaQuery,
 } from "@mui/material";
-import React from "react";
+import React ,{lazy,Suspense} from "react";
 import { ACCENT_COLOR } from "../Constants";
 import { useTheme } from "@emotion/react";
-import CustomButton from "../Components/CustomButton";
-import CustomBubblyLink from "../Components/CustomBubblyLink";
+const CustomButton = lazy(() => import("../Components/CustomButton"));
+const CustomBubblyLink = lazy(() => import("../Components/CustomBubblyLink"));
+import Loading from "../Screens/Loading";
 
 
 const About = () => {
@@ -91,7 +92,7 @@ const About = () => {
                 am excited to contribute to meaningful projects and continue
                 developing my skills in web development.
               </Typography>
-
+<Suspense fallback={<Loading/>}>
               <Box mt={3}>
                 <CustomButton
                   href=""
@@ -110,6 +111,7 @@ const About = () => {
                   }
                 />
               </Box>
+              </Suspense>
             </Grid>
           </Grid>
         </Box>

@@ -1,9 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import { BOXES_COLOR } from "../Constants";
 import { center } from "../Helpers";
-import CustomBubblyLink from "./CustomBubblyLink";
-import CustomButton from "./CustomButton";
+const CustomButton = lazy(() => import("./CustomButton"));
+const CustomBubblyLink = lazy(() => import("./CustomBubblyLink"));
+import Loading from "../Screens/Loading";
+
 
 const ContactMe = () => {
   return (
@@ -26,6 +28,7 @@ const ContactMe = () => {
           Have a project on your mind
         </Typography>
       </Box>
+      <Suspense fallback={<Loading/>}>
       <Box>
         <CustomButton
           href=""
@@ -44,6 +47,7 @@ const ContactMe = () => {
           }
         />
       </Box>
+      </Suspense>
     </Box>
   );
 };

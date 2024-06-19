@@ -1,12 +1,13 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState,lazy,Suspense } from "react";
 import { ACCENT_COLOR } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AOS from "aos";
+import Loading from "../Screens/Loading";
 import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
-import CustomButton from "../Components/CustomButton";
+const CustomButton = lazy(() => import("../Components/CustomButton"));
 import "../src/index.css";
 
 const WritingText = () => {
@@ -115,15 +116,12 @@ const Home = () => {
         component={"section"}
       >
         <Box
-          display="flex"
-          justifyContent="center"
-          alignItems={matches ? "flex-start" : "center"}
           width={"100%"}
         >
           <Grid
             container
             p={5}
-            direction={matches ? "column-reverse" : ""}
+            // direction={matches ? "column-reverse" : ""}
             justifyContent="space-between"
             spacing={2}
           >
@@ -206,7 +204,7 @@ const Home = () => {
                   );
                 })}
               </Box>
-
+<Suspense fallback={<Loading/>}>
               <Box mt={3}>
                 <CustomButton
                   href="./TalhaShiekhResume2.pdf"
@@ -223,6 +221,7 @@ const Home = () => {
                   }
                 />
               </Box>
+              </Suspense>
             </Grid>
             <Grid data-aos="fade-left" item xs={10} sm={10} md={5} lg={4}>
               <img

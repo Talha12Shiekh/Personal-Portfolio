@@ -1,7 +1,9 @@
-import { lazy, useState } from "react";
+import { useState,lazy,Suspense } from "react";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
+import Loading from "../Screens/Loading";
+
 import {
   Container,
   Box,
@@ -22,10 +24,12 @@ const Services = () => {
   
   return (
     <Box>
+      <Suspense fallback={<Loading/>}>
       <HeadingAndDescription
         heading="Services"
         description="Here are the services that i provide to my clients"
       />
+      </Suspense>
       <Grid container {...center} columnSpacing={5}>
         {SKILLS.map(({ icon, heading, description, key },index) => {
           return (

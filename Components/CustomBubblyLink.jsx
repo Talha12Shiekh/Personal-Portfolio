@@ -1,13 +1,13 @@
-import React from 'react'
-import { BubblyLink } from 'react-bubbly-transitions'
-import { ACCENT_COLOR } from '../Constants'
+import React from "react";
+import { BubblyLink } from "react-bubbly-transitions";
+import { ACCENT_COLOR } from "../Constants";
 
-const CustomBubblyLink = ({children,to}) => {
+const CustomBubblyLink = ({ children, to }) => {
   return (
     <BubblyLink to={to} colorStart={ACCENT_COLOR}>
-        {children}
+      {children}
     </BubblyLink>
-  )
-}
+  );
+};
 
-export default CustomBubblyLink
+export default CustomBubblyLink;

@@ -10,10 +10,10 @@ import "./index.css";
 function App() {
   return (
     <Box width="100%" bgcolor={BACKGROUND_COLOR}>
+      <Suspense fallback={<Loading/>}>
         <Navbar />
         <CssBaseline />
         <BubblyContainer />
-      <Suspense fallback={<Loading/>}>
         <Outlet/>
       </Suspense>
     </Box>
