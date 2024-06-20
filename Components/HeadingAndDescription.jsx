@@ -6,8 +6,8 @@ const HeadingAndDescription = ({ heading, description }) => {
   return (
     <>
       <Typography
-        data-aos="fade-right"
-        data-aos-delay="200"
+        // data-aos="fade-right"
+        // data-aos-delay="200"
         color={"white"}
         gutterBottom
         fontWeight="bold"
@@ -19,8 +19,8 @@ const HeadingAndDescription = ({ heading, description }) => {
         {heading}
       </Typography>
       <Typography
-        data-aos="fade-left"
-        data-aos-delay="200"
+        // data-aos="fade-left"
+        // data-aos-delay="200"
         px={5}
         textAlign="center"
         mb={5}

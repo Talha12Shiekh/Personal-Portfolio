@@ -47,7 +47,7 @@ const NAVBAR_LINKS = [
   {
     text: "Services",
     key: 6,
-    path: "/",
+    path: "/services",
   },
 ];
 
@@ -121,7 +121,7 @@ const Navbar = () => {
                   key={text}
                   disablePadding
                 >
-                  <ListItemButton>
+                  <ListItemButton onClick={() => setopenDrawer(false)}>
                   <CustomBubblyLink to={path}>
                     <ListItemText>
                       <Typography color={"white"} variant="h4">

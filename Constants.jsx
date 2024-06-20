@@ -4,6 +4,9 @@ export const ACCENT_COLOR = "#05c4bc";
 export const SECOND_BG_COLOR = "#323846";
 export const BOXES_COLOR = "#485373";
 export const ICON_BACKGROUND_COLOR = "#5c6a93";
+import { Box } from "@mui/material";
+import { center } from "./Helpers";
+import "./src/index.css"
 
 export const SKILLS_FIRST_ROW = [
   {
@@ -163,19 +166,28 @@ export const SKILLS = [
 export const EXPERIENCE = [
   {
     key: 1,
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="2em"
-        height="2em"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="white"
-          d="M21 17v-6.9L12 15L1 9l11-6l11 6v8zm-9 4l-7-3.8v-5l7 3.8l7-3.8v5z"
-        ></path>
-      </svg>
-    ),
+    icon:  <Box
+    width={60}
+    height={60}
+    //  data-aos="zoom-in"
+    //       data-aos-duration="500"
+    borderRadius={100}
+    bgcolor={BOXES_COLOR}
+    style={{ boxShadow: "3px 3px 20px rgb(5, 196, 188)" }}
+    {...center}
+  >
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="2em"
+      height="2em"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="white"
+        d="M21 17v-6.9L12 15L1 9l11-6l11 6v8zm-9 4l-7-3.8v-5l7 3.8l7-3.8v5z"
+      ></path>
+    </svg>
+  </Box>,
     date: "2019 - 2024",
     title: "Self Experience",
     subtitle: "Not Employed",
@@ -189,4 +201,30 @@ export const EXPERIENCE = [
           company yet, I am eager to contribute, grow, and earn through
           professional opportunities.`,
   },
+];
+export const EDUCATION = [
+  {
+    key: 1,
+    icon: (
+      <img 
+      //  data-aos="zoom-in"
+        className="skulImage" src="dareArqam.png" loading="lazy" alt="Loading..."/>
+    ),
+    date: "2011 - 2022",
+    title: "Dar e Arqam School, Lahore, Pakistan",
+    subtitle: "Matriculation (X), Computer Science",
+    description: `I studied at Dar-e-Arqam School in Lahore for 10 years, excelling in both Computer Science and various science subjects. I achieved top grades (1036/1100 (81%)  in Matric and 484/495 (95%) in 9th Grade) and frequently held the top position in my class. As a member of the school cricket team, I won several awards. This period marked the beginning of my journey as a web developer.`,
+  },
+  {
+    key: 2,
+    icon: (
+      <img  
+      // data-aos="zoom-in"
+       className="skulImage" src="college1.png" loading="lazy" alt="Loading..."/>
+    ),
+    date: "2022 - 2024",
+    title: "Punjab Group of Colleges, Lahore",
+    subtitle: "Fsc (XII), ICS with Computer, Physics, and Mathematics",
+    description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved 458/560 (82%) marks in the first year and often held the top position in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
+  }
 ];

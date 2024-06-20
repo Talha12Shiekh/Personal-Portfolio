@@ -69,3 +69,11 @@ html {
     box-shadow: 3px 3px 50px rgb(5, 196, 188);
     transform: scale(1.1) !important;
 }
+
+
+.skulImage{
+  width:8vw;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:100%;
+}

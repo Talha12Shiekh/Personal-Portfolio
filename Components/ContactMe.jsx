@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography,useTheme,useMediaQuery } from "@mui/material";
 import React,{lazy,Suspense} from "react";
 import { BOXES_COLOR } from "../Constants";
 import { center } from "../Helpers";
@@ -8,20 +8,24 @@ import Loading from "../Screens/Loading";
 
 
 const ContactMe = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("lg"));
   return (
     <Box
-      height={300}
       bgcolor={BOXES_COLOR}
       my={10}
       {...center}
-      justifyContent="space-between"
-      flexDirection="row"
-      px={10}
+      justifyContent={matches ? "center" : "space-between"}
+      flexDirection={matches ? "column" : "row"}
+      p={10}
+      gap={matches ? 5 : 0}
+
     >
-      <Box width={"50%"}>
+      <Box>
         <Typography
           lineHeight={1.5}
           variant="h3"
+          textAlign="center"
           fontWeight="bold"
           color={"white"}
         >
