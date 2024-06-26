@@ -29,9 +29,9 @@ const Skills = () => {
     return (
       <Grid item md={4} lg={2}>
         <Box
-          // data-aos="zoom-in"
-          // data-aos-delay={index * 10}
-          // data-aos-duration="500"
+          data-aos="zoom-in"
+          data-aos-delay={index * 10}
+          data-aos-duration="500"
         >
           <Box
             display="flex"

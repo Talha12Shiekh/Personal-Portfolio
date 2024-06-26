@@ -169,8 +169,8 @@ export const EXPERIENCE = [
     icon:  <Box
     width={60}
     height={60}
-    //  data-aos="zoom-in"
-    //       data-aos-duration="500"
+    data-aos="zoom-in"
+    data-aos-duration="500"
     borderRadius={100}
     bgcolor={BOXES_COLOR}
     style={{ boxShadow: "3px 3px 20px rgb(5, 196, 188)" }}
@@ -207,7 +207,7 @@ export const EDUCATION = [
     key: 1,
     icon: (
       <img 
-      //  data-aos="zoom-in"
+       data-aos="zoom-in"
         className="skulImage" src="dareArqam.png" loading="lazy" alt="Loading..."/>
     ),
     date: "2011 - 2022",
@@ -219,7 +219,7 @@ export const EDUCATION = [
     key: 2,
     icon: (
       <img  
-      // data-aos="zoom-in"
+      data-aos="zoom-in"
        className="skulImage" src="college1.png" loading="lazy" alt="Loading..."/>
     ),
     date: "2022 - 2024",

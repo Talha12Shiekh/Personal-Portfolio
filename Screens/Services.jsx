@@ -35,9 +35,9 @@ const Services = () => {
           return (
             <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} xs={10}>
               <Box
-              //  data-aos="zoom-in"
-              //  data-aos-delay={index * 10}
-              //  data-aos-duration="500"
+               data-aos="zoom-in"
+               data-aos-delay={index * 10}
+               data-aos-duration="500"
                 p={3}
                 {...center}
                 flexDirection="column"
@@ -60,7 +60,8 @@ const Services = () => {
                 <Typography
                   sx={{ wordBreak: "break-word" }}
                   variant="body1"
-                  color="black"
+                  color="white"
+                  m={1}
                   textAlign="center"
                 >
                   {description}

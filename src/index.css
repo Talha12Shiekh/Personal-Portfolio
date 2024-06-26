@@ -70,6 +70,10 @@ html {
     transform: scale(1.1) !important;
 }
 
+.servicesBox:hover p{
+  color:black;
+}
+
 
 .skulImage{
   width:8vw;

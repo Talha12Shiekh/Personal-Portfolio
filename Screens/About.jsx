@@ -31,10 +31,10 @@ const About = () => {
           alignItems={"center"}
           width={"100%"}
         >
-          <Grid container p={5} justifyContent="space-around" spacing={2}>
+          <Grid overflow={"hidden"} container p={5} justifyContent="space-around" spacing={2}>
             <Grid
-              // data-aos="fade-right"
-              // data-aos-delay="300"
+              data-aos="fade-right"
+              data-aos-delay="300"
               item
               xs={10}
               sm={10}
@@ -55,10 +55,10 @@ const About = () => {
                 alt="Loading..."
               />
             </Grid>
-            <Grid item xs={10} sm={10} md={6} lg={6}>
+            <Grid overflow="hidden" item xs={10} sm={10} md={6} lg={6}>
               <Typography
-                // data-aos="fade-left"
-                // data-aos-delay="100"
+                data-aos="fade-left"
+                data-aos-delay="100"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
@@ -67,8 +67,8 @@ const About = () => {
                 About me
               </Typography>
               <Typography
-                // data-aos="fade-right"
-                // data-aos-delay="200"
+                data-aos="fade-right"
+                data-aos-delay="200"
                 color={ACCENT_COLOR}
                 gutterBottom
                 fontWeight="bold"

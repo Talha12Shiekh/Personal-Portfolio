@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -18,6 +18,9 @@ const BannerAndContact = lazy(() =>
   import("../Components/BannerAndContact.jsx")
 );
 import Loading from "../Screens/Loading";
+
+
+
 
 
 let theme = createTheme({
@@ -82,6 +85,16 @@ const router = createBrowserRouter([
           <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Services />
+            </BannerAndContact>
+          </Suspense>
+        ),
+      },
+      {
+        path: "education",
+        element: (
+          <Suspense fallback={<Loading/>}>
+            <BannerAndContact>
+              <Education />
             </BannerAndContact>
           </Suspense>
         ),

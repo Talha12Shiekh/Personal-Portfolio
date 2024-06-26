@@ -24,13 +24,14 @@ const Experience = () => {
           description="My working experience as a frontend developer"
         />
       </Suspense>
+      <Box overflow="hidden">
       {
         EXPERIENCE.map(({icon,title,subtitle,description,date,key}) => {
           const element = {icon,title,subtitle,description,date}
           return <ExpAndEducationComp key={key} {...element}/>
         })
       }
-      
+      </Box>
     </Container>
   );
 };

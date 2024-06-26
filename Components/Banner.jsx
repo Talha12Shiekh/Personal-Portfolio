@@ -15,7 +15,7 @@ const Banner = ({heading,description}) => {
       bgcolor={BOXES_COLOR}
       mb={10}
     >
-      <Typography variant="h2" fontWeight="bold" color={"white"}>
+      <Typography data-aos="zoom-in" variant="h2" fontWeight="bold" color={"white"}>
         {heading}
       </Typography>
       <Typography

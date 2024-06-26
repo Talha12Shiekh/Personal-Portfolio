@@ -3,12 +3,12 @@ import React, { useState,lazy,Suspense } from "react";
 import { ACCENT_COLOR } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import AOS from "aos";
 import Loading from "../Screens/Loading";
 import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 const CustomButton = lazy(() => import("../Components/CustomButton"));
 import "../src/index.css";
+import gif from "../public/bg.gif"
 
 const WritingText = () => {
   return (
@@ -33,7 +33,6 @@ const WritingText = () => {
 const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
-  AOS.init();
 
   const ICONS_SIZE = "1.8em";
 
@@ -114,7 +113,8 @@ const Home = () => {
         maxWidth={"lg"}
         sx={{ padding: "0 !important" }}
         component={"section"}
-      >
+
+        >
         <Box
           width={"100%"}
         >
@@ -127,8 +127,8 @@ const Home = () => {
           >
             <Grid item xs={10} sm={10} md={7} lg={6}>
               <Typography
-                // data-aos="fade-right"
-                // data-aos-duration="500"
+                data-aos="fade-right"
+                data-aos-duration="500"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
@@ -137,8 +137,8 @@ const Home = () => {
                 Hello it's me
               </Typography>
               <Typography
-                // data-aos="fade-left"
-                // data-aos-duration="1000"
+                data-aos="fade-left"
+                data-aos-duration="1000"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
@@ -147,8 +147,8 @@ const Home = () => {
                 Talha Khurram
               </Typography>
               <Typography
-                // data-aos="fade-right"
-                // data-aos-duration="1500"
+                data-aos="fade-right"
+                data-aos-duration="1500"
                 color="white"
                 display="flex"
                 gap={1}
@@ -157,8 +157,8 @@ const Home = () => {
               >
                 I'm a
                 <Typography
-                  // data-aos="fade-right"
-                  // data-aos-duration="1500"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
                   className="typingText"
                   color={ACCENT_COLOR}
                   gutterBottom
@@ -224,7 +224,7 @@ const Home = () => {
               </Suspense>
             </Grid>
             <Grid
-            //  data-aos="fade-left"
+             data-aos="fade-left"
               item xs={10} sm={10} md={5} lg={4}>
               <img
               className="talhaImage"

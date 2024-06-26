@@ -9,10 +9,10 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
       {matches && <Box>
         {icon}
       </Box>}
-      <Box>
+      <Box overflow="hidden">
         <Typography
-          // data-aos="fade-right"
-          // data-aos-duration="500"
+          data-aos="fade-right"
+          data-aos-duration="500"
           ml={4}
           color={ACCENT_COLOR}
           fontWeight="bold"
@@ -21,8 +21,8 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
           {date}
         </Typography>
         <Typography
-          // data-aos="fade-left"
-          // data-aos-duration="1000"
+          data-aos="fade-left"
+          data-aos-duration="1000"
           ml={4}
           my={3}
           color={"white"}
@@ -32,8 +32,8 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
           {title}
         </Typography>
         <Typography
-          // data-aos="fade-right"
-          // data-aos-duration="1500"
+          data-aos="fade-right"
+          data-aos-duration="1500"
           ml={4}
           my={3}
           color={"white"}

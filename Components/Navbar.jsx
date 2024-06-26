@@ -42,7 +42,7 @@ const NAVBAR_LINKS = [
   {
     text: "Education",
     key: 5,
-    path: "/",
+    path: "/education",
   },
   {
     text: "Services",
