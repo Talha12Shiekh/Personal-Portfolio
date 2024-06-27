@@ -8,17 +8,18 @@ import Loading from "../Screens/Loading";
 import "./index.css";
 import AOS from "aos";
 
+
 function App() {
   useEffect(() => {
     AOS.init();
   },[])
   return (
     <Box width="100%" bgcolor={BACKGROUND_COLOR}>
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
         <Navbar />
         <CssBaseline />
         <BubblyContainer />
-        <Outlet/>
+        <Outlet />
       </Suspense>
     </Box>
   );

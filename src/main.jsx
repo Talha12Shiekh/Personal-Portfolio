@@ -14,6 +14,7 @@ const Skills = lazy(() => import("../Screens/Skills"));
 const Services = lazy(() => import("../Screens/Services"));
 const Experience = lazy(() => import("../Screens/Experience"));
 const Education = lazy(() => import("../Screens/Education"));
+const Projects = lazy(() => import("../Screens/Projects"));
 const BannerAndContact = lazy(() =>
   import("../Components/BannerAndContact.jsx")
 );
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
             <Services />
             <Experience />
             <Education />
+            <Projects />
           </Suspense>
         ),
       },

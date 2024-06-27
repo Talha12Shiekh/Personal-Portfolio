@@ -7,13 +7,13 @@ html {
   padding-right: 0px !important;
 }
 
-:root{
-    --BACKGROUND-COLOR : #151925;
-    --TEXT-COLOR : #ffffff;
-    --ACCENT-COLOR : #05c4bc;
-    --SECOND-BG-COLOR : #323846;
-    --BOXES-COLOR : #485373;
-    --ICON-BACKGROUND-COLOR : #5c6a93;
+:root {
+  --BACKGROUND-COLOR: #151925;
+  --TEXT-COLOR: #ffffff;
+  --ACCENT-COLOR: #05c4bc;
+  --SECOND-BG-COLOR: #323846;
+  --BOXES-COLOR: #485373;
+  --ICON-BACKGROUND-COLOR: #5c6a93;
 }
 
 .talhaImage {
@@ -39,45 +39,61 @@ html {
   transform: scale(1.2);
 }
 
-.skillsBoxes{
-    background-color: var(--BOXES-COLOR);
-    box-shadow: 0px 0px 0px rgb(5, 196, 188);
-    transition: all 0.3s linear;
-    cursor: pointer;
+.skillsBoxes {
+  background-color: var(--BOXES-COLOR);
+  box-shadow: 0px 0px 0px rgb(5, 196, 188);
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
 
-.skillsBoxes:hover{
-    box-shadow: 3px 3px 50px rgb(5, 196, 188);
-    background-color: var(--ACCENT-COLOR);
+.skillsBoxes:hover {
+  box-shadow: 3px 3px 50px rgb(5, 196, 188);
+  background-color: var(--ACCENT-COLOR);
 }
 
-.skillsBoxes:hover .boxesText{
-    color: black;
+.skillsBoxes:hover .boxesText {
+  color: black;
 }
 
-.boxesText{
-    color: white;
+.boxesText {
+  color: white;
 }
 
-.servicesBox{
-    background-color: var(--BOXES-COLOR);
-    transition: all 0.3s linear;
-    cursor: pointer;
+.servicesBox,
+.projectsCard {
+  background-color: var(--BOXES-COLOR);
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
-.servicesBox:hover{
-    background-color: var(--ACCENT-COLOR);
-    box-shadow: 3px 3px 50px rgb(5, 196, 188);
-    transform: scale(1.1) !important;
+.projectsCard path {
+  fill: var(--ACCENT-COLOR);
+}
+.projectsCard{
+  transition: all 0.3s linear !important;
+}
+.servicesBox:hover,
+.projectsCard:hover {
+  background-color: var(--ACCENT-COLOR);
+  box-shadow: 3px 3px 50px rgb(5, 196, 188);
+  transform: scale(1.1) !important;
 }
 
-.servicesBox:hover p{
-  color:black;
+.projectsCard:hover {
+  box-shadow: 3px 3px 10px rgb(5, 196, 188);
 }
 
+.servicesBox:hover,
+.projectsCard:hover p {
+  color: black !important;
+}
 
-.skulImage{
-  width:8vw;
-  aspect-ratio:1;
-  object-fit:cover;
-  border-radius:100%;
+.projectsCard:hover path{
+  fill: black !important;
+}
+
+.skulImage {
+  width: 8vw;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 100%;
 }

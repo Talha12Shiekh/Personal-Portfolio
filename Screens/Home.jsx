@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React, { useState,lazy,Suspense } from "react";
-import { ACCENT_COLOR } from "../Constants";
+import { ACCENT_COLOR,ICONS_SIZE } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Loading from "../Screens/Loading";
@@ -8,7 +8,6 @@ import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 const CustomButton = lazy(() => import("../Components/CustomButton"));
 import "../src/index.css";
-import gif from "../public/bg.gif"
 
 const WritingText = () => {
   return (
@@ -34,7 +33,7 @@ const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const ICONS_SIZE = "1.8em";
+  
 
   const ICONS_ARRAY = [
     {

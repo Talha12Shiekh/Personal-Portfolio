@@ -4,9 +4,12 @@ export const ACCENT_COLOR = "#05c4bc";
 export const SECOND_BG_COLOR = "#323846";
 export const BOXES_COLOR = "#485373";
 export const ICON_BACKGROUND_COLOR = "#5c6a93";
+export const ICONS_SIZE = "1.8em";
+export const PROJECTS_ICONS_SIZE = "1.2em" 
 import { Box } from "@mui/material";
 import { center } from "./Helpers";
-import "./src/index.css"
+import "./src/index.css";
+
 
 export const SKILLS_FIRST_ROW = [
   {
@@ -228,3 +231,21 @@ export const EDUCATION = [
     description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved 458/560 (82%) marks in the first year and often held the top position in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
   }
 ];
+
+export const TABS = [
+  {
+    key:1,
+    title: "All",
+    value:"All"
+  },
+  {
+    key:2,
+    title: "Web App's",
+    value:"Web"
+  },
+  {
+    key:3,
+    title: "Mobile App's",
+    value:"Mobile"
+  },
+]
