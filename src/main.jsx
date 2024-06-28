@@ -18,6 +18,7 @@ const Projects = lazy(() => import("../Screens/Projects"));
 const BannerAndContact = lazy(() =>
   import("../Components/BannerAndContact.jsx")
 );
+import 'atropos/css'
 import Loading from "../Screens/Loading";
 
 

@@ -71,25 +71,28 @@ html {
 .projectsCard{
   transition: all 0.3s linear !important;
 }
-.servicesBox:hover,
-.projectsCard:hover {
+.servicesBox:hover {
   background-color: var(--ACCENT-COLOR);
   box-shadow: 3px 3px 50px rgb(5, 196, 188);
   transform: scale(1.1) !important;
 }
 
-.projectsCard:hover {
-  box-shadow: 3px 3px 10px rgb(5, 196, 188);
-}
+/* .my-atropos {
+  width: 320px;
+  height: 160px;
+} */
 
-.servicesBox:hover,
-.projectsCard:hover p {
+/* .projectsCard:hover {
+  box-shadow: 3px 3px 50px rgb(5, 196, 188) !important;
+} */
+
+.servicesBox:hover {
   color: black !important;
 }
 
-.projectsCard:hover path{
+/* .projectsCard:hover path{
   fill: black !important;
-}
+} */
 
 .skulImage {
   width: 8vw;

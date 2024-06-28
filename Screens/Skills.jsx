@@ -20,6 +20,7 @@ import Loading from "../Screens/Loading";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
+import Atropos from 'atropos/react';
 
 const BOXES_WIDTH = 200;
 const BOXES_HEIGHT = 180;
