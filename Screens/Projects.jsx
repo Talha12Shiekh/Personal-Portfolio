@@ -26,6 +26,7 @@ import {
   TABS,
   PROJECTS_ICONS_SIZE,
   BACKGROUND_COLOR,
+  MOBILE_PROJECTS
 } from "../Constants";
 import ProjectCard from "../Components/ProjectCard";
 const HeadingAndDescription = lazy(() =>
@@ -80,7 +81,14 @@ const Projects = () => {
           </Tabs>
         </Box>
         <Box display="flex" justifyContent={"space-around"} flexWrap={"wrap"}>
-            <ProjectCard/>
+          {
+            MOBILE_PROJECTS.map(project => {
+              const {image,title,description,codeLink,live,liveDisabled,key} = project;
+              const projectsObj = {image,title,description,codeLink,live,liveDisabled};
+              return <ProjectCard key={key} {...projectsObj}/>
+            })
+          }
+            
         </Box>
       </Suspense>
     </Container>

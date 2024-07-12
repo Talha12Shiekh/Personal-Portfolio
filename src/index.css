@@ -32,11 +32,11 @@ html {
   border-radius: 10px !important;
   padding-inline: 40px !important;
   box-shadow: 3px 3px 15px rgb(5, 196, 188) !important;
-  transition: all 0.5s linear !important;
+  transition: all 0.3s linear !important;
 }
 
 .customButton:hover {
-  transform: scale(1.2);
+  transform: scale(1.1) !important;
 }
 
 .skillsBoxes {
@@ -46,9 +46,18 @@ html {
   cursor: pointer;
 }
 
+.skills_attropos{
+  width : 200px;
+  height : 180px;
+}
+
 .skillsBoxes:hover {
   box-shadow: 3px 3px 50px rgb(5, 196, 188);
   background-color: var(--ACCENT-COLOR);
+}
+
+.atropos-inner{
+  overflow:visible !important;
 }
 
 .skillsBoxes:hover .boxesText {
@@ -59,15 +68,21 @@ html {
   color: white;
 }
 
+.projectsCard button{
+  color:var(--ACCENT-COLOR)
+}
+
 .servicesBox,
 .projectsCard {
   background-color: var(--BOXES-COLOR);
   transition: all 0.3s linear;
   cursor: pointer;
 }
-.projectsCard path {
-  fill: var(--ACCENT-COLOR);
+
+.projectsCard:hover{
+  box-shadow: 5px 5px 20px var(--ACCENT-COLOR) !important;
 }
+
 .projectsCard{
   transition: all 0.3s linear !important;
 }
@@ -77,26 +92,18 @@ html {
   transform: scale(1.1) !important;
 }
 
-/* .my-atropos {
-  width: 320px;
-  height: 160px;
-} */
-
-/* .projectsCard:hover {
-  box-shadow: 3px 3px 50px rgb(5, 196, 188) !important;
-} */
 
 .servicesBox:hover {
   color: black !important;
 }
-
-/* .projectsCard:hover path{
-  fill: black !important;
-} */
 
 .skulImage {
   width: 8vw;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 100%;
+}
+
+.projects_icon{
+  transform:scale(1.2)
 }

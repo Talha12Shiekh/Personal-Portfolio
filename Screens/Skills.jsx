@@ -17,10 +17,10 @@ import {
 } from "../Constants";
 import "../src/index.css";
 import Loading from "../Screens/Loading";
+import Atropos from "atropos/react";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
-import Atropos from 'atropos/react';
 
 const BOXES_WIDTH = 200;
 const BOXES_HEIGHT = 180;
@@ -33,23 +33,32 @@ const Skills = () => {
           data-aos="zoom-in"
           data-aos-delay={index * 10}
           data-aos-duration="500"
-        >
+          >
+        <Atropos
+        
+        rotateXMax={30}
+        rotateYMax={30}
+
+        highlight={false} activeOffset={100} className="skills_attropos">
+
           <Box
             display="flex"
             justifyContent="center"
-            gap={2}
+            
             alignItems="center"
             flexDirection="column"
             borderRadius={5}
+            gap={2}
             width={BOXES_WIDTH}
             height={BOXES_HEIGHT}
             className="skillsBoxes"
           >
-            <img width={80} height={80} src={image} alt="Loading" />
+            <img data-atropos-offset="8" width={80} height={80} src={image} alt="Loading" />
             <Typography className="boxesText" variant="h5">
               {text}
             </Typography>
           </Box>
+        </Atropos>
         </Box>
       </Grid>
     );

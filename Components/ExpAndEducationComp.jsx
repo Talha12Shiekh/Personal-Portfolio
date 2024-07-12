@@ -6,7 +6,7 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
     const matches = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Box display="flex" gap={10} my={10}>
-      {matches && <Box>
+      {matches && <Box ml={2}>
         {icon}
       </Box>}
       <Box overflow="hidden">

@@ -1,12 +1,7 @@
 import Atropos from "atropos/react";
-import React ,{useState} from "react";
-import {
-  ACCENT_COLOR,
-  BOXES_COLOR,
-  GITHUB,
-  DesktopIcon,
-  ViewIcon,
-} from "../Constants";
+import React, { useState } from "react";
+import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
+import { VisibilityOutlined, Computer } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -16,14 +11,19 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import "../src/index.css";
 
-const CARD_DESCRIPTION_LIMIT= `Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica  except`
-// import {GitHub} from '@mui/icons-material;
+const CARD_DESCRIPTION_LIMIT = `Developed a feature-rich calculator app using React Native, designed to perform complex arithmetic calculations with ease. The app o`;
+import { GitHub } from "@mui/icons-material";
 
-const ProjectCard = () => {
-    const [showStatus,setshowStatus] = useState(false);
+const ProjectCard = ({image,title,description,codeLink,live,liveDisabled}) => {
   return (
-    <Atropos className="my-atropos" onEnter={() => setshowStatus(p => !p)} onLeave={() => setshowStatus(p => !p)}>
+    <Atropos
+      shadow={false}
+      shadowScale={0}
+      highlight={false}
+      className="my-atropos"
+    >
       <Card
         sx={{
           maxWidth: 345,
@@ -33,18 +33,7 @@ const ProjectCard = () => {
         }}
         className="projectsCard"
       >
-        <CardMedia sx={{ height: 200, marginBottom: 4 }} image="demo.PNG">
-          {showStatus && <Box
-            bgcolor="rgba(0,0,0,.5)"
-            height="100%"
-            display="flex"
-            justifyContent={"center"}
-            alignItems="center"
-          >
-            <Typography color={"white"} variant="h3">
-              Completed
-            </Typography>
-          </Box>}
+        <CardMedia data-atropos-offset="5" sx={{ height: 200, marginBottom: 4 }} image={image}>
         </CardMedia>
         <CardContent style={{ padding: 0 }}>
           <Typography
@@ -54,11 +43,10 @@ const ProjectCard = () => {
             variant="h5"
             component="div"
           >
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body" color={"white"}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica  except 
+            {description.length > CARD_DESCRIPTION_LIMIT.length ?  `${description.substring(0, CARD_DESCRIPTION_LIMIT.length)}   ...` : description}
           </Typography>
         </CardContent>
         <CardActions
@@ -72,21 +60,39 @@ const ProjectCard = () => {
           }}
         >
           <Button
-            startIcon={<GITHUB />}
+           data-atropos-offset="5"
+            startIcon={<GitHub className="projects_icon" />}
             variant="text"
             size="small"
             color="secondary"
+            href={codeLink}
+            target="_blank"
           >
             <Typography color={ACCENT_COLOR} textTransform={"capitalize"}>
               Code
             </Typography>
           </Button>
-          <Button startIcon={<ViewIcon />} variant="text" size="small">
+         
+          <Button
+            data-atropos-offset="10"
+            startIcon={<VisibilityOutlined className="projects_icon" />}
+            variant="text"
+            size="small"
+            color="secondary"
+          >
             <Typography color={ACCENT_COLOR} textTransform={"capitalize"}>
               View
             </Typography>
           </Button>
-          <Button startIcon={<DesktopIcon />} variant="text" size="small">
+          <Button
+            data-atropos-offset="10"
+            startIcon={<Computer className="projects_icon" />}
+            variant="text"
+            size="small"
+            color="secondary"
+            href={live}
+            disabled={liveDisabled}
+          >
             <Typography color={ACCENT_COLOR} textTransform={"capitalize"}>
               Live
             </Typography>

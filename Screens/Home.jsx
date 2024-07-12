@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography,IconButton } from "@mui/material";
 import React, { useState,lazy,Suspense } from "react";
 import { ACCENT_COLOR,ICONS_SIZE,ICONS_ARRAY } from "../Constants";
 import { useTheme } from "@mui/material/styles";
@@ -116,17 +116,18 @@ const Home = () => {
                 mt={2}
                 width={200}
                 height={50}
+                gap={3}
               >
                 {ICONS_ARRAY.map(({ href, key, icon }) => {
                   return (
-                    <Button
+                    <IconButton
                       key={key}
                       target="_blank"
                       variant="text"
                       href={href}
                     >
                       {icon}
-                    </Button>
+                    </IconButton>
                   );
                 })}
               </Box>

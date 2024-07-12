@@ -9,8 +9,8 @@ import "./index.css";
 import AOS from "aos";
 
 
-AOS.init();
 function App() {
+  AOS.init();
   return (
     <Box width="100%" bgcolor={BACKGROUND_COLOR}>
       <Suspense fallback={<Loading />}>
