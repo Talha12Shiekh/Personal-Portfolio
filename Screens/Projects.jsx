@@ -16,7 +16,7 @@ import {
   CardActions,
 } from "@mui/material";
 import { useState, lazy, Suspense } from "react";
-import Atropos from 'atropos/react';
+import Atropos from "atropos/react";
 import Loading from "./Loading";
 import "../src/index.css";
 import {
@@ -26,25 +26,33 @@ import {
   TABS,
   PROJECTS_ICONS_SIZE,
   BACKGROUND_COLOR,
-  MOBILE_PROJECTS
+  MOBILE_PROJECTS,
 } from "../Constants";
-import ProjectCard from "../Components/ProjectCard";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
-
+// const ProjectCard = lazy(() => import("../Components/ProjectCard"));
+import ProjectCard from "../Components/ProjectCard"
 const Projects = () => {
+  const ALLPROJECTS = [...MOBILE_PROJECTS]
+  const [PROJECTS,SETPROJECTS] = useState(ALLPROJECTS);
+
   const [value, setValue] = useState("All");
+
   const handleChange = (_, newValue) => {
     setValue(newValue);
+    if(newValue === "Web"){
+      SETPROJECTS([])
+    }else if (newValue === "Mobile"){
+      SETPROJECTS(MOBILE_PROJECTS)
+    }else {
+      SETPROJECTS(ALLPROJECTS)
+    }
   };
 
+
   return (
-    <Container
-      maxWidth={"lg"}
-      sx={{ padding: 5 }}
-      component={"section"}
-    >
+    <Container maxWidth={"lg"} sx={{ padding: 5 }} component={"section"}>
       <Suspense fallback={<Loading />}>
         <HeadingAndDescription
           heading="Projects"
@@ -80,15 +88,34 @@ const Projects = () => {
             })}
           </Tabs>
         </Box>
-        <Box display="flex" justifyContent={"space-around"} flexWrap={"wrap"}>
-          {
-            MOBILE_PROJECTS.map(project => {
-              const {image,title,description,codeLink,live,liveDisabled,key} = project;
-              const projectsObj = {image,title,description,codeLink,live,liveDisabled};
-              return <ProjectCard key={key} {...projectsObj}/>
-            })
-          }
-            
+        <Box display="flex" gap={5} justifyContent={"flex-start"} flexWrap={"wrap"}>
+          {PROJECTS.map((project) => {
+            const {
+              image,
+              title,
+              description,
+              codeLink,
+              live,
+              liveDisabled,
+              key,
+              viewImages,
+              skills
+            } = project;
+            const projectsObj = {
+              image,
+              title,
+              description,
+              codeLink,
+              live,
+              liveDisabled,
+              viewImages,
+              viewImages,
+              skills
+            };
+            return (
+                <ProjectCard key={key} {...projectsObj} />
+            );
+          })}
         </Box>
       </Suspense>
     </Container>

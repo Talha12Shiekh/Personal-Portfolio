@@ -4,6 +4,7 @@ export const ACCENT_COLOR = "#05c4bc";
 export const SECOND_BG_COLOR = "#323846";
 export const BOXES_COLOR = "#485373";
 export const ICON_BACKGROUND_COLOR = "#5c6a93";
+export const PROJECTS_SKILL_COLOR = "#50609133";
 export const ICONS_SIZE = "1.8em";
 export const PROJECTS_ICONS_SIZE = "1.2em" 
 import { Box } from "@mui/material";
