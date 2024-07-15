@@ -21,10 +21,6 @@ const BannerAndContact = lazy(() =>
 import 'atropos/css'
 import Loading from "../Screens/Loading";
 
-
-
-
-
 let theme = createTheme({
   typography: {
     fontFamily: "Poppins",
@@ -98,6 +94,16 @@ const router = createBrowserRouter([
           <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Education />
+            </BannerAndContact>
+          </Suspense>
+        ),
+      },
+      {
+        path: "projects",
+        element: (
+          <Suspense fallback={<Loading/>}>
+            <BannerAndContact>
+              <Projects />
             </BannerAndContact>
           </Suspense>
         ),

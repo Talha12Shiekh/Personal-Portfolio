@@ -83,6 +83,15 @@ import QUIZZAPP4 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-4.png";
 import QUIZZAPP5 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-5.png";
 import QUIZZAPP6 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-6.png";
 
+import TYPING1 from "./public/TYPING-IMAGES/Typing-image-1.png"
+import TYPING2 from "./public/TYPING-IMAGES/Typing-image-2.png";
+
+import WORD1 from "/WORDPROCESSOR-IMAGES/WordProcessor1.png"
+import WORD2 from "/WORDPROCESSOR-IMAGES/WordProcessor2.png"
+import WORD3 from "/WORDPROCESSOR-IMAGES/WordProcessor3.png"
+import WORD4 from "/WORDPROCESSOR-IMAGES/WordProcessor4.png"
+import WORD5 from "/WORDPROCESSOR-IMAGES/WordProcessor5.png"
+
 
 export const ICONS_ARRAY = [
   {
@@ -430,8 +439,8 @@ export const WEB_PROJECTS = [
   },
   {
     key: 8,
-    image:"",
-    viewImages:[],
+    image:WORD2,
+    viewImages:[WORD1,WORD2,WORD3,WORD4,WORD5],
     title:"Text Processor",
     description:"My first React.js application, a word processor developed with Bootstrap, offers both light and dark modes for user preference. The home page features a textarea for text input, accompanied by buttons for various operations such as converting text to uppercase, lowercase, clearing text, copying text, and removing extra spaces. Below these buttons, the app displays real-time information about the text, including word and character counts. Additionally, it calculates the estimated reading time for the entered text, providing a comprehensive writing and editing experience.",
     codeLink:"https://github.com/Talha12Shiekh/TextUtils-React-",
@@ -454,8 +463,8 @@ export const WEB_PROJECTS = [
   },
   {
     key: 10,
-    image:"",
-    viewImages:[],
+    image:TYPING1,
+    viewImages:[TYPING1,TYPING2],
     title:"Typing Machine",
     description:"I developed a typing machine using HTML, CSS, and JavaScript, featuring a smooth UI. It presents words for the user to type and includes a \"Try Again\" button that generates a new paragraph. A countdown timer tracks the typing duration, and when the time is up, further typing is disabled. The app also displays the number of mistakes made, as well as the user's words per minute (WPM) and characters per minute (CPM) typed by the user.",
     codeLink:"https://github.com/Talha12Shiekh/Javascript-projects/tree/master/Typing%20machine",

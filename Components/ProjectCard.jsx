@@ -10,6 +10,8 @@ import {
   CardContent,
   CardMedia,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import "../src/index.css";
 import ProjectsModal from "./ProjectsModal";
@@ -31,6 +33,9 @@ const ProjectCard = ({
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+
+  
   return (
     <>
       <ProjectsModal
@@ -63,7 +68,7 @@ const ProjectCard = ({
           <CardMedia
             data-atropos-offset="5"
             loading="lazy"
-            sx={{ height: 200, marginBottom: 4 }}
+            sx={{ height: 200, marginBottom: 4}}
             image={image}
           ></CardMedia>
           <CardContent style={{ padding: 0, height: 160, overflow: "hidden" }}>
@@ -115,6 +120,7 @@ const ProjectCard = ({
               size="small"
               color="secondary"
               className="projects_button"
+              target="_blank"
             >
               <Typography color={ACCENT_COLOR} textTransform={"capitalize"}>
                 View
@@ -129,6 +135,7 @@ const ProjectCard = ({
               href={live}
               className="projects_button"
               disabled={liveDisabled}
+              target="_blank"
             >
               <Typography color={ACCENT_COLOR} textTransform={"capitalize"}>
                 Live

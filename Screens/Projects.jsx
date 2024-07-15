@@ -34,6 +34,11 @@ const HeadingAndDescription = lazy(() =>
 );
 import ProjectCard from "../Components/ProjectCard"
 const Projects = () => {
+
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("lg"));
+  const checkTabs = useMediaQuery(theme.breakpoints.down("md"));
+
   const ALLPROJECTS = [...MOBILE_PROJECTS,...WEB_PROJECTS]
   const [PROJECTS,SETPROJECTS] = useState(ALLPROJECTS);
 
@@ -70,7 +75,8 @@ const Projects = () => {
             sx={{ color: ACCENT_COLOR, marginBlock: 5 }}
             textColor="white"
             indicatorColor="primary"
-            aria-label="secondary tabs example"
+            aria-label="My Projects"
+            orientation={checkTabs ? "vertical" : "horizontal"}
           >
             {TABS.map(({ title, value, key }) => {
               return (
@@ -88,7 +94,7 @@ const Projects = () => {
             })}
           </Tabs>
         </Box>
-        <Box display="flex" gap={5} justifyContent={"flex-start"} flexWrap={"wrap"}>
+        <Box display="flex" gap={5} justifyContent={matches ? "center" : "flex-start"} flexWrap={"wrap"}>
           {PROJECTS.map((project) => {
             const {
               image,

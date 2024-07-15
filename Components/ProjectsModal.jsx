@@ -7,6 +7,8 @@ import {
   Icon,
   IconButton,
   Button,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import {
@@ -25,12 +27,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "60%",
   bgcolor: BACKGROUND_COLOR,
   boxShadow: 24,
   p: 4,
   borderWidth: 0,
-  my: 10,
+  my: 15,
   borderRadius: 5,
 };
 
@@ -52,6 +53,10 @@ const ProjectsModal = ({
     return <CustomArrow direction="prev" onClick={clickHandler} hasNext={hasNext} />;
   };
 
+  const theme = useTheme();
+  const checkingImageforLargerScreens = useMediaQuery(theme.breakpoints.down("xl"));
+  const checkingModalforSmallerScreens = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Modal
       aria-labelledby="transition-modal-title"
@@ -69,7 +74,7 @@ const ProjectsModal = ({
       }}
     >
       <Fade in={open}>
-        <Box sx={style}>
+        <Box sx={{...style,width:checkingModalforSmallerScreens ? "90%" : "60%"}}>
           <Box width="100%" mb={1} textAlign="right">
             <IconButton onClick={handleClose}>
               <Close style={{ color: "white" }} />
@@ -90,7 +95,7 @@ const ProjectsModal = ({
                       alt="Loading..."
                       src={img}
                       loading="lazy"
-                      style={{ width: "100%", height: "100%" }}
+                      style={{ width: !checkingImageforLargerScreens ? "60%" : "100%", height: "100%" }}
                     />
                   </Box>
                 );
