@@ -18,8 +18,7 @@ import {
 import { Close } from "@mui/icons-material";
 import "../src/index.css";
 import { Carousel } from "react-responsive-carousel";
-import { CustomNextArrow, CustomPrevArrow } from "./CustomArrows";
-// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { CustomArrow } from "./CustomArrows";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const style = {
   position: "absolute",
@@ -31,7 +30,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   borderWidth: 0,
-  my: 20,
+  my: 10,
   borderRadius: 5,
 };
 
@@ -47,10 +46,10 @@ const ProjectsModal = ({
   viewImages,
 }) => {
   const renderArrowNext = (clickHandler, hasNext) => {
-    return <CustomNextArrow onClick={clickHandler} hasNext={hasNext} />;
+    return <CustomArrow direction="next" onClick={clickHandler} hasNext={hasNext} />;
   };
   const renderArrowPrev = (clickHandler, hasNext) => {
-    return <CustomPrevArrow onClick={clickHandler} hasNext={hasNext} />;
+    return <CustomArrow direction="prev" onClick={clickHandler} hasNext={hasNext} />;
   };
 
   return (

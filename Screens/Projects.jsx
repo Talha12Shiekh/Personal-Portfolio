@@ -27,14 +27,14 @@ import {
   PROJECTS_ICONS_SIZE,
   BACKGROUND_COLOR,
   MOBILE_PROJECTS,
+  WEB_PROJECTS
 } from "../Constants";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
-// const ProjectCard = lazy(() => import("../Components/ProjectCard"));
 import ProjectCard from "../Components/ProjectCard"
 const Projects = () => {
-  const ALLPROJECTS = [...MOBILE_PROJECTS]
+  const ALLPROJECTS = [...MOBILE_PROJECTS,...WEB_PROJECTS]
   const [PROJECTS,SETPROJECTS] = useState(ALLPROJECTS);
 
   const [value, setValue] = useState("All");
@@ -42,7 +42,7 @@ const Projects = () => {
   const handleChange = (_, newValue) => {
     setValue(newValue);
     if(newValue === "Web"){
-      SETPROJECTS([])
+      SETPROJECTS(WEB_PROJECTS)
     }else if (newValue === "Mobile"){
       SETPROJECTS(MOBILE_PROJECTS)
     }else {

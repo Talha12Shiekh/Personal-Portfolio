@@ -42,7 +42,46 @@ import SMALLAPP9 from "/SMALL-APPS-UI/SMALL-APP-UI-9.jpeg";
 import SMALLAPP10 from "/SMALL-APPS-UI/SMALL-APP-UI-10.jpeg";
 import SMALLAPP11 from "/SMALL-APPS-UI/SMALL-APP-UI-11.jpeg";
 
+import PORTFOLIO1 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-1.png"
+import PORTFOLIO2 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-2.png"
+import PORTFOLIO3 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-3.png"
+import PORTFOLIO4 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-4.png"
+import PORTFOLIO5 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-5.png"
+import PORTFOLIO6 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-6.png"
+import PORTFOLIO7 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-7.png"
+import PORTFOLIO8 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-8.png"
+import PORTFOLIO9 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-9.png"
+import PORTFOLIO10 from "/PERSONAL_PORTFOLIO_IMAGES/portfolio-img-10.png";
 
+
+import CLOTHWEBSITE1 from "/CLOTHING-WEBSITE-IMAGES/Clothing1.png"
+import CLOTHWEBSITE2 from "/CLOTHING-WEBSITE-IMAGES/Clothing2.png"
+import CLOTHWEBSITE3 from "/CLOTHING-WEBSITE-IMAGES/Clothing3.png"
+import CLOTHWEBSITE4 from "/CLOTHING-WEBSITE-IMAGES/Clothing4.png"
+import CLOTHWEBSITE5 from "/CLOTHING-WEBSITE-IMAGES/Clothing5.png"
+import CLOTHWEBSITE6 from "/CLOTHING-WEBSITE-IMAGES/Clothing6.png"
+import CLOTHWEBSITE7 from "/CLOTHING-WEBSITE-IMAGES/Clothing7.png"
+import CLOTHWEBSITE8 from "/CLOTHING-WEBSITE-IMAGES/Clothing8.png"
+
+
+import NOTESAPP1 from "/NOTES-APP-IMAGES/NOTES-APP-1.png"
+import NOTESAPP2 from "/NOTES-APP-IMAGES/NOTES-APP-2.png"
+import NOTESAPP3 from "/NOTES-APP-IMAGES/NOTES-APP-3.png"
+import NOTESAPP4 from "/NOTES-APP-IMAGES/NOTES-APP-4.png"
+import NOTESAPP5 from "/NOTES-APP-IMAGES/NOTES-APP-5.png"
+import NOTESAPP6 from "/NOTES-APP-IMAGES/NOTES-APP-6.png"
+import NOTESAPP7 from "/NOTES-APP-IMAGES/NOTES-APP-7.png"
+import NOTESAPP8 from "/NOTES-APP-IMAGES/NOTES-APP-8.png"
+import NOTESAPP9 from "/NOTES-APP-IMAGES/NOTES-APP-9.png";
+
+
+
+import QUIZZAPP1 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-1.png";
+import QUIZZAPP2 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-2.png";
+import QUIZZAPP3 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-3.png";
+import QUIZZAPP4 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-4.png";
+import QUIZZAPP5 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-5.png";
+import QUIZZAPP6 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-6.png";
 
 
 export const ICONS_ARRAY = [
@@ -355,41 +394,38 @@ export const MOBILE_PROJECTS = [
   },
 ]
 
-const WEB_PROJECTS = [
+export const WEB_PROJECTS = [
   {
     key: 5,
-    image:"",
-    viewImages:[],
+    image:PORTFOLIO1,
+    viewImages:[PORTFOLIO1,PORTFOLIO2,PORTFOLIO3,PORTFOLIO4,PORTFOLIO5,PORTFOLIO6,PORTFOLIO7,PORTFOLIO8,PORTFOLIO9,PORTFOLIO10],
     title:"Personal Portflio",
-    description:"___",
+    description:"I developed a comprehensive portfolio website using HTML, CSS, and JavaScript, featuring multiple pages: Home, About, Services, Portfolio, Pricing, and Contact. The site supports both light and dark modes, enhancing user experience. It includes a reaction modal for user interactions and dynamic animations throughout the site. The client feedback section is displayed as a carousel, showcasing testimonials and frequently asked questions. The Services page presents various offerings in card format, while the Contact page features a sign-in form for easy communication.",
     codeLink:"https://github.com/Talha12Shiekh/Portfolio",
     live:"https://talhawebsite.netlify.app/",
     liveDisabled:false,
-    status:"Completed",
     skills:["HTML","CSS","NPM","JavaScript","Netlify"],
   },
   {
     key: 6,
-    image:"",
-    viewImages:[],
+    image:CLOTHWEBSITE1,
+    viewImages:[CLOTHWEBSITE1,CLOTHWEBSITE2,CLOTHWEBSITE3,CLOTHWEBSITE4,CLOTHWEBSITE5,CLOTHWEBSITE6,CLOTHWEBSITE7,CLOTHWEBSITE8],
     title:"Clothing Website",
-    description:"___",
+    description:"I developed a dynamic clothing website using React.js and Bootstrap. It features multiple pages: Home, Products, Trends, and Contact. The discount section includes a countdown timer, and the Products page allows easy filtering. The Trends page showcases trending designs in a grid layout with prices. The Contact section includes a login form, and the site supports seamless navigation without reloading.",
     codeLink:"https://github.com/Talha12Shiekh/ClothingWebsite",
     live:"https://khurramclothing.netlify.app/",
     liveDisabled:false,
-    status:"Completed",
     skills:["React Js","JSX","NPM","JavaScript","Bootstrap","Netlify"],
   },
   {
     key: 7,
-    image:"",
-    viewImages:[],
+    image:NOTESAPP7,
+    viewImages:[NOTESAPP1,NOTESAPP2,NOTESAPP3,NOTESAPP4,NOTESAPP5,NOTESAPP6,NOTESAPP7,NOTESAPP8,NOTESAPP9],
     title:"Notes App",
-    description:"___",
+    description:"I created a feature-rich notes app using React and Redux, it consists of responsive design. Users can manage notes seamlessly with functions for adding, deleting, updating, and recovering notes. The app supports marking notes as important, pinning them for quick access, and includes a filtering feature for organization. Additionally, there's a convenient option to delete notes, enhancing user experience.",
     codeLink:"https://github.com/Talha12Shiekh/REACT_NOTES_APP",
     live:"https://tknotesapp.netlify.app/",
     liveDisabled:false,
-    status:"Completed",
     skills:["React Js","JSX","NPM","JavaScript","Redux","Netlify","CSS"],
   },
   {
@@ -397,23 +433,34 @@ const WEB_PROJECTS = [
     image:"",
     viewImages:[],
     title:"Text Processor",
-    description:"___",
+    description:"My first React.js application, a word processor developed with Bootstrap, offers both light and dark modes for user preference. The home page features a textarea for text input, accompanied by buttons for various operations such as converting text to uppercase, lowercase, clearing text, copying text, and removing extra spaces. Below these buttons, the app displays real-time information about the text, including word and character counts. Additionally, it calculates the estimated reading time for the entered text, providing a comprehensive writing and editing experience.",
     codeLink:"https://github.com/Talha12Shiekh/TextUtils-React-",
     live:"",
     liveDisabled:true,
     status:"Completed",
-    skills:["React Js","JSX","NPM","JavaScript","Bootstrap","Netlify"],
+    skills:["React Js","JSX","NPM","JavaScript","Bootstrap","CSS"],
   },
   {
     key: 9,
-    image:"",
-    viewImages:[],
+    image:QUIZZAPP2,
+    viewImages:[QUIZZAPP1,QUIZZAPP2,QUIZZAPP3,QUIZZAPP4,QUIZZAPP5,QUIZZAPP6],
     title:"Quizz App",
-    description:"___",
+    description:"I created a quiz app using React.js with CSS styling. The app features a start button that initiates the quizzes, each comprising four options and a limited response time. If the user selects the wrong option or time expires, the correct answer is automatically highlighted. The app displays the current quiz number and the total number of quizzes. A settings page allows users to add, edit, delete quizzes, and customize the time for each quiz. Upon completion, the app shows the results, indicating how many answers were correct.",
     codeLink:"https://github.com/Talha12Shiekh/REACT_QUIZZ_APP",
     live:"https://tkquizzapp.netlify.app/",
     liveDisabled:false,
     status:"Completed",
     skills:["React Js","JSX","CSS","NPM","JavaScript","Netlify"],
+  },
+  {
+    key: 10,
+    image:"",
+    viewImages:[],
+    title:"Typing Machine",
+    description:"I developed a typing machine using HTML, CSS, and JavaScript, featuring a smooth UI. It presents words for the user to type and includes a \"Try Again\" button that generates a new paragraph. A countdown timer tracks the typing duration, and when the time is up, further typing is disabled. The app also displays the number of mistakes made, as well as the user's words per minute (WPM) and characters per minute (CPM) typed by the user.",
+    codeLink:"https://github.com/Talha12Shiekh/Javascript-projects/tree/master/Typing%20machine",
+    live:"",
+    liveDisabled:true,
+    skills:["HTML","CSS","JavaScript"],
   },
 ]

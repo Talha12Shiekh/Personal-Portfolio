@@ -62,6 +62,7 @@ const ProjectCard = ({
         >
           <CardMedia
             data-atropos-offset="5"
+            loading="lazy"
             sx={{ height: 200, marginBottom: 4 }}
             image={image}
           ></CardMedia>
