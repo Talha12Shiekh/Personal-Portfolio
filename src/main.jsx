@@ -9,7 +9,6 @@ import {
 } from "@mui/material/styles";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("../Screens/Home"));
-const About = lazy(() => import("../Screens/About"));
 const Skills = lazy(() => import("../Screens/Skills"));
 const Services = lazy(() => import("../Screens/Services"));
 const Experience = lazy(() => import("../Screens/Experience"));
@@ -47,11 +46,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "about",
+        path: "contacts",
         element: (
           <Suspense fallback={<Loading/>}>
             <BannerAndContact>
-              <About />
+              <h1>Contacts</h1>
             </BannerAndContact>
           </Suspense>
         ),

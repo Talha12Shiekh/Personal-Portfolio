@@ -16,11 +16,14 @@ import {
 import { center } from "../Helpers";
 import { BOXES_COLOR, ICON_BACKGROUND_COLOR, SKILLS } from "../Constants";
 import "../src/index.css";
+import { motion } from "framer-motion";
 
 
 const Services = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
+
+  const AnimatedBox = motion(Box);
   
   return (
     <Box>
@@ -34,10 +37,9 @@ const Services = () => {
         {SKILLS.map(({ icon, heading, description, key },index) => {
           return (
             <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} xs={10}>
-              <Box
-               data-aos="zoom-in"
-               data-aos-delay={index * 10}
-               data-aos-duration="500"
+              <AnimatedBox
+             initial={{transform:"scale(0.5)"}}
+             whileInView={{transform:"scale(1)"}}
                 p={3}
                 {...center}
                 flexDirection="column"
@@ -66,7 +68,7 @@ const Services = () => {
                 >
                   {description}
                 </Typography>
-              </Box>
+              </AnimatedBox>
             </Grid>
           );
         })}

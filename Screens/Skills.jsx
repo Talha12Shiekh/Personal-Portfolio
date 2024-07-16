@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useState, lazy,Suspense } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import {
   ACCENT_COLOR,
   BOXES_COLOR,
@@ -18,6 +18,7 @@ import {
 import "../src/index.css";
 import Loading from "../Screens/Loading";
 import Atropos from "atropos/react";
+import { motion } from "framer-motion";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
@@ -25,41 +26,47 @@ const HeadingAndDescription = lazy(() =>
 const BOXES_WIDTH = 200;
 const BOXES_HEIGHT = 180;
 
+const AnimatedBox = motion(Box);
+
 const Skills = () => {
   const SingleSkill = ({ image, text, index }) => {
     return (
       <Grid item md={4} lg={2}>
-        <Box
-          data-aos="zoom-in"
-          data-aos-delay={index * 10}
-          data-aos-duration="500"
+        <AnimatedBox
+          initial={{transform:"scale(0.5)"}}
+          whileInView={{transform:"scale(1)"}}
+        >
+          <Atropos
+            rotateXMax={30}
+            rotateYMax={30}
+            highlight={false}
+            activeOffset={100}
+            className="skills_attropos"
           >
-        <Atropos
-        
-        rotateXMax={30}
-        rotateYMax={30}
-
-        highlight={false} activeOffset={100} className="skills_attropos">
-
-          <Box
-            display="flex"
-            justifyContent="center"
-            
-            alignItems="center"
-            flexDirection="column"
-            borderRadius={5}
-            gap={2}
-            width={BOXES_WIDTH}
-            height={BOXES_HEIGHT}
-            className="skillsBoxes"
-          >
-            <img data-atropos-offset="8" width={80} height={80} src={image} alt="Loading" />
-            <Typography className="boxesText" variant="h5">
-              {text}
-            </Typography>
-          </Box>
-        </Atropos>
-        </Box>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              borderRadius={5}
+              gap={2}
+              width={BOXES_WIDTH}
+              height={BOXES_HEIGHT}
+              className="skillsBoxes"
+            >
+              <img
+                data-atropos-offset="8"
+                width={80}
+                height={80}
+                src={image}
+                alt="Loading"
+              />
+              <Typography className="boxesText" variant="h5">
+                {text}
+              </Typography>
+            </Box>
+          </Atropos>
+        </AnimatedBox>
       </Grid>
     );
   };
@@ -72,11 +79,11 @@ const Skills = () => {
       sx={{ padding: "0 !important" }}
       component={"section"}
     >
-      <Suspense fallback={<Loading/>}>
-      <HeadingAndDescription
-        heading="Skills"
-        description="Here are some of my skills on which I have been working on for the past 2 years."
-      />
+      <Suspense fallback={<Loading />}>
+        <HeadingAndDescription
+          heading="Skills"
+          description="Here are some of my skills on which I have been working on for the past 2 years."
+        />
       </Suspense>
       <Grid container px={matches ? 5 : 0}>
         <Grid
@@ -92,8 +99,8 @@ const Skills = () => {
             ...SKILLS_SECOND_ROW,
             ...SKILLS_THIRD_ROW,
             ...SKILLS_FOURTH_ROW,
-          ].map(({image, text,key}, index) => {
-            const element = {image, text};
+          ].map(({ image, text, key }, index) => {
+            const element = { image, text };
             return <SingleSkill index={index} key={key} {...element} />;
           })}
         </Grid>

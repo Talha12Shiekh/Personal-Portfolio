@@ -1,5 +1,6 @@
 import { Box, Button, Container, Grid, Typography, Stack,useTheme,useMediaQuery } from "@mui/material";
 import { BOXES_COLOR, ICON_BACKGROUND_COLOR, ACCENT_COLOR } from "../Constants";
+import AnimatedTypography from "./AnimatedTypography";
 
 const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
     const theme = useTheme()
@@ -10,19 +11,16 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
         {icon}
       </Box>}
       <Box overflow="hidden">
-        <Typography
-          data-aos="fade-right"
-          data-aos-duration="500"
+        <AnimatedTypography
+          offset={-100}
           ml={4}
           color={ACCENT_COLOR}
           fontWeight="bold"
           variant="h5"
         >
           {date}
-        </Typography>
-        <Typography
-          data-aos="fade-left"
-          data-aos-duration="1000"
+        </AnimatedTypography>
+        <AnimatedTypography
           ml={4}
           my={3}
           color={"white"}
@@ -30,10 +28,9 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
           variant="h3"
         >
           {title}
-        </Typography>
-        <Typography
-          data-aos="fade-right"
-          data-aos-duration="1500"
+        </AnimatedTypography>
+        <AnimatedTypography
+        offset={-100}
           ml={4}
           my={3}
           color={"white"}
@@ -41,7 +38,7 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
           variant="h5"
         >
           {subtitle}
-        </Typography>
+        </AnimatedTypography>
         <Box>
         <Typography sx={{ wordBreak: "break-word" }} ml={4} my={3} color={BOXES_COLOR} variant="h6">
           {description}

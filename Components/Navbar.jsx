@@ -20,11 +20,6 @@ export const NAVBAR_HEIGHT = "15vh";
 
 const NAVBAR_LINKS = [
   {
-    text: "About",
-    key: 1,
-    path: "/about",
-  },
-  {
     text: "Skills",
     key: 2,
     path: "/skills",
@@ -48,6 +43,11 @@ const NAVBAR_LINKS = [
     text: "Services",
     key: 6,
     path: "/services",
+  },
+  {
+    text: "Contacts",
+    key: 1,
+    path: "/contacts",
   },
 ];
 

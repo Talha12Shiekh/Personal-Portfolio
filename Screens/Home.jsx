@@ -1,6 +1,13 @@
-import { Box, Button, Container, Grid, Typography,IconButton } from "@mui/material";
-import React, { useState,lazy,Suspense } from "react";
-import { ACCENT_COLOR,ICONS_SIZE,ICONS_ARRAY } from "../Constants";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  IconButton,
+} from "@mui/material";
+import React, { lazy, Suspense } from "react";
+import { ACCENT_COLOR, ICONS_SIZE, ICONS_ARRAY } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Loading from "../Screens/Loading";
@@ -8,6 +15,8 @@ import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 const CustomButton = lazy(() => import("../Components/CustomButton"));
 import "../src/index.css";
+import { motion } from "framer-motion";
+import AnimatedTypography from "../Components/AnimatedTypography";
 
 const WritingText = () => {
   return (
@@ -33,17 +42,16 @@ const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
+  const AnimatedGrid = motion(Grid);
+
   return (
     <>
       <Container
         maxWidth={"lg"}
         sx={{ padding: "0 !important" }}
         component={"section"}
-
-        >
-        <Box
-          width={"100%"}
-        >
+      >
+        <Box width={"100%"}>
           <Grid
             container
             p={5}
@@ -52,29 +60,25 @@ const Home = () => {
             spacing={2}
           >
             <Grid item xs={10} sm={10} md={7} lg={6}>
-              <Typography
-                data-aos="fade-right"
-                data-aos-duration="500"
+              <AnimatedTypography
+                offset={-100}
                 color="white"
                 gutterBottom
                 fontWeight="bold"
                 variant="h6"
               >
                 Hello it's me
-              </Typography>
-              <Typography
-                data-aos="fade-left"
-                data-aos-duration="1000"
+              </AnimatedTypography>
+              <AnimatedTypography
                 color="white"
                 gutterBottom
                 fontWeight="bold"
                 variant={matches ? "h3" : "h2"}
               >
                 Talha Khurram
-              </Typography>
-              <Typography
-                data-aos="fade-right"
-                data-aos-duration="1500"
+              </AnimatedTypography>
+              <AnimatedTypography
+                offset={-100}
                 color="white"
                 display="flex"
                 gap={1}
@@ -83,8 +87,6 @@ const Home = () => {
               >
                 I'm a
                 <Typography
-                  data-aos="fade-right"
-                  data-aos-duration="1500"
                   className="typingText"
                   color={ACCENT_COLOR}
                   gutterBottom
@@ -93,7 +95,7 @@ const Home = () => {
                 >
                   <WritingText />
                 </Typography>
-              </Typography>
+              </AnimatedTypography>
               <Box component="div" width="100%">
                 <Typography
                   color="white"
@@ -125,43 +127,51 @@ const Home = () => {
                       target="_blank"
                       variant="text"
                       href={href}
+                      className="home_icons"
                     >
                       {icon}
                     </IconButton>
                   );
                 })}
               </Box>
-<Suspense fallback={<Loading/>}>
-              <Box mt={3}>
-                <CustomButton
-                  href="./TalhaShiekhResume2.pdf"
-                  onClick={() => {}}
-                  children={
-                    <Typography
-                      textTransform="capitalize"
-                      fontSize={23}
-                      fontWeight="bold"
-                      color="white"
-                    >
-                      Check Resume
-                    </Typography>
-                  }
-                />
-              </Box>
+              <Suspense fallback={<Loading />}>
+                <Box mt={3}>
+                  <CustomButton
+                    href="./TalhaShiekhResume2.pdf"
+                    onClick={() => {}}
+                    children={
+                      <Typography
+                        textTransform="capitalize"
+                        fontSize={23}
+                        fontWeight="bold"
+                        color="white"
+                      >
+                        Check Resume
+                      </Typography>
+                    }
+                  />
+                </Box>
               </Suspense>
             </Grid>
-            <Grid
-             data-aos="fade-left"
-              item xs={10} sm={10} md={5} lg={4}>
+            <AnimatedGrid
+              initial={{transform:"translateX(100px)"}}
+              whileInView={{transform:"translateX(0px)"}}
+              transition={{duration:0.6}}
+              item
+              xs={10}
+              sm={10}
+              md={5}
+              lg={4}
+            >
               <img
-              className="talhaImage"
+                className="talhaImage"
                 loading="lazy"
                 height={"420vh"}
                 width={"400vw"}
                 src="./Talha.png"
                 alt="Loading..."
               />
-            </Grid>
+            </AnimatedGrid>
           </Grid>
         </Box>
       </Container>

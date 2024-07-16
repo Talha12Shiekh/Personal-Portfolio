@@ -126,6 +126,13 @@ html {
   color:white;
 }
 
+.home_icons{
+  transition: all 0.5s linear !important;
+}
+.home_icons:hover{
+  box-shadow: 5px 5px 20px var(--ACCENT-COLOR) !important;
+}
+
 .carousel .slide img {
     max-height: 500px;  /* change this to whatever you want */
     width: auto;

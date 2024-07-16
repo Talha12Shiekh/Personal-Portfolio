@@ -1,11 +1,14 @@
 import { Box, Typography } from "@mui/material";
-import React ,{lazy,Suspense} from "react";
+import React, { lazy, Suspense } from "react";
 import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
 const CustomBubblyLink = lazy(() => import("./CustomBubblyLink"));
 import { center } from "../Helpers";
 import Loading from "../Screens/Loading";
+import { motion } from "framer-motion";
 
-const Banner = ({heading,description}) => {
+const AnimatedScalingTypography = motion(Typography);
+
+const Banner = ({ heading, description }) => {
   return (
     <Box
       height={300}
@@ -15,16 +18,17 @@ const Banner = ({heading,description}) => {
       bgcolor={BOXES_COLOR}
       mb={10}
     >
-      <Typography data-aos="zoom-in" variant="h2" fontWeight="bold" color={"white"}>
-        {heading}
-      </Typography>
-      <Typography
-        {...center}
-        variant="h5"
+      <AnimatedScalingTypography
+        initial={{ transform: "scale(0.5)" }}
+        whileInView={{ transform: "scale(1)" }}
+        variant="h2"
         fontWeight="bold"
         color={"white"}
       >
-        <Suspense fallback={<Loading/>}>
+        {heading}
+      </AnimatedScalingTypography>
+      <Typography {...center} variant="h5" fontWeight="bold" color={"white"}>
+        <Suspense fallback={<Loading />}>
           <CustomBubblyLink to={"/"}>Home</CustomBubblyLink>{" "}
         </Suspense>
         <svg
