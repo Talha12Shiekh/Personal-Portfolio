@@ -83,8 +83,8 @@ import QUIZZAPP4 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-4.png";
 import QUIZZAPP5 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-5.png";
 import QUIZZAPP6 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-6.png";
 
-import TYPING1 from "./public/TYPING-IMAGES/Typing-image-1.png"
-import TYPING2 from "./public/TYPING-IMAGES/Typing-image-2.png";
+import TYPING1 from "/TYPING-IMAGES/Typing-image-1.png"
+import TYPING2 from "/TYPING-IMAGES/Typing-image-2.png";
 
 import WORD1 from "/WORDPROCESSOR-IMAGES/WordProcessor1.png"
 import WORD2 from "/WORDPROCESSOR-IMAGES/WordProcessor2.png"

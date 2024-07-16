@@ -12,7 +12,7 @@ const Loading = () => {
         width={100}
         radius={5}
         color={ACCENT_COLOR}
-        ariaLabel="ball-triangle-loading"
+        ariaLabel="Loading Please wait"
         wrapperStyle={{}}
         wrapperClass=""
         visible={true}

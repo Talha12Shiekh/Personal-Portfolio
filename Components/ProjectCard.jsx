@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import "../src/index.css";
 import ProjectsModal from "./ProjectsModal";
-
+import {motion} from "framer-motion"
 const CARD_DESCRIPTION_LIMIT = `Developed a feature-rich calculator app using React Native, designed to perform complex arithmetic calculations with ease. The app o . The app o The app oThe app oThe app o`;
 import { GitHub } from "@mui/icons-material";
 
@@ -55,6 +55,10 @@ const ProjectCard = ({
         highlight={false}
         className="my-atropos"
       >
+        <motion.div
+        layout
+        >
+
         <Card
           onClick={handleOpen}
           sx={{
@@ -143,6 +147,8 @@ const ProjectCard = ({
             </Button>
           </CardActions>
         </Card>
+        </motion.div>
+
       </Atropos>
     </>
   );

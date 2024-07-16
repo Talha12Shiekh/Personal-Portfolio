@@ -32,19 +32,17 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1>Error</h1>,
+    errorElement: <h1>😂😂😂</h1>,
     children: [
       {
         path: "/",
         element: (
           <Suspense fallback={<Loading/>}>
             <Home />
-            <About />
             <Skills />
             <Services />
             <Experience />
             <Education />
-            <Projects />
           </Suspense>
         ),
       },
