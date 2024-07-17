@@ -77,8 +77,9 @@ import QUIZZAPP4 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-4.png";
 import QUIZZAPP5 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-5.png";
 import QUIZZAPP6 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-6.png";
 
-import TYPING1 from "/TYPING-IMAGES/Typing-image-1.png";
-import TYPING2 from "/TYPING-IMAGES/Typing-image-2.png";
+import MPORTFOLIO1 from "/TYPING-IMAGES/material-ui-portfolio-1.png";
+import MPORTFOLIO2 from "/TYPING-IMAGES/material-ui-portfolio-2.png";
+import MPORTFOLIO3 from "/TYPING-IMAGES/material-ui-portfolio-3.png";
 
 import WORD1 from "/WORDPROCESSOR-IMAGES/WordProcessor1.png";
 import WORD2 from "/WORDPROCESSOR-IMAGES/WordProcessor2.png";
@@ -533,15 +534,15 @@ export const WEB_PROJECTS = [
   },
   {
     key: 10,
-    image: TYPING1,
-    viewImages: [TYPING1, TYPING2],
-    title: "Typing Machine",
+    image: MPORTFOLIO2,
+    viewImages: [MPORTFOLIO1, MPORTFOLIO2,MPORTFOLIO3],
+    title: "Portfolio Website",
     description:
-      'I developed a typing machine using HTML, CSS, and JavaScript, featuring a smooth UI. It presents words for the user to type and includes a "Try Again" button that generates a new paragraph. A countdown timer tracks the typing duration, and when the time is up, further typing is disabled. The app also displays the number of mistakes made, as well as the user\'s words per minute (WPM) and characters per minute (CPM) typed by the user.',
+      'I created a portfolio website using Material UI, which includes a landing page, portfolio page, about me section, and contacts section. This was my first project using Material UI, where I used complex grids for a neat layout. The website is fully responsive, so it looks good on all devices. This project helped me learn a lot about using Material UI for web development',
     codeLink:
-      "https://github.com/Talha12Shiekh/Javascript-projects/tree/master/Typing%20machine",
+      "https://github.com/Talha12Shiekh/Material-UI",
     live: "",
     liveDisabled: true,
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["React js", "CSS", "JavaScript","Material UI","NPM","JSX"],
   },
 ];
