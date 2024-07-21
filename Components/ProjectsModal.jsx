@@ -31,7 +31,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   borderWidth: 0,
-  my: 15,
+  my: 27,
   borderRadius: 5,
 };
 
@@ -95,7 +95,7 @@ const ProjectsModal = ({
                       alt="Loading..."
                       src={img}
                       loading="lazy"
-                      style={{ width: !checkingImageforLargerScreens ? "60%" : "100%", height: "100%" }}
+                      style={{ width: !checkingImageforLargerScreens ? "60%" : "100%", height: "150%" }}
                     />
                   </Box>
                 );

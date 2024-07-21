@@ -88,6 +88,48 @@ import WORD4 from "/WORDPROCESSOR-IMAGES/WordProcessor4.png";
 import WORD5 from "/WORDPROCESSOR-IMAGES/WordProcessor5.png";
 import { motion } from "framer-motion";
 
+
+import WHAT1 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-1.jpeg";
+import WHAT2 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-2.jpeg";
+import WHAT3 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-3.jpeg";
+import WHAT4 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-4.jpeg";
+import WHAT5 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-5.jpeg";
+import WHAT6 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-6.jpeg";
+import WHAT7 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-7.jpeg";
+import WHAT8 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-8.jpeg";
+import WHAT9 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-9.jpeg";
+import WHAT10 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-10.jpeg";
+import WHAT11 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-11.jpeg";
+import WHAT12 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-12.jpeg";
+import WHAT13 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-13.jpeg";
+import WHAT14 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-14.jpeg";
+import WHAT15 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-15.jpeg";
+import WHAT16 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-16.jpeg";
+import WHAT17 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-17.jpeg";
+import WHAT18 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-18.jpeg";
+import WHAT19 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-19.jpeg";
+import WHAT20 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-20.jpeg";
+import WHAT21 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-21.jpeg";
+import WHAT22 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-22.jpeg";
+import WHAT23 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-23.jpeg";
+import WHAT24 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-24.jpeg";
+import WHAT25 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-25.jpeg";
+import WHAT26 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-26.jpeg";
+import WHAT27 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-27.jpeg";
+import WHAT28 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-28.jpeg";
+import WHAT29 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-29.jpeg";
+import WHAT30 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-30.jpeg";
+import WHAT31 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-31.jpeg";
+import WHAT32 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-32.jpeg";
+import WHAT33 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-33.jpeg";
+import WHAT34 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-34.jpeg";
+import WHAT35 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-35.jpeg";
+import WHAT36 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-36.jpeg";
+import WHAT37 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-37.jpeg";
+import WHAT38 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-38.jpeg";
+import WHAT39 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-39.jpeg";
+import WHAT40 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-40.jpeg";
+
 export const ICONS_ARRAY = [
   {
     icon: <Instagram style={{ color: ACCENT_COLOR }} />,
@@ -372,7 +414,7 @@ export const MOBILE_PROJECTS = [
   {
     key: 1,
     image: "WhatsappCloneTitleImage.png",
-    viewImages: [],
+    viewImages: [WHAT1,WHAT2,WHAT3,WHAT4,WHAT5,WHAT6,WHAT7,WHAT8,WHAT9,WHAT10,WHAT11,WHAT12,WHAT13,WHAT14,WHAT15,WHAT16,WHAT17,WHAT18,WHAT19,WHAT20,WHAT21,WHAT22,WHAT23,WHAT24,WHAT25,WHAT26,WHAT27,WHAT28,WHAT29,WHAT30,WHAT31,WHAT32,WHAT33,WHAT34,WHAT35,WHAT36,WHAT37,WHAT38,WHAT39,WHAT40],
     title: "Whatsapp Clone",
     description:
       "Developed a comprehensive WhatsApp clone in frontend using React Native, replicating key functionalities to enhance user experience. The app includes robust chat management features, allowing users to add, delete, search, pin,filter and archive chats with ease. The messaging UI closely mirrors that of WhatsApp, providing a familiar and intuitive interface for users. Additionally, I implemented message reactions, enabling users to react to messages with emojis, and included features to star and pin important messages for quick access The app also features a call UI, designed to resemble the WhatsApp calling experience and much more This project demonstrates my proficiency in mobile app development using React Native",
