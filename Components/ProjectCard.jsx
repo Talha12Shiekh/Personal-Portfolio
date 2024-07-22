@@ -28,12 +28,12 @@ const ProjectCard = ({
   liveDisabled,
   viewImages,
   skills,
+  platform
 }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
 
   
   return (
@@ -48,6 +48,7 @@ const ProjectCard = ({
         live={live}
         liveDisabled={liveDisabled}
         open={open}
+        platform={platform}
       />
       <Atropos
         shadow={false}

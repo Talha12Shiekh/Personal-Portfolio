@@ -83,7 +83,8 @@ const Navbar = () => {
         PaperProps={{
           sx: {
             backgroundColor: "rgba(0,0,0,.5)",
-            width: innerWidth,
+            width: "100vw",
+            position:'relative'
           },
         }}
         open={openDrawer}
@@ -94,7 +95,7 @@ const Navbar = () => {
           color="info"
           size="large"
         >
-          <Typography marginLeft={45} marginTop={5}>
+          <Typography position={"absolute"} top={30} right={30}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2.5em"
@@ -108,7 +109,7 @@ const Navbar = () => {
             </svg>
           </Typography>
         </IconButton>
-        <Box padding={5} height="100%">
+        <Box padding={5} mt={10} height="100%">
           {NAVBAR_LINKS.map(({ text, key,path }) => {
             return (
               <List key={key}>

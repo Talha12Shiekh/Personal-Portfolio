@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 import React from "react";
 import { center } from "../Helpers";
 import { BallTriangle } from "react-loader-spinner";
-import { ACCENT_COLOR } from "../Constants";
+import { ACCENT_COLOR, BACKGROUND_COLOR } from "../Constants";
 
 const Loading = () => {
   return (
-    <Box {...center} bgcolor={"white"} width={"100%"} height="100vh">
+    <Box {...center} bgcolor={BACKGROUND_COLOR} width={"100%"} height="100vh">
       <BallTriangle
         height={100}
         width={100}

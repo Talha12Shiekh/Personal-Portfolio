@@ -15,8 +15,6 @@ import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 const CustomButton = lazy(() => import("../Components/CustomButton"));
 import "../src/index.css";
-import { motion } from "framer-motion";
-import AnimatedTypography from "../Components/AnimatedTypography";
 
 const WritingText = () => {
   return (
@@ -42,7 +40,6 @@ const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const AnimatedGrid = motion(Grid);
 
   return (
     <>
@@ -60,25 +57,26 @@ const Home = () => {
             spacing={2}
           >
             <Grid item xs={10} sm={10} md={7} lg={6}>
-              <AnimatedTypography
-                offset={-100}
+              <Typography
+              className="animate__animated animate__fadeInDown"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
                 variant="h6"
               >
                 Hello it's me
-              </AnimatedTypography>
-              <AnimatedTypography
+              </Typography>
+              <Typography
+              className="animate__animated animate__fadeInDown"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
                 variant={matches ? "h3" : "h2"}
               >
                 Talha Khurram
-              </AnimatedTypography>
-              <AnimatedTypography
-                offset={-100}
+              </Typography>
+              <Typography
+              className="animate__animated animate__fadeInDown"
                 color="white"
                 display="flex"
                 gap={1}
@@ -95,7 +93,7 @@ const Home = () => {
                 >
                   <WritingText />
                 </Typography>
-              </AnimatedTypography>
+              </Typography>
               <Box component="div" width="100%">
                 <Typography
                   color="white"
@@ -153,10 +151,7 @@ const Home = () => {
                 </Box>
               </Suspense>
             </Grid>
-            <AnimatedGrid
-              initial={{transform:"translateX(100px)"}}
-              whileInView={{transform:"translateX(0px)"}}
-              transition={{duration:0.6}}
+            <Grid
               item
               xs={10}
               sm={10}
@@ -164,14 +159,14 @@ const Home = () => {
               lg={4}
             >
               <img
-                className="talhaImage"
+                className="animate__animated animate__bounceInRight talhaImage"
                 loading="lazy"
                 height={"420vh"}
                 width={"400vw"}
                 src="./Talha.png"
                 alt="Loading..."
               />
-            </AnimatedGrid>
+            </Grid>
           </Grid>
         </Box>
       </Container>

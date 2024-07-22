@@ -31,7 +31,6 @@ const style = {
   boxShadow: 24,
   p: 4,
   borderWidth: 0,
-  my: 27,
   borderRadius: 5,
 };
 
@@ -45,17 +44,27 @@ const ProjectsModal = ({
   live,
   codeLink,
   viewImages,
+  platform,
 }) => {
   const renderArrowNext = (clickHandler, hasNext) => {
-    return <CustomArrow direction="next" onClick={clickHandler} hasNext={hasNext} />;
+    return (
+      <CustomArrow direction="next" onClick={clickHandler} hasNext={hasNext} />
+    );
   };
   const renderArrowPrev = (clickHandler, hasNext) => {
-    return <CustomArrow direction="prev" onClick={clickHandler} hasNext={hasNext} />;
+    return (
+      <CustomArrow direction="prev" onClick={clickHandler} hasNext={hasNext} />
+    );
   };
 
   const theme = useTheme();
-  const checkingImageforLargerScreens = useMediaQuery(theme.breakpoints.down("xl"));
-  const checkingModalforSmallerScreens = useMediaQuery(theme.breakpoints.down("md"));
+  const checkingImageforLargerScreens = useMediaQuery(
+    theme.breakpoints.down("xl")
+  );
+  const checkingModalforSmallerScreens = useMediaQuery(
+    theme.breakpoints.down("md")
+  );
+
 
   return (
     <Modal
@@ -74,7 +83,13 @@ const ProjectsModal = ({
       }}
     >
       <Fade in={open}>
-        <Box sx={{...style,width:checkingModalforSmallerScreens ? "90%" : "60%"}}>
+        <Box
+          sx={{
+            ...style,
+            width: checkingModalforSmallerScreens ? "90%" : "60%",
+            my: platform == "web" ? 15 : 25,
+          }}
+        >
           <Box width="100%" mb={1} textAlign="right">
             <IconButton onClick={handleClose}>
               <Close style={{ color: "white" }} />
@@ -95,7 +110,10 @@ const ProjectsModal = ({
                       alt="Loading..."
                       src={img}
                       loading="lazy"
-                      style={{ width: !checkingImageforLargerScreens ? "60%" : "100%", height: "150%" }}
+                      style={{
+                        width: !checkingImageforLargerScreens ? "60%" : "100%",
+                        height: "150%",
+                      }}
                     />
                   </Box>
                 );

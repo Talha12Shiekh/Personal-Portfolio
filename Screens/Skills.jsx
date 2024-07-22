@@ -6,10 +6,8 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useState, lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useRef } from "react";
 import {
-  ACCENT_COLOR,
-  BOXES_COLOR,
   SKILLS_FIRST_ROW,
   SKILLS_SECOND_ROW,
   SKILLS_THIRD_ROW,
@@ -18,7 +16,6 @@ import {
 import "../src/index.css";
 import Loading from "../Screens/Loading";
 import Atropos from "atropos/react";
-import { motion } from "framer-motion";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
@@ -26,16 +23,32 @@ const HeadingAndDescription = lazy(() =>
 const BOXES_WIDTH = 200;
 const BOXES_HEIGHT = 180;
 
-const AnimatedBox = motion(Box);
-
 const Skills = () => {
-  const SingleSkill = ({ image, text, index }) => {
+  const SingleSkill = ({ image, text }) => {
+    const skillRef = useRef(null);
+
+    useEffect(() => {
+      const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("animate__animated", "animate__zoomIn");
+          }
+        });
+      };
+  
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5,
+      });
+  
+      if (skillRef.current) observer.observe(skillRef.current);
+  
+      return () => {
+        if (skillRef.current) observer.unobserve(skillRef.current);
+      };
+    }, []);
     return (
       <Grid item md={4} lg={2}>
-        <AnimatedBox
-          initial={{transform:"scale(0.5)"}}
-          whileInView={{transform:"scale(1)"}}
-        >
+        <Box ref={skillRef}>
           <Atropos
             rotateXMax={30}
             rotateYMax={30}
@@ -66,7 +79,7 @@ const Skills = () => {
               </Typography>
             </Box>
           </Atropos>
-        </AnimatedBox>
+          </Box>
       </Grid>
     );
   };

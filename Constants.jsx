@@ -7,6 +7,7 @@ export const ICON_BACKGROUND_COLOR = "#5c6a93";
 export const PROJECTS_SKILL_COLOR = "#50609133";
 export const ICONS_SIZE = "1.8em";
 export const PROJECTS_ICONS_SIZE = "1.2em";
+export const DOWNLOAD_BUTTON_COLOR = "#363e55";
 import { Box } from "@mui/material";
 import { center } from "./Helpers";
 import "./src/index.css";
@@ -308,16 +309,12 @@ export const SKILLS = [
   },
 ];
 
-const AnimatedBox = motion(Box);
 
 export const EXPERIENCE = [
   {
     key: 1,
     icon: (
-      <AnimatedBox
-      initial={{ transform: "scale(0.4)" }}
-        whileInView={{ transform: "scale(1)" }}
-        transition={{duration:0.5}}
+      <Box
         width={60}
         height={60}
         borderRadius={100}
@@ -336,7 +333,7 @@ export const EXPERIENCE = [
             d="M21 17v-6.9L12 15L1 9l11-6l11 6v8zm-9 4l-7-3.8v-5l7 3.8l7-3.8v5z"
           ></path>
         </svg>
-      </AnimatedBox>
+      </Box>
     ),
     date: "2019 - 2024",
     title: "Self Experience",
@@ -357,10 +354,7 @@ export const EDUCATION = [
   {
     key: 1,
     icon: (
-      <motion.img
-        initial={{ transform: "scale(0.4)" }}
-        whileInView={{ transform: "scale(1)" }}
-        transition={{duration:0.5}}
+      <img
         className="skulImage"
         src="dareArqam.png"
         loading="lazy"
@@ -375,10 +369,7 @@ export const EDUCATION = [
   {
     key: 2,
     icon: (
-      <motion.img
-        initial={{ transform: "scale(0.4)" }}
-        whileInView={{ transform: "scale(1)" }}
-        transition={{duration:0.5}}
+      <img
         className="skulImage"
         src="college1.png"
         loading="lazy"
@@ -410,6 +401,19 @@ export const TABS = [
   },
 ];
 
+export const SMALL_TABS = [
+  {
+    key: 2,
+    title: "Web Projects",
+    value: "Web",
+  },
+  {
+    key: 3,
+    title: "Mobile Projects",
+    value: "Mobile",
+  },
+];
+
 export const MOBILE_PROJECTS = [
   {
     key: 1,
@@ -421,6 +425,7 @@ export const MOBILE_PROJECTS = [
     codeLink: "https://github.com/Talha12Shiekh/WhatsappClone",
     live: "",
     liveDisabled: true,
+    platform:"mobile",
     skills: ["React Js", "React Native", "JSX", "NPM", "JavaScript", "Expo"],
   },
   {
@@ -428,6 +433,7 @@ export const MOBILE_PROJECTS = [
     image: CALC1,
     viewImages: [CALC1, CALC2, CALC3, CALC4, CALC5, CALC6],
     title: "Mobile Calculator",
+    platform:"mobile",
     description:
       "Developed a feature-rich calculator app using React Native, designed to perform complex arithmetic calculations with ease. The app offers a user-friendly interface similar to an Android calculator, including a sidebar for viewing calculation history. Users can save and restore calculations from history, delete history, and highlight important symbols during calculations. This project highlights my skills in mobile app development, focusing on creating intuitive and functional user interfaces.",
     codeLink: "https://github.com/Talha12Shiekh/CALCULATOR",
@@ -440,6 +446,7 @@ export const MOBILE_PROJECTS = [
     image: STUD1,
     viewImages: [STUD1, STUD2, STUD3, STUD4, STUD5, STUD6, STUD7, STUD8],
     title: "Students App",
+    platform:"mobile",
     description:
       "Students App, developed in React Native, offers a user-friendly interface for students and educators. The app features a landing page that provides easy navigation to sections such as Courses, Contacts, Students Information, and About Me. The Courses section displays various courses as cards, allowing users to apply easily. The Students Information section includes a carousel showcasing enrolled students. The About Me section features useful links with icons, while the Contacts section has a sign-in form for course registration.",
     codeLink: "https://github.com/Talha12Shiekh/STUDENTS-APP",
@@ -464,6 +471,7 @@ export const MOBILE_PROJECTS = [
       SMALLAPP11,
     ],
     title: "Small Applications UI",
+    platform:"mobile",
     description:
       "In addition to my major projects, I have developed several small application UIs using React Native, for example Gym App, Travel App, and Food App. These apps feature smooth and intuitive user interfaces, showcasing my expertise in React Native. Each app is designed to provide an excellent user experience, with the Gym App focusing on fitness routines, the Travel App offering travel planning and exploration features, and the Food App presenting a seamless food ordering and recipe browsing experience. These projects highlight my ability to create polished and functional mobile app interfaces.",
     codeLink: "https://github.com/Talha12Shiekh/Small-Applications-UI-",
@@ -478,6 +486,7 @@ export const WEB_PROJECTS = [
   {
     key: 5,
     image: PORTFOLIO1,
+    platform:"web",
     viewImages: [
       PORTFOLIO1,
       PORTFOLIO2,
@@ -511,6 +520,7 @@ export const WEB_PROJECTS = [
       CLOTHWEBSITE7,
       CLOTHWEBSITE8,
     ],
+    platform:"web",
     title: "Clothing Website",
     description:
       "I developed a dynamic clothing website using React.js and Bootstrap. It features multiple pages: Home, Products, Trends, and Contact. The discount section includes a countdown timer, and the Products page allows easy filtering. The Trends page showcases trending designs in a grid layout with prices. The Contact section includes a login form, and the site supports seamless navigation without reloading.",
@@ -534,6 +544,7 @@ export const WEB_PROJECTS = [
       NOTESAPP9,
     ],
     title: "Notes App",
+    platform:"web",
     description:
       "I created a feature-rich notes app using React and Redux, it consists of responsive design. Users can manage notes seamlessly with functions for adding, deleting, updating, and recovering notes. The app supports marking notes as important, pinning them for quick access, and includes a filtering feature for organization. Additionally, there's a convenient option to delete notes, enhancing user experience.",
     codeLink: "https://github.com/Talha12Shiekh/REACT_NOTES_APP",
@@ -546,6 +557,7 @@ export const WEB_PROJECTS = [
     image: WORD2,
     viewImages: [WORD1, WORD2, WORD3, WORD4, WORD5],
     title: "Text Processor",
+    platform:"web",
     description:
       "My first React.js application, a word processor developed with Bootstrap, offers both light and dark modes for user preference. The home page features a textarea for text input, accompanied by buttons for various operations such as converting text to uppercase, lowercase, clearing text, copying text, and removing extra spaces. Below these buttons, the app displays real-time information about the text, including word and character counts. Additionally, it calculates the estimated reading time for the entered text, providing a comprehensive writing and editing experience.",
     codeLink: "https://github.com/Talha12Shiekh/TextUtils-React-",
@@ -566,6 +578,7 @@ export const WEB_PROJECTS = [
       QUIZZAPP6,
     ],
     title: "Quizz App",
+    platform:"web",
     description:
       "I created a quiz app using React.js with CSS styling. The app features a start button that initiates the quizzes, each comprising four options and a limited response time. If the user selects the wrong option or time expires, the correct answer is automatically highlighted. The app displays the current quiz number and the total number of quizzes. A settings page allows users to add, edit, delete quizzes, and customize the time for each quiz. Upon completion, the app shows the results, indicating how many answers were correct.",
     codeLink: "https://github.com/Talha12Shiekh/REACT_QUIZZ_APP",
@@ -579,6 +592,7 @@ export const WEB_PROJECTS = [
     image: MPORTFOLIO2,
     viewImages: [MPORTFOLIO1, MPORTFOLIO2,MPORTFOLIO3],
     title: "Portfolio Website",
+    platform:"web",
     description:
       'I created a portfolio website using Material UI, which includes a landing page, portfolio page, about me section, and contacts section. This was my first project using Material UI, where I used complex grids for a neat layout. The website is fully responsive, so it looks good on all devices. This project helped me learn a lot about using Material UI for web development',
     codeLink:

@@ -4,9 +4,7 @@ import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
 const CustomBubblyLink = lazy(() => import("./CustomBubblyLink"));
 import { center } from "../Helpers";
 import Loading from "../Screens/Loading";
-import { motion } from "framer-motion";
 
-const AnimatedScalingTypography = motion(Typography);
 
 const Banner = ({ heading, description }) => {
   return (
@@ -18,15 +16,14 @@ const Banner = ({ heading, description }) => {
       bgcolor={BOXES_COLOR}
       mb={10}
     >
-      <AnimatedScalingTypography
-        initial={{ transform: "scale(0.5)" }}
-        whileInView={{ transform: "scale(1)" }}
+      <Typography
+      className="animate__animated animate__bounceIn"
         variant="h2"
         fontWeight="bold"
         color={"white"}
       >
         {heading}
-      </AnimatedScalingTypography>
+      </Typography>
       <Typography {...center} variant="h5" fontWeight="bold" color={"white"}>
         <Suspense fallback={<Loading />}>
           <CustomBubblyLink to={"/"}>Home</CustomBubblyLink>{" "}

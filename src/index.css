@@ -79,9 +79,10 @@ html {
   cursor: pointer;
 }
 
-.projectsCard:hover{
+.projectsCard:hover,.sm_project_card:hover{
   box-shadow: 5px 5px 20px var(--ACCENT-COLOR) !important;
 }
+
 
 .project_skill{
   box-shadow: 2px 2px 10px var(--ACCENT-COLOR) !important; 
@@ -141,3 +142,12 @@ html {
 .projects_modal_btn:disabled{
   background-color:grey !important;
 }
+
+.sm_project_image{
+  transition: transform 0.3s linear;
+}
+.sm_project_image:hover{
+  transform: scale(1.2);
+}
+
+

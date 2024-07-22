@@ -29,15 +29,14 @@ import {
   MOBILE_PROJECTS,
   WEB_PROJECTS,
 } from "../Constants";
+import {ReusableTabs,AnimatedGrid} from "../Components/ReusableTabsAndGrid";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
-import ProjectCard from "../Components/ProjectCard";
+const ProjectCard = lazy(() => import("../Components/ProjectCard"));
+const SmallProjects = lazy(() => import("../Components/SmallProjects"));
 const Projects = () => {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("lg"));
-  const checkTabs = useMediaQuery(theme.breakpoints.down("md"));
-
+  
   const ALLPROJECTS = [...MOBILE_PROJECTS, ...WEB_PROJECTS];
   const [PROJECTS, SETPROJECTS] = useState(ALLPROJECTS);
 
@@ -55,80 +54,49 @@ const Projects = () => {
   };
 
   return (
-    <Container maxWidth={"lg"} sx={{ padding: 5 }} component={"section"}>
-      <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
+      <Container maxWidth={"lg"} sx={{ padding: 5 }} component={"section"}>
         <HeadingAndDescription
           heading="Projects"
           description="I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects."
         />
-      </Suspense>
-      <Box
-        sx={{ width: "100%" }}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Tabs
+        <ReusableTabs
           value={value}
-          onChange={handleChange}
-          sx={{ color: ACCENT_COLOR, marginBlock: 5 }}
-          textColor="white"
-          indicatorColor="primary"
-          aria-label="My Projects"
-          orientation={checkTabs ? "vertical" : "horizontal"}
-        >
-          {TABS.map(({ title, value, key }) => {
-            return (
-              <Tab
-                sx={{
-                  fontSize: 25,
-                  textTransform: "capitalize",
-                  marginInline: 5,
-                }}
-                key={key}
-                value={value}
-                label={title}
-              />
-            );
+          handleChange={handleChange}
+          TABS_CONTENT={TABS}
+        />
+        <AnimatedGrid>
+          {PROJECTS.map((project) => {
+            const {
+              image,
+              title,
+              description,
+              codeLink,
+              live,
+              liveDisabled,
+              key,
+              viewImages,
+              skills,
+              platform,
+            } = project;
+            const projectsObj = {
+              image,
+              title,
+              description,
+              codeLink,
+              live,
+              liveDisabled,
+              viewImages,
+              viewImages,
+              skills,
+              platform,
+            };
+            return <ProjectCard key={key} {...projectsObj} />;
           })}
-        </Tabs>
-      </Box>
-      <motion.div
-        layout
-        style={{
-          display: "flex",
-          justifyContent: matches ? "center" : "flex-start",
-          flexWrap: "wrap",
-          gap: 40,
-        }}
-      >
-        {PROJECTS.map((project) => {
-          const {
-            image,
-            title,
-            description,
-            codeLink,
-            live,
-            liveDisabled,
-            key,
-            viewImages,
-            skills,
-          } = project;
-          const projectsObj = {
-            image,
-            title,
-            description,
-            codeLink,
-            live,
-            liveDisabled,
-            viewImages,
-            viewImages,
-            skills,
-          };
-          return <ProjectCard key={key} {...projectsObj} />;
-        })}
-      </motion.div>
-    </Container>
+        </AnimatedGrid>
+        <SmallProjects />
+      </Container>
+    </Suspense>
   );
 };
 
