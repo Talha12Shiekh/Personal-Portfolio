@@ -40,7 +40,6 @@ const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-
   return (
     <>
       <Container
@@ -58,7 +57,7 @@ const Home = () => {
           >
             <Grid item xs={10} sm={10} md={7} lg={6}>
               <Typography
-              className="animate__animated animate__fadeInDown"
+                className="animate__animated animate__fadeInDown"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
@@ -67,7 +66,7 @@ const Home = () => {
                 Hello it's me
               </Typography>
               <Typography
-              className="animate__animated animate__fadeInDown"
+                className="animate__animated animate__fadeInDown"
                 color="white"
                 gutterBottom
                 fontWeight="bold"
@@ -76,7 +75,7 @@ const Home = () => {
                 Talha Khurram
               </Typography>
               <Typography
-              className="animate__animated animate__fadeInDown"
+                className="animate__animated animate__fadeInDown"
                 color="white"
                 display="flex"
                 gap={1}
@@ -151,13 +150,7 @@ const Home = () => {
                 </Box>
               </Suspense>
             </Grid>
-            <Grid
-              item
-              xs={10}
-              sm={10}
-              md={5}
-              lg={4}
-            >
+            <Grid item xs={10} sm={10} md={5} lg={4}>
               <img
                 className="animate__animated animate__bounceInRight talhaImage"
                 loading="lazy"

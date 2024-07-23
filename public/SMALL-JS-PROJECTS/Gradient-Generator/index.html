@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient generator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+        <div class="gradient_box"></div>
+        <div class="options_container">
+            <div class="selection_container">
+                <select>
+                    <option value="to right">to right</option>
+                    <option value="to top">to top</option>
+                    <option value="to left">to left</option>
+                    <option value="to bottom">to bottom</option>
+                </select>
+            </div>
+          <div class="inputs_container">
+            <input type="color" value="#c7c727">
+            <input type="color" value="#3ce13c">
+          </div>  
+        </div>
+        <div class="txtarea">
+            <textarea disabled>background: linear-gradient(to right,#c7c727,#3ce13c);</textarea>
+        </div>
+        <button>Copy color</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

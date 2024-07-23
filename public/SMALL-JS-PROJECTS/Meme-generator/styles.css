@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+:root{
+    --body-background:#151925;
+    --button-background:#5977ab;
+    --box-background:#84a9e9;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--body-background);
+}
+
+.container{
+    text-align: center;
+    background-color: var(--box-background);
+    padding: 20px;
+    padding-inline: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+h1{
+    margin-bottom: 20px;
+    color: black;
+}
+
+.meme-container{
+    margin-bottom: 20px;
+    width: 35vw;
+    height: 60vh;
+    background: url(search.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loadingContainer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--box-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 10px 20px ;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,transform 0.5s ease;
+    font-family: inherit;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+
+
