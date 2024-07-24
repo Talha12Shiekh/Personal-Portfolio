@@ -1,4 +1,4 @@
-import { Typography, useMediaQuery, useTheme,Box } from "@mui/material";
+import { Typography, useMediaQuery, useTheme, Box } from "@mui/material";
 import { useEffect, useRef } from "react";
 
 const HeadingAndDescription = ({ heading, description }) => {
@@ -13,17 +13,21 @@ const HeadingAndDescription = ({ heading, description }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (entry.target === headingRef.current) {
-            entry.target.classList.add("animate__animated", "animate__fadeInLeft");
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__fadeInLeft"
+            );
           } else if (entry.target === descriptionRef.current) {
-            entry.target.classList.add("animate__animated", "animate__fadeInRight");
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__fadeInRight"
+            );
           }
         }
       });
     };
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
-    });
+    const observer = new IntersectionObserver(handleIntersection);
 
     if (headingRef.current) observer.observe(headingRef.current);
     if (descriptionRef.current) observer.observe(descriptionRef.current);
@@ -36,7 +40,7 @@ const HeadingAndDescription = ({ heading, description }) => {
   return (
     <Box overflow={"hidden"}>
       <Typography
-      ref={headingRef}
+        ref={headingRef}
         color={"white"}
         gutterBottom
         fontWeight="bold"
@@ -48,7 +52,7 @@ const HeadingAndDescription = ({ heading, description }) => {
         {heading}
       </Typography>
       <Typography
-      ref={descriptionRef}
+        ref={descriptionRef}
         px={5}
         textAlign="center"
         mb={10}

@@ -65,7 +65,7 @@ const Projects = () => {
           handleChange={handleChange}
           TABS_CONTENT={TABS}
         />
-        <AnimatedGrid>
+        <AnimatedGrid gap={40}>
           {PROJECTS.map((project) => {
             const {
               image,

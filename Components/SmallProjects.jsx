@@ -7,27 +7,27 @@ import {
   Tab,
 } from "@mui/material";
 import React, { lazy, Suspense, useState } from "react";
-import { SMALL_TABS } from "../Constants";
+import { SMALL_TABS, SMALL_WEB_PROJECTS } from "../Constants";
 import Loading from "../Screens/Loading";
 const SmallProjectCard = lazy(() => import("./SmallProjectCard"));
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
-import { motion } from "framer-motion";
 import { ReusableTabs, AnimatedGrid } from "./ReusableTabsAndGrid";
 
 const SmallProjects = () => {
   const [value, setValue] = useState("Web");
 
+  const ALLPROJECTS = [...SMALL_WEB_PROJECTS];
+  const [PROJECTS, SETPROJECTS] = useState(ALLPROJECTS);
+
   const handleChange = (_, newValue) => {
     setValue(newValue);
-    // if (newValue === "Web") {
-    //   SETPROJECTS(WEB_PROJECTS);
-    // } else if (newValue === "Mobile") {
-    //   SETPROJECTS(MOBILE_PROJECTS);
-    // } else {
-    //   SETPROJECTS(ALLPROJECTS);
-    // }
+    if (newValue === "Web") {
+      SETPROJECTS(SMALL_WEB_PROJECTS);
+    } else if (newValue === "Mobile") {
+      SETPROJECTS([]);
+    }
   };
   return (
     <Suspense fallback={<Loading />}>
@@ -40,10 +40,13 @@ const SmallProjects = () => {
         handleChange={handleChange}
         TABS_CONTENT={SMALL_TABS}
       />
-      <AnimatedGrid>
-        <SmallProjectCard />
-        <SmallProjectCard />
-        <SmallProjectCard />
+      <AnimatedGrid gap={60}>
+        {
+          PROJECTS.map((project) => {
+            const {title,downloadFile,key,image} = project;
+            return <SmallProjectCard key={key} title={title} downloadFile={downloadFile} projectImage={image} />
+          })
+        }
       </AnimatedGrid>
     </Suspense>
   );

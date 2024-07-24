@@ -37,7 +37,7 @@ const Skills = () => {
       };
   
       const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.5,
+        threshold: 0.1,
       });
   
       if (skillRef.current) observer.observe(skillRef.current);

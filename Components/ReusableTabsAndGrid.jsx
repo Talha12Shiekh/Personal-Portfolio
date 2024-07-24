@@ -41,7 +41,7 @@ export const ReusableTabs = ({ value, handleChange, TABS_CONTENT }) => {
   );
 };
 
-export const AnimatedGrid = ({ children }) => {
+export const AnimatedGrid = ({ children,gap }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
   return (
@@ -51,7 +51,7 @@ export const AnimatedGrid = ({ children }) => {
         display: "flex",
         justifyContent: matches ? "center" : "flex-start",
         flexWrap: "wrap",
-        gap: 40,
+        gap,
         marginTop: 30,
       }}
     >

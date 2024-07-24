@@ -13,6 +13,8 @@ import { center } from "./Helpers";
 import "./src/index.css";
 import { Instagram, LinkedIn, GitHub, YouTube } from "@mui/icons-material";
 
+
+import CALC0 from "/CALCULATOR-IMAGES/MOBILE-CALCULATOR-FRONT.jpeg";
 import CALC1 from "/CALCULATOR-IMAGES/CALC-1-IMG.jpeg";
 import CALC2 from "/CALCULATOR-IMAGES/CALC-2-IMG.jpeg";
 import CALC3 from "/CALCULATOR-IMAGES/CALC-3-IMG.jpeg";
@@ -20,6 +22,7 @@ import CALC4 from "/CALCULATOR-IMAGES/CALC-4-IMG.jpeg";
 import CALC5 from "/CALCULATOR-IMAGES/CALC-5-IMG.jpeg";
 import CALC6 from "/CALCULATOR-IMAGES/CALC-6-IMG.jpeg";
 
+import STUD0 from "/STUDENTS-APP-IMAGES/STUDENTS-APP-FRONT.jpeg";
 import STUD1 from "/STUDENTS-APP-IMAGES/STUDENT-APP-IMG-1.jpeg";
 import STUD2 from "/STUDENTS-APP-IMAGES/STUDENT-APP-IMG-2.jpeg";
 import STUD3 from "/STUDENTS-APP-IMAGES/STUDENT-APP-IMG-3.jpeg";
@@ -29,6 +32,7 @@ import STUD6 from "/STUDENTS-APP-IMAGES/STUDENT-APP-IMG-6.jpeg";
 import STUD7 from "/STUDENTS-APP-IMAGES/STUDENT-APP-IMG-7.jpeg";
 import STUD8 from "/STUDENTS-APP-IMAGES/STUDENT-APP-IMG-8.jpeg";
 
+import SMALLAPP0 from "/SMALL-APPS-UI/SMALL-APPS-UI-FRONT.jpeg";
 import SMALLAPP1 from "/SMALL-APPS-UI/SMALL-APP-UI-1.jpeg";
 import SMALLAPP2 from "/SMALL-APPS-UI/SMALL-APP-UI-2.jpeg";
 import SMALLAPP3 from "/SMALL-APPS-UI/SMALL-APP-UI-3.jpeg";
@@ -87,9 +91,9 @@ import WORD2 from "/WORDPROCESSOR-IMAGES/WordProcessor2.png";
 import WORD3 from "/WORDPROCESSOR-IMAGES/WordProcessor3.png";
 import WORD4 from "/WORDPROCESSOR-IMAGES/WordProcessor4.png";
 import WORD5 from "/WORDPROCESSOR-IMAGES/WordProcessor5.png";
-import { motion } from "framer-motion";
 
 
+import WHAT0 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-CLONE-FRONT.jpeg";
 import WHAT1 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-1.jpeg";
 import WHAT2 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-2.jpeg";
 import WHAT3 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-3.jpeg";
@@ -131,6 +135,39 @@ import WHAT38 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-38.jpeg";
 import WHAT39 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-39.jpeg";
 import WHAT40 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-40.jpeg";
 
+
+import AnalogClockImage from "/SMALL-PROJECTS-IMAGES/Analog-Clock-img.jpg"
+import BooksLibraryImage from "/SMALL-PROJECTS-IMAGES/Book-library.png";
+import BootStrapWebsiteImage from "/SMALL-PROJECTS-IMAGES/Boostrap-website.webp";
+import ClickNotesImage from "/SMALL-PROJECTS-IMAGES/Clicknotes.jpg";
+import CopyButtonImage from "/SMALL-PROJECTS-IMAGES/Copybutton.webp";
+import CounterImage from "/SMALL-PROJECTS-IMAGES/Counter.webp";
+import DragImage from "/SMALL-PROJECTS-IMAGES/dragimage.jpg";
+import DropImage from "/SMALL-PROJECTS-IMAGES/dropimage.webp";
+import FileMakerImage from "/SMALL-PROJECTS-IMAGES/file-maker.png";
+import GoggleNotesImage from "/SMALL-PROJECTS-IMAGES/gogglenotes.png";
+import GradientImage from "/SMALL-PROJECTS-IMAGES/gradient-generator.jpg";
+import CanvasImage from "/SMALL-PROJECTS-IMAGES/HTML-canvas.png";
+import JokesImage from "/SMALL-PROJECTS-IMAGES/jokes-generator.webp";
+import LoginFormImage from "/SMALL-PROJECTS-IMAGES/Login-form.webp";
+import MemeGeneratorImage from "/SMALL-PROJECTS-IMAGES/meme-generator.jpg";
+import NewsWebsiteImage from "/SMALL-PROJECTS-IMAGES/newsWebsite.webp";
+import NotesAppImage from "/SMALL-PROJECTS-IMAGES/notes-app.png";
+import PostmanCloneImage from "/SMALL-PROJECTS-IMAGES/postmanclone.jpg";
+import QRCodeImage from "/SMALL-PROJECTS-IMAGES/qrcodegenerator.webp";
+import StickyNotesImage from "/SMALL-PROJECTS-IMAGES/stickynotes.jpg";
+import StopWatchImage from "/SMALL-PROJECTS-IMAGES/stopwatch.png";
+import TempConverterImage from "/SMALL-PROJECTS-IMAGES/tempconverter.jpg";
+import ThumbnailImage from "/SMALL-PROJECTS-IMAGES/thumbnail-getter.webp";
+import TICTACTOEImage from "/SMALL-PROJECTS-IMAGES/tic-tac-toe.png";
+import TodoListImage from "/SMALL-PROJECTS-IMAGES/todolist.png";
+import TypingImage from "/SMALL-PROJECTS-IMAGES/typingmachine.png";
+import UnitsConverterImage from "/SMALL-PROJECTS-IMAGES/units-converter.png";
+
+
+
+
+
 export const ICONS_ARRAY = [
   {
     icon: <Instagram style={{ color: ACCENT_COLOR }} />,
@@ -156,88 +193,88 @@ export const ICONS_ARRAY = [
 
 export const SKILLS_FIRST_ROW = [
   {
-    image: "./HTML.png",
+    image: "/SKILLS-IMAGES/HTML.png",
     text: "HTML",
     key: 1,
   },
   {
-    image: "./CSS.png",
+    image: "/SKILLS-IMAGES/CSS.png",
     text: "CSS",
     key: 2,
   },
   {
-    image: "./JAVASCRIPT.png",
+    image: "/SKILLS-IMAGES/JAVASCRIPT.png",
     text: "JavaScript",
     key: 3,
   },
   {
-    image: "./BOOTSTRAP.png",
+    image: "/SKILLS-IMAGES/BOOTSTRAP.png",
     text: "Bootstrap",
     key: 4,
   },
 ];
 export const SKILLS_SECOND_ROW = [
   {
-    image: "./REACT.svg",
+    image: "/SKILLS-IMAGES/REACT.svg",
     text: "React js",
     key: 5,
   },
   {
-    image: "./MUI.png",
+    image: "/SKILLS-IMAGES/MUI.png",
     text: "Material UI",
     key: 6,
   },
   {
-    image: "./TAILWIND.svg",
+    image: "/SKILLS-IMAGES/TAILWIND.svg",
     text: "Tailwind CSS",
     key: 7,
   },
   {
-    image: "./REDUX.svg",
+    image: "/SKILLS-IMAGES/REDUX.svg",
     text: "Redux",
     key: 8,
   },
 ];
 export const SKILLS_THIRD_ROW = [
   {
-    image: "./TYPESCRIPT.svg",
+    image: "/SKILLS-IMAGES/TYPESCRIPT.svg",
     text: "TypeScript",
     key: 9,
   },
   {
-    image: "./EXPO.svg",
+    image: "/SKILLS-IMAGES/EXPO.svg",
     text: "Expo go",
     key: 10,
   },
   {
-    image: "./NETLIFY.png",
+    image: "/SKILLS-IMAGES/NETLIFY.png",
     text: "Netlify",
     key: 11,
   },
   {
-    image: "./REACT.svg",
+    image: "/SKILLS-IMAGES/REACT.svg",
     text: "React Native",
     key: 12,
   },
 ];
 export const SKILLS_FOURTH_ROW = [
   {
-    image: "./GIT.png",
+    image: "/SKILLS-IMAGES/GIT.png",
     text: "Git",
     key: 13,
   },
   {
-    image: "./GITHUB.png",
+    image: "/SKILLS-IMAGES/GITHUB.png",
     text: "Github",
     key: 14,
   },
   {
-    image: "./NPM.png",
+    image: "/SKILLS-IMAGES/NPM.png",
     text: "Netlify",
     key: 15,
   },
   {
-    image: "./REACT.svg",
+    image: "/SKILLS-IMAGES/REACT.svg",
     text: "JSX",
     key: 16,
   },
@@ -337,7 +374,7 @@ export const EXPERIENCE = [
     ),
     date: "2019 - 2024",
     title: "Self Experience",
-    subtitle: "Not Employed",
+    subtitle: "Seeking for oppurtunities",
     description: `Driven Frontend and Mobile Applications Developer with a proven track
           record of creating responsive, visually appealing web pages and mobile
           apps using HTML5, CSS, and JavaScript, and react native Expertized in
@@ -356,7 +393,7 @@ export const EDUCATION = [
     icon: (
       <img
         className="skulImage"
-        src="dareArqam.png"
+        src="/EDUCATION-IMAGES/dareArqam.png"
         loading="lazy"
         alt="Loading..."
       />
@@ -371,7 +408,7 @@ export const EDUCATION = [
     icon: (
       <img
         className="skulImage"
-        src="college1.png"
+        src="/EDUCATION-IMAGES/college1.png"
         loading="lazy"
         alt="Loading..."
       />
@@ -417,8 +454,8 @@ export const SMALL_TABS = [
 export const MOBILE_PROJECTS = [
   {
     key: 1,
-    image: "WhatsappCloneTitleImage.png",
-    viewImages: [WHAT1,WHAT2,WHAT3,WHAT4,WHAT5,WHAT6,WHAT7,WHAT8,WHAT9,WHAT10,WHAT11,WHAT12,WHAT13,WHAT14,WHAT15,WHAT16,WHAT17,WHAT18,WHAT19,WHAT20,WHAT21,WHAT22,WHAT23,WHAT24,WHAT25,WHAT26,WHAT27,WHAT28,WHAT29,WHAT30,WHAT31,WHAT32,WHAT33,WHAT34,WHAT35,WHAT36,WHAT37,WHAT38,WHAT39,WHAT40],
+    image: WHAT0,
+    viewImages: [WHAT0,WHAT1,WHAT2,WHAT3,WHAT4,WHAT5,WHAT6,WHAT7,WHAT8,WHAT9,WHAT10,WHAT11,WHAT12,WHAT13,WHAT14,WHAT15,WHAT16,WHAT17,WHAT18,WHAT19,WHAT20,WHAT21,WHAT22,WHAT23,WHAT24,WHAT25,WHAT26,WHAT27,WHAT28,WHAT29,WHAT30,WHAT31,WHAT32,WHAT33,WHAT34,WHAT35,WHAT36,WHAT37,WHAT38,WHAT39,WHAT40],
     title: "Whatsapp Clone",
     description:
       "Developed a comprehensive WhatsApp clone in frontend using React Native, replicating key functionalities to enhance user experience. The app includes robust chat management features, allowing users to add, delete, search, pin,filter and archive chats with ease. The messaging UI closely mirrors that of WhatsApp, providing a familiar and intuitive interface for users. Additionally, I implemented message reactions, enabling users to react to messages with emojis, and included features to star and pin important messages for quick access The app also features a call UI, designed to resemble the WhatsApp calling experience and much more This project demonstrates my proficiency in mobile app development using React Native",
@@ -430,8 +467,8 @@ export const MOBILE_PROJECTS = [
   },
   {
     key: 2,
-    image: CALC1,
-    viewImages: [CALC1, CALC2, CALC3, CALC4, CALC5, CALC6],
+    image: CALC0,
+    viewImages: [CALC0,CALC1, CALC2, CALC3, CALC4, CALC5, CALC6],
     title: "Mobile Calculator",
     platform:"mobile",
     description:
@@ -443,8 +480,8 @@ export const MOBILE_PROJECTS = [
   },
   {
     key: 3,
-    image: STUD1,
-    viewImages: [STUD1, STUD2, STUD3, STUD4, STUD5, STUD6, STUD7, STUD8],
+    image: STUD0,
+    viewImages: [STUD0,STUD1, STUD2, STUD3, STUD4, STUD5, STUD6, STUD7, STUD8],
     title: "Students App",
     platform:"mobile",
     description:
@@ -456,8 +493,9 @@ export const MOBILE_PROJECTS = [
   },
   {
     key: 4,
-    image: SMALLAPP1,
+    image: SMALLAPP0,
     viewImages: [
+      SMALLAPP0,
       SMALLAPP1,
       SMALLAPP2,
       SMALLAPP3,
@@ -602,3 +640,169 @@ export const WEB_PROJECTS = [
     skills: ["React js", "CSS", "JavaScript","Material UI","NPM","JSX"],
   },
 ];
+
+
+export const SMALL_WEB_PROJECTS = [
+  {
+    key:1,
+    title:"Analog Clock",
+    image:AnalogClockImage,
+    downloadFile:"/SMALL-JS-PROJECTS/AnalogClock.zip"
+  },
+  {
+    key:2,
+    title:"Books Library",
+    image:BooksLibraryImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Book-Library.zip"
+  },
+  {
+    key:3,
+    title:"BootStrap Website",
+    image:BootStrapWebsiteImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Bootstrap-Website.zip"
+  },
+  {
+    key:4,
+    title:"Click Notes",
+    image:ClickNotesImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Click-notes.zip"
+  },
+  {
+    key:5,
+    title:"Copy Button",
+    image:CopyButtonImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Copy-Button.zip"
+  },
+  {
+    key:6,
+    title:"Counter",
+    image:CounterImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Counter.zip"
+  },
+  {
+    key:7,
+    title:"Drag functionallity",
+    image:DragImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Drag-functionallity.zip"
+  },
+  {
+    key:8,
+    title:"Drop functionallity",
+    image:DropImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Drop-functionallity.zip"
+  },
+  {
+    key:9,
+    title:"File Maker",
+    image:FileMakerImage,
+    downloadFile:"/SMALL-JS-PROJECTS/File-Maker.zip"
+  },
+  {
+    key:10,
+    title:"Goggle Notes",
+    image:GoggleNotesImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Goggle-Notes.zip"
+  },
+  {
+    key:11,
+    title:"Gradient Generator",
+    image:GradientImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Gradient-Generator.zip"
+  },
+  {
+    key:12,
+    title:"HTML Canvas Projects",
+    image:CanvasImage,
+    downloadFile:"/SMALL-JS-PROJECTS/HTML-Canvas-Projects.zip"
+  },
+  {
+    key:13,
+    title:"Jokes Generator",
+    image:JokesImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Jokes-generator.zip"
+  },
+  {
+    key:14,
+    title:"Login Form",
+    image:LoginFormImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Login-Form.zip"
+  },
+  {
+    key:15,
+    title:"Meme generator",
+    image:MemeGeneratorImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Meme-generator.zip"
+  },
+  {
+    key:16,
+    title:"News Website",
+    image:NewsWebsiteImage,
+    downloadFile:"/SMALL-JS-PROJECTS/News-Website.zip"
+  },
+  {
+    key:17,
+    title:"Notes app",
+    image:NotesAppImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Notes-app.zip"
+  },
+  {
+    key:18,
+    title:"Postman Clone",
+    image:PostmanCloneImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Postman-Clone.zip"
+  },
+  {
+    key:19,
+    title:"QR Code generator",
+    image:QRCodeImage,
+    downloadFile:"/SMALL-JS-PROJECTS/QR-Code-generator.zip"
+  },
+  {
+    key:20,
+    title:"Sticky notes",
+    image:StickyNotesImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Sticky-notes.zip"
+  },
+  {
+    key:21,
+    title:"StopWatch",
+    image:StopWatchImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Stopwatch.zip"
+  },
+  {
+    key:22,
+    title:"Temprature Converter",
+    image:TempConverterImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Temprature-Converter.zip"
+  },
+  {
+    key:23,
+    title:"Thumbnail Getter",
+    image:ThumbnailImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Thumbnail-Getter.zip"
+  },
+  {
+    key:24,
+    title:"React TIC-TAC-TOE",
+    image:TICTACTOEImage,
+    downloadFile:"/SMALL-JS-PROJECTS/TIC-TAC-TOE-GAME.zip"
+  },
+  {
+    key:25,
+    title:"Todo List",
+    image:TodoListImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Todo-List.zip"
+  },
+  {
+    key:26,
+    title:"Typing Machine",
+    image:TypingImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Typing-machine.zip"
+  },
+  {
+    key:27,
+    title:"Units Converter",
+    image:UnitsConverterImage,
+    downloadFile:"/SMALL-JS-PROJECTS/Units-Converter.zip"
+  },
+]
