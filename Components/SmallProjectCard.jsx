@@ -8,7 +8,6 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import image from "/WhatsappCloneTitleImage.png";
 import { ACCENT_COLOR, BOXES_COLOR, DOWNLOAD_BUTTON_COLOR } from "../Constants";
 import "../src/index.css";
 import { motion } from "framer-motion";
