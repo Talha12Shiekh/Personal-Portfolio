@@ -15,6 +15,7 @@ import { ACCENT_COLOR, BACKGROUND_COLOR } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CustomBubblyLink from "./CustomBubblyLink";
+import "../src/index.css"
 
 export const NAVBAR_HEIGHT = "15vh";
 
@@ -109,12 +110,12 @@ const Navbar = () => {
             </svg>
           </Typography>
         </IconButton>
-        <Box padding={5} mt={10} height="100%">
+        <Box padding={5} mt={5} height="100%">
           {NAVBAR_LINKS.map(({ text, key,path }) => {
             return (
-              <List key={key}>
+              <List className="drawer_text" key={key} sx={{mt:3}}>
                 <ListItem
-                  sx={(theme) => ({
+                  sx={() => ({
                     "& .MuiTouchRipple-child": {
                       backgroundColor: `white !important`,
                     },
@@ -122,20 +123,20 @@ const Navbar = () => {
                   key={text}
                   disablePadding
                 >
-                  <ListItemButton onClick={() => setopenDrawer(false)}>
-                  <CustomBubblyLink to={path}>
+                  <CustomBubblyLink  to={path}>
+                    <div onClick={() => setopenDrawer(false)}>
                     <ListItemText>
                       <Typography color={"white"} variant="h4">
                         {text}
                       </Typography>
                     </ListItemText>
+                    </div>
                   </CustomBubblyLink>
-                  </ListItemButton>
                 </ListItem>
               </List>
             );
           })}
-          <List>
+          <List sx={{mt:3}}>
             <GithubButton />
           </List>
         </Box>
@@ -167,22 +168,20 @@ const Navbar = () => {
             </Box>
             {matches ? (
               <>
-                <Box display="flex" gap={2} component={"div"}>
+                <Box className="navbar_links" display="flex" gap={4} component={"div"}>
                   {NAVBAR_LINKS.map(({ text, key, path }) => {
                     return (
-                      <Button variant="text" key={key}>
-                        <CustomBubblyLink to={path}>
+                        <CustomBubblyLink key={key} to={path}
+                        >
                           <Typography
                             color={"white"}
                             fontWeight={500}
-                            // fontSize={18}
                             variant="subtitle1"
                             textTransform={"capitalize"}
                           >
                             {text}
                           </Typography>
                         </CustomBubblyLink>
-                      </Button>
                     );
                   })}
                 </Box>

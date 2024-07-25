@@ -16,7 +16,7 @@ export default function SmallProjectCard({title,downloadFile,projectImage}) {
   return (
     <motion.div layout>
       <Card className="sm_project_card" sx={{ maxWidth: 345, p: 2, bgcolor: BOXES_COLOR }}>
-        <Box height={200} width={300} overflow="hidden" >
+        <Box height={200} width={300} bgcolor={"white"} overflow="hidden" >
           <CardMedia
             component="img"
             alt="green iguana"

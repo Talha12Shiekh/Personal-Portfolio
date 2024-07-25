@@ -105,7 +105,7 @@ const ProjectsModal = ({
             >
               {viewImages.map((img) => {
                 return (
-                  <Box component="div">
+                  <Box key={img} component="div">
                     <img
                       alt="Loading..."
                       src={img}

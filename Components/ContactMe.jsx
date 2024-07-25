@@ -1,15 +1,21 @@
-import { Box, Button, Typography,useTheme,useMediaQuery } from "@mui/material";
-import React,{lazy,Suspense} from "react";
+import {
+  Box,
+  Button,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import React, { lazy, Suspense } from "react";
 import { BOXES_COLOR } from "../Constants";
 import { center } from "../Helpers";
 const CustomButton = lazy(() => import("./CustomButton"));
-const CustomBubblyLink = lazy(() => import("./CustomBubblyLink"));
 import Loading from "../Screens/Loading";
-
+import { useNavigate } from "react-router-dom";
 
 const ContactMe = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
+  const navigate = useNavigate();
   return (
     <Box
       bgcolor={BOXES_COLOR}
@@ -19,7 +25,6 @@ const ContactMe = () => {
       flexDirection={matches ? "column" : "row"}
       p={10}
       gap={matches ? 5 : 0}
-
     >
       <Box>
         <Typography
@@ -32,25 +37,23 @@ const ContactMe = () => {
           Have a project on your mind
         </Typography>
       </Box>
-      <Suspense fallback={<Loading/>}>
-      <Box>
-        <CustomButton
-          href=""
-          onClick={() => {}}
-          children={
-            <CustomBubblyLink to="/">
-              <Typography
-                textTransform="capitalize"
-                fontSize={23}
-                fontWeight="bold"
-                color="white"
-              >
-                Contact me
-              </Typography>
-            </CustomBubblyLink>
-          }
-        />
-      </Box>
+      <Suspense fallback={<Loading />}>
+        <Box>
+          <CustomButton
+            href=""
+            onClick={() => navigate("/")}
+            children={
+                  <Typography
+                    textTransform="capitalize"
+                    fontSize={23}
+                    fontWeight="bold"
+                    color="white"
+                  >
+                    Contact me
+                  </Typography>
+            }
+          />
+        </Box>
       </Suspense>
     </Box>
   );

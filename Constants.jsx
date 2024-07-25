@@ -165,6 +165,21 @@ import TypingImage from "/SMALL-PROJECTS-IMAGES/typingmachine.png";
 import UnitsConverterImage from "/SMALL-PROJECTS-IMAGES/units-converter.png";
 
 
+import ImageSliderImage from "/SMALL-PROJECTS-IMAGES/imageslider.png";
+import ClickEffectButtonImage from "/SMALL-PROJECTS-IMAGES/clicksoundeffect.jpg";
+import CountDownImage from "/SMALL-PROJECTS-IMAGES/smallcountdown.jpg";
+import EvolvingButtonImage from "/SMALL-PROJECTS-IMAGES/evlovingbutton.gif";
+import FloatingButtonImage from "/SMALL-PROJECTS-IMAGES/FloatingButton.png";
+import HeartButtonImage from "/SMALL-PROJECTS-IMAGES/heartButton.gif";
+import ImageManipulatorImage from "/SMALL-PROJECTS-IMAGES/ImageManipulator.webp";
+import ParallaxSliderImage from "/SMALL-PROJECTS-IMAGES/parralaxslider.png";
+import QuestionarrieImage from "/SMALL-PROJECTS-IMAGES/Questionarrie.jpg";
+import TextEditorImage from "/SMALL-PROJECTS-IMAGES/texteditor.png";
+import TextToSpeechImage from "/SMALL-PROJECTS-IMAGES/textToSpeech.png";
+import TinderCardsImage from "/SMALL-PROJECTS-IMAGES/tindercards.png";
+import FloatingHeartsImage from "/SMALL-PROJECTS-IMAGES/floatingHearts.png";
+
+
 
 
 
@@ -401,7 +416,7 @@ export const EDUCATION = [
     date: "2011 - 2022",
     title: "Dar e Arqam School, Lahore, Pakistan",
     subtitle: "Matriculation (X), Computer Science",
-    description: `I studied at Dar-e-Arqam School in Lahore for 10 years, excelling in both Computer Science and various science subjects. I achieved top grades (1036/1100 (81%)  in Matric and 484/495 (95%) in 9th Grade) and frequently held the top position in my class. As a member of the school cricket team, I won several awards. This period marked the beginning of my journey as a web developer.`,
+    description: `I studied at Dar-e-Arqam School in Lahore for 10 years, excelling in both Computer Science and various science subjects. I achieved top grades (81%)  in Matric and  (95%) in 9th Grade and frequently held the top position in my class. As a member of the school cricket team, I won several awards. This period marked the beginning of my journey as a web developer.`,
   },
   {
     key: 2,
@@ -416,7 +431,7 @@ export const EDUCATION = [
     date: "2022 - 2024",
     title: "Punjab Group of Colleges, Lahore",
     subtitle: "Fsc (XII), ICS with Computer, Physics, and Mathematics",
-    description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved 458/560 (82%) marks in the first year and often held the top position in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
+    description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved (82%) marks in the first year and often held the top position in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
   },
 ];
 
@@ -805,4 +820,97 @@ export const SMALL_WEB_PROJECTS = [
     image:UnitsConverterImage,
     downloadFile:"/SMALL-JS-PROJECTS/Units-Converter.zip"
   },
+]
+
+export const SMALL_MOBILE_PROJECTS = [
+  {
+    key:1,
+    title:"Animated Slider",
+    image:ImageSliderImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/Animated-Slider.zip"
+  },
+  {
+    key:2,
+    title:"QR Code Scanner",
+    image:QRCodeImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/QRCodeScanner.zip"
+  },
+  {
+    key:3,
+    title:"Click Effect Button",
+    image:ClickEffectButtonImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/ClickEffectButton.zip"
+  },
+  {
+    key:4,
+    title:"Copy To Clipboard",
+    image:CopyButtonImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/CopyToClipBoard.zip"
+  },
+  {
+    key:5,
+    title:"CountDown Animation",
+    image:CountDownImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/CountDownAnimation.zip"
+  },
+  {
+    key:6,
+    title:"Evolving Button",
+    image:EvolvingButtonImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/EvolvingButton.zip"
+  },
+  {
+    key:7,
+    title:"Floating Button",
+    image:FloatingButtonImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/FloatingButton.zip"
+  },
+  {
+    key:8,
+    title:"Floating Hearts",
+    image:FloatingHeartsImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/FloatingHearts.zip"
+  },
+  {
+    key:9,
+    title:"Heart Button",
+    image:HeartButtonImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/HeartButton.zip"
+  },
+  {
+    key:10,
+    title:"Image Manipulator",
+    image:ImageManipulatorImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/ImageManipulator.zip"
+  },
+  {
+    key:11,
+    title:"Parallax Image Slider",
+    image:ParallaxSliderImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/ParallaxImageSlider.zip"
+  },
+  {
+    key:12,
+    title:"Questionarrie",
+    image:QuestionarrieImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/Questionarre.zip"
+  },
+  {
+    key:13,
+    title:"Text Editor Animation",
+    image:TextEditorImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/TextEditorAnimation.zip"
+  },
+  {
+    key:14,
+    title:"Text To Speech",
+    image:TextToSpeechImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/TextToSpeech.zip"
+  },
+  {
+    key:15,
+    title:"Tinder Cards",
+    image:TinderCardsImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/TinderCards.zip"
+  }
 ]

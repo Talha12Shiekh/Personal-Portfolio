@@ -149,3 +149,40 @@ html {
 .sm_project_image:hover{
   transform: scale(1.2);
 }
+
+body .navbar_links .react-bubbly-transitions__bubbly-link{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+
+
+body .navbar_links .react-bubbly-transitions__bubbly-link::after {
+  --delay:0s;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  bottom: -3px;
+  background-color: var(--ACCENT-COLOR);
+  box-shadow: 10px 10px 50px var(--ACCENT-COLOR);
+  transition: all 0.5s linear;
+  transition-delay: var(--delay);
+}
+
+body .navbar_links .react-bubbly-transitions__bubbly-link.active::after{
+  width: 100%;
+  --delay:1s
+}
+
+body .navbar_links .react-bubbly-transitions__bubbly-link:hover::after{
+  width: 100% !important;
+}
+
+
+.drawer_text:active{
+  background-color: rgba(255,255,255,0.1) !important;
+}

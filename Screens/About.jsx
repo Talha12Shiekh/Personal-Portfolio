@@ -98,6 +98,7 @@ const About = () => {
                   href=""
                   onClick={() => {}}
                   children={
+                    <>
                     <CustomBubblyLink to="/">
                       <Typography
                         textTransform="capitalize"
@@ -108,6 +109,7 @@ const About = () => {
                         Contact me
                       </Typography>
                     </CustomBubblyLink>
+                    </>
                   }
                 />
               </Box>

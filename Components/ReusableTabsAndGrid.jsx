@@ -17,7 +17,7 @@ export const ReusableTabs = ({ value, handleChange, TABS_CONTENT }) => {
         value={value}
         onChange={handleChange}
         sx={{ color: ACCENT_COLOR, marginBlock: 5 }}
-        textColor="white"
+        textColor="inherit"
         indicatorColor="primary"
         aria-label="My Projects"
         orientation={checkTabs ? "vertical" : "horizontal"}

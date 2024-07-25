@@ -51,7 +51,6 @@ const Home = () => {
           <Grid
             container
             p={5}
-            direction={matches ? "column-reverse" : ""}
             justifyContent="space-between"
             spacing={2}
           >
@@ -79,19 +78,11 @@ const Home = () => {
                 color="white"
                 display="flex"
                 gap={1}
+                gutterBottom
                 fontWeight="bold"
-                variant={matches ? "h5" : "h4"}
+                variant={matches ? "h5" : "h4"}                
               >
-                I'm a
-                <Typography
-                  className="typingText"
-                  color={ACCENT_COLOR}
-                  gutterBottom
-                  fontWeight="bold"
-                  variant={matches ? "h5" : "h4"}
-                >
-                  <WritingText />
-                </Typography>
+                I'm a <span style={{color:ACCENT_COLOR}}><WritingText /></span>
               </Typography>
               <Box component="div" width="100%">
                 <Typography

@@ -7,7 +7,7 @@ import {
   Tab,
 } from "@mui/material";
 import React, { lazy, Suspense, useState } from "react";
-import { SMALL_TABS, SMALL_WEB_PROJECTS } from "../Constants";
+import { SMALL_TABS, SMALL_WEB_PROJECTS,SMALL_MOBILE_PROJECTS } from "../Constants";
 import Loading from "../Screens/Loading";
 const SmallProjectCard = lazy(() => import("./SmallProjectCard"));
 const HeadingAndDescription = lazy(() =>
@@ -18,15 +18,14 @@ import { ReusableTabs, AnimatedGrid } from "./ReusableTabsAndGrid";
 const SmallProjects = () => {
   const [value, setValue] = useState("Web");
 
-  const ALLPROJECTS = [...SMALL_WEB_PROJECTS];
-  const [PROJECTS, SETPROJECTS] = useState(ALLPROJECTS);
+  const [PROJECTS, SETPROJECTS] = useState(SMALL_WEB_PROJECTS);
 
   const handleChange = (_, newValue) => {
     setValue(newValue);
     if (newValue === "Web") {
       SETPROJECTS(SMALL_WEB_PROJECTS);
     } else if (newValue === "Mobile") {
-      SETPROJECTS([]);
+      SETPROJECTS(SMALL_MOBILE_PROJECTS);
     }
   };
   return (
