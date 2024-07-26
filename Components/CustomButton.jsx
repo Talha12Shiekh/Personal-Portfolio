@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { ACCENT_COLOR } from "../Constants";
 import "../src/index.css";
 
-const CustomButton = ({ href, onClick, children }) => {
+const CustomButton = ({ href, onClick, children,...rest }) => {
   return (
     <Button
       target="_blank"
@@ -13,6 +13,7 @@ const CustomButton = ({ href, onClick, children }) => {
         backgroundColor: ACCENT_COLOR,
       }}
       variant="contained"
+      {...rest}
     >
       {children}
     </Button>

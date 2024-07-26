@@ -79,6 +79,7 @@ html {
   cursor: pointer;
 }
 
+
 .projectsCard:hover,.sm_project_card:hover{
   box-shadow: 5px 5px 20px var(--ACCENT-COLOR) !important;
 }
@@ -185,4 +186,10 @@ body .navbar_links .react-bubbly-transitions__bubbly-link:hover::after{
 
 .drawer_text:active{
   background-color: rgba(255,255,255,0.1) !important;
+}
+
+
+.input{
+  color:white !important;
+  border-color: white !important;
 }

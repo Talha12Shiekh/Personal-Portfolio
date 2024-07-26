@@ -12,7 +12,7 @@ import { Box } from "@mui/material";
 import { center } from "./Helpers";
 import "./src/index.css";
 import { Instagram, LinkedIn, GitHub, YouTube } from "@mui/icons-material";
-
+import {HomeOutlined as Home ,CallRounded as CallIcon,LocalPostOfficeOutlined as MessageIcon} from '@mui/icons-material';
 
 import CALC0 from "/CALCULATOR-IMAGES/MOBILE-CALCULATOR-FRONT.jpeg";
 import CALC1 from "/CALCULATOR-IMAGES/CALC-1-IMG.jpeg";
@@ -913,4 +913,22 @@ export const SMALL_MOBILE_PROJECTS = [
     image:TinderCardsImage,
     downloadFile:"/SMALL-MOBILE-PROJECTS/TinderCards.zip"
   }
+]
+
+export const CONTACTS_INFORMATION = [
+  {
+    key:1,
+    icon:<Home style={{ fontSize: "3rem", color: ACCENT_COLOR }} />,
+    text:"Johar Town , Lahore"
+  },
+  {
+    key:2,
+    icon:<CallIcon style={{ fontSize: "3rem", color: ACCENT_COLOR }} />,
+    text:"+92 321-4946471"
+  },
+  {
+    key:3,
+    icon:<MessageIcon style={{ fontSize: "3rem", color: ACCENT_COLOR }} />,
+    text:"tk.shiekh4567@gmail.com"
+  },
 ]

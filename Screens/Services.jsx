@@ -1,4 +1,4 @@
-import { useState,lazy,Suspense } from "react";
+import { lazy,Suspense } from "react";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
@@ -32,9 +32,9 @@ const Services = () => {
       />
       </Suspense>
       <Grid container {...center} columnSpacing={5}>
-        {SKILLS.map(({ icon, heading, description, key },index) => {
+        {SKILLS.map(({ icon, heading, description, key }) => {
           return (
-            <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} xs={10}>
+            <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} xs={7}>
               <Box
                 p={3}
                 {...center}

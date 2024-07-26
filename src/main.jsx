@@ -15,6 +15,7 @@ const Services = lazy(() => import("../Screens/Services"));
 const Experience = lazy(() => import("../Screens/Experience"));
 const Education = lazy(() => import("../Screens/Education"));
 const Projects = lazy(() => import("../Screens/Projects"));
+const Contacts = lazy(() => import("../Screens/Contacts"));
 const BannerAndContact = lazy(() =>
   import("../Components/BannerAndContact.jsx")
 );
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading/>}>
             <BannerAndContact>
-              <h1>Contacts</h1>
+              <Contacts/>
             </BannerAndContact>
           </Suspense>
         ),
