@@ -13,6 +13,7 @@ import { center } from "./Helpers";
 import "./src/index.css";
 import { Instagram, LinkedIn, GitHub, YouTube } from "@mui/icons-material";
 import {HomeOutlined as Home ,CallRounded as CallIcon,LocalPostOfficeOutlined as MessageIcon} from '@mui/icons-material';
+import { LocationOn as LocationIcon,Call,Email } from "@mui/icons-material";
 
 import CALC0 from "/CALCULATOR-IMAGES/MOBILE-CALCULATOR-FRONT.jpeg";
 import CALC1 from "/CALCULATOR-IMAGES/CALC-1-IMG.jpeg";
@@ -65,6 +66,7 @@ import CLOTHWEBSITE6 from "/CLOTHING-WEBSITE-IMAGES/Clothing6.png";
 import CLOTHWEBSITE7 from "/CLOTHING-WEBSITE-IMAGES/Clothing7.png";
 import CLOTHWEBSITE8 from "/CLOTHING-WEBSITE-IMAGES/Clothing8.png";
 
+import NOTESAPP0 from "/NOTES-APP-IMAGES/NOTES-APP-0.jpeg";
 import NOTESAPP1 from "/NOTES-APP-IMAGES/NOTES-APP-1.png";
 import NOTESAPP2 from "/NOTES-APP-IMAGES/NOTES-APP-2.png";
 import NOTESAPP3 from "/NOTES-APP-IMAGES/NOTES-APP-3.png";
@@ -76,6 +78,7 @@ import NOTESAPP8 from "/NOTES-APP-IMAGES/NOTES-APP-8.png";
 import NOTESAPP9 from "/NOTES-APP-IMAGES/NOTES-APP-9.png";
 
 import QUIZZAPP1 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-1.png";
+import QUIZZAPP0 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-0.jpg";
 import QUIZZAPP2 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-2.png";
 import QUIZZAPP3 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-3.png";
 import QUIZZAPP4 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-4.png";
@@ -86,6 +89,7 @@ import MPORTFOLIO1 from "/TYPING-IMAGES/material-ui-portfolio-1.png";
 import MPORTFOLIO2 from "/TYPING-IMAGES/material-ui-portfolio-2.png";
 import MPORTFOLIO3 from "/TYPING-IMAGES/material-ui-portfolio-3.png";
 
+import WORD0 from "/WORDPROCESSOR-IMAGES/WordProcessor0.jpeg";
 import WORD1 from "/WORDPROCESSOR-IMAGES/WordProcessor1.png";
 import WORD2 from "/WORDPROCESSOR-IMAGES/WordProcessor2.png";
 import WORD3 from "/WORDPROCESSOR-IMAGES/WordProcessor3.png";
@@ -316,6 +320,7 @@ export const SKILLS = [
     description:
       "I provide web development services using HTML, CSS, JavaScript, and React.js. I create responsive, user-friendly websites, from simple landing pages to complex platforms",
     key: 1,
+    path: "/services",
   },
   {
     icon: (
@@ -339,6 +344,7 @@ export const SKILLS = [
     description:
       "I design visually appealing interfaces to enhance user satisfaction. By focusing on user behavior and the latest design trends, I ensure your website or app is both functional and enjoyable to use.",
     key: 2,
+    path: "/services",
   },
   {
     icon: (
@@ -358,6 +364,7 @@ export const SKILLS = [
     description:
       "Specializing in React Native, I develop engaging mobile apps for Android. I deliver high-quality, functional apps that offer a seamless user experience, turning your ideas into reality.",
     key: 3,
+    path: "/services",
   },
 ];
 
@@ -584,8 +591,9 @@ export const WEB_PROJECTS = [
   },
   {
     key: 7,
-    image: NOTESAPP7,
+    image: NOTESAPP0,
     viewImages: [
+      NOTESAPP0,
       NOTESAPP1,
       NOTESAPP2,
       NOTESAPP3,
@@ -607,8 +615,8 @@ export const WEB_PROJECTS = [
   },
   {
     key: 8,
-    image: WORD2,
-    viewImages: [WORD1, WORD2, WORD3, WORD4, WORD5],
+    image: WORD0,
+    viewImages: [WORD0,WORD1, WORD2, WORD3, WORD4, WORD5],
     title: "Text Processor",
     platform:"web",
     description:
@@ -621,8 +629,9 @@ export const WEB_PROJECTS = [
   },
   {
     key: 9,
-    image: QUIZZAPP2,
+    image: QUIZZAPP0,
     viewImages: [
+      QUIZZAPP0,
       QUIZZAPP1,
       QUIZZAPP2,
       QUIZZAPP3,
@@ -931,4 +940,25 @@ export const CONTACTS_INFORMATION = [
     icon:<MessageIcon style={{ fontSize: "3rem", color: ACCENT_COLOR }} />,
     text:"tk.shiekh4567@gmail.com"
   },
+]
+
+export const CONTACTS_QUESTIONS = [
+{
+  key:1,
+  icon:<LocationIcon sx={{ color: ACCENT_COLOR, fontSize: 25 }}/>,
+  text:"222 G3 Johar Town Lahore, Pakistan",
+  alignItems:"flex-start"
+},
+{
+  key:2,
+  icon:<Call sx={{ color: ACCENT_COLOR, fontSize: 25 }}/>,
+  text:"+92 321-4946471",
+  alignItems:"center"
+},
+{
+  key:3,
+  icon:<Email sx={{ color: ACCENT_COLOR, fontSize: 25 }}/>,
+  text:"tk.shiekh4567@gmail.com",
+  alignItems:"center"
+},
 ]

@@ -7,16 +7,21 @@ import {
   FormControl,
   useMediaQuery,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { lazy, Suspense, useRef, useState } from "react";
 import { CONTACTS_INFORMATION } from "../Constants";
-import ContactsInformationComponent from "../Components/ContactsInformationComponent";
+const ContactsInformationComponent = lazy(() =>
+  import("../Components/ContactsInformationComponent")
+);
 import "../src/index.css";
 import { CustomTextInput } from "../Components/CustomTextInput";
 import CustomButton from "../Components/CustomButton";
 import { useTheme } from "@mui/material/styles";
 import { useForm, ValidationError } from "@formspree/react";
-import HeadingAndDescription from "../Components/HeadingAndDescription";
-import { center } from "../Helpers";
+const HeadingAndDescription = lazy(() =>
+  import("../Components/HeadingAndDescription")
+);
+import "../src/index.css";
+import Loading from "./Loading";
 
 const Contacts = () => {
   const [inputValues, setInputValues] = useState({
@@ -42,32 +47,61 @@ const Contacts = () => {
     });
   }
 
+  const formSubmitButtonRef = useRef(null);
+
   return (
     <>
+      <form
+        className="hidden_form"
+        method="POST"
+        action="https://formspree.io/f/movajgev"
+        onSubmit={() => {
+          handleSubmit();
+        }}
+      >
+        <input name="name" readOnly value={inputValues.name} type="text" />
+        <input name="email" readOnly value={inputValues.email} type="text" />
+        <input name="subject" readOnly value={inputValues.subject} type="text" />
+        <input name="message" readOnly value={inputValues.message} type="text" />
+        <button ref={formSubmitButtonRef} type="submit" />
+      </form>
       <Container
         maxWidth={"xl"}
         sx={{ padding: "0 !important" }}
         component={"section"}
       >
-        <HeadingAndDescription
-          heading={"Contact"}
-          description={
-            "Feel free to contact to me for any questions or opportunities!"
-          }
-        />
-        <Box {...center}>
+        <Suspense fallback={<Loading />}>
+          <HeadingAndDescription
+            heading={"Contact"}
+            description={
+              "Feel free to contact to me for any questions or opportunities!"
+            }
+          />
+        </Suspense>
+
+        <Box>
+          <Suspense fallback={<Loading/>}>
+
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27225.328237875936!2d74.25636258697475!3d31.46461865700412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919015f82b0b86f%3A0x2fcaf9fdeb3d02e6!2sJohar%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1722003047185!5m2!1sen!2s"
-            width="95%"
-            height="500"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.874840291217!2d74.27188582469432!3d31.4726289495008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903d0ef51e8e9%3A0xfe7725b94cf22d2a!2sBlock%20G3%20Block%20G%203%20Phase%202%20Johar%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1722081869408!5m2!1sen!2s"
+            width="100%"
+            height="450"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+          </Suspense>
+
         </Box>
         <Box width={"100%"}>
-          <Grid container p={5} justifyContent="space-between" spacing={2}>
+          <Grid
+            container
+            p={matches ? 0 : 5}
+            my={5}
+            justifyContent={matches ? "center" : "space-between"}
+            spacing={2}
+          >
             <Grid
               item
               display={"flex"}
@@ -79,20 +113,17 @@ const Contacts = () => {
             >
               {CONTACTS_INFORMATION.map(({ icon, text, key }) => {
                 return (
-                  <ContactsInformationComponent
-                    key={key}
-                    icon={icon}
-                    text={text}
-                  />
+                  <Suspense key={key} fallback={<Loading />}>
+                    <ContactsInformationComponent
+                      icon={icon}
+                      text={text}
+                    />
+                  </Suspense>
                 );
               })}
             </Grid>
             <Grid item xs={10} md={10} lg={4}>
-              <form
-                method="POST"
-                action="https://formspree.io/f/movajgev"
-                onSubmit={handleSubmit}
-              >
+              <form>
                 <CustomTextInput
                   label="Your Name"
                   value={inputValues.name}
@@ -129,39 +160,23 @@ const Contacts = () => {
               </form>
             </Grid>
             <Grid item xs={10} md={10} lg={4}>
-              <form
-                method="POST"
-                action="https://formspree.io/f/movajgev"
-                onSubmit={handleSubmit}
-              >
-                <CustomTextInput
-                  label="Message"
-                  type="message"
-                  multiline
-                  rows={8}
-                  defaultValue="Enter Message"
-                  value={inputValues.message}
-                  onChange={handleChange}
-                />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
-              </form>
-            </Grid>
-            <Box
-              width="100%"
-              mt={3}
-              display="flex"
-              justifyContent={matches ? "flex-start" : "flex-end"}
-            >
-              <form
-                method="POST"
-                action="https://formspree.io/f/movajgev"
-                onSubmit={handleSubmit}
-              >
-                <CustomButton type="submit">
+              <CustomTextInput
+                label="Message"
+                type="message"
+                multiline
+                rows={8}
+                value={inputValues.message}
+                onChange={handleChange}
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <Box mt={2} textAlign={"right"}>
+                <CustomButton
+                  onClick={() => formSubmitButtonRef.current.click()}
+                >
                   <Typography
                     textTransform="capitalize"
                     fontSize={23}
@@ -171,8 +186,8 @@ const Contacts = () => {
                     Send Message
                   </Typography>
                 </CustomButton>
-              </form>
-            </Box>
+              </Box>
+            </Grid>
           </Grid>
         </Box>
       </Container>

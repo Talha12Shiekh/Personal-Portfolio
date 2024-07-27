@@ -19,7 +19,7 @@ import "../src/index.css"
 
 export const NAVBAR_HEIGHT = "15vh";
 
-const NAVBAR_LINKS = [
+export const NAVBAR_LINKS = [
   {
     text: "Skills",
     key: 2,

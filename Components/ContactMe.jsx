@@ -19,7 +19,7 @@ const ContactMe = () => {
   return (
     <Box
       bgcolor={BOXES_COLOR}
-      my={10}
+      mt={10}
       {...center}
       justifyContent={matches ? "center" : "space-between"}
       flexDirection={matches ? "column" : "row"}
@@ -41,16 +41,16 @@ const ContactMe = () => {
         <Box>
           <CustomButton
             href=""
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/contacts")}
             children={
-                  <Typography
-                    textTransform="capitalize"
-                    fontSize={23}
-                    fontWeight="bold"
-                    color="white"
-                  >
-                    Contact me
-                  </Typography>
+              <Typography
+                textTransform="capitalize"
+                fontSize={23}
+                fontWeight="bold"
+                color="white"
+              >
+                Contact me
+              </Typography>
             }
           />
         </Box>

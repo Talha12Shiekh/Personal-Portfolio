@@ -193,3 +193,7 @@ body .navbar_links .react-bubbly-transitions__bubbly-link:hover::after{
   color:white !important;
   border-color: white !important;
 }
+
+.hidden_form{
+  display: none;
+}

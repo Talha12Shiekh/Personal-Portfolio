@@ -34,7 +34,7 @@ const Services = () => {
       <Grid container {...center} columnSpacing={5}>
         {SKILLS.map(({ icon, heading, description, key }) => {
           return (
-            <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} xs={7}>
+            <Grid key={key} mb={matches ? 4 : 0} item lg={3.5} md={7} xs={10}>
               <Box
                 p={3}
                 {...center}
