@@ -68,7 +68,6 @@ const Projects = () => {
               live,
               liveDisabled,
               viewImages,
-              viewImages,
               skills,
               platform,
             };
