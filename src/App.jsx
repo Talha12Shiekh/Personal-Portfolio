@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy } from "react";
 import { Box, CssBaseline } from "@mui/material";
 import { BACKGROUND_COLOR } from "../Constants";
 import { Outlet } from "react-router-dom";

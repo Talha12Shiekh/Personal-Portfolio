@@ -1,5 +1,5 @@
-import { Box, Button, Container, Grid, Typography, Stack,useTheme,useMediaQuery } from "@mui/material";
-import { BOXES_COLOR, ICON_BACKGROUND_COLOR, ACCENT_COLOR } from "../Constants";
+import { Box, Typography,useTheme,useMediaQuery } from "@mui/material";
+import { BOXES_COLOR, ACCENT_COLOR } from "../Constants";
 import { useEffect, useRef } from "react";
 
 const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {

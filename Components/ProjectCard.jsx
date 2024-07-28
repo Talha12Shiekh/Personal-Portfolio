@@ -1,5 +1,5 @@
 import Atropos from "atropos/react";
-import React, { useState } from "react";
+import React, { useState,lazy,Suspense } from "react";
 import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
 import { VisibilityOutlined, Computer } from "@mui/icons-material";
 import {
@@ -10,14 +10,13 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 import "../src/index.css";
-import ProjectsModal from "./ProjectsModal";
+const ProjectsModal = lazy(() => import("./ProjectsModal"))
 import {motion} from "framer-motion"
 const CARD_DESCRIPTION_LIMIT = `Developed a feature-rich calculator app using React Native, designed to perform complex arithmetic calculations with ease. The app o . The app o The app oThe app oThe app o`;
 import { GitHub } from "@mui/icons-material";
+import Loading from "../Screens/Loading"
 
 const ProjectCard = ({
   image,
@@ -38,6 +37,8 @@ const ProjectCard = ({
   
   return (
     <>
+    <Suspense fallback={<Loading/>}>
+
       <ProjectsModal
         title={title}
         viewImages={viewImages}
@@ -50,6 +51,8 @@ const ProjectCard = ({
         open={open}
         platform={platform}
       />
+    </Suspense>
+
       <Atropos
         shadow={false}
         shadowScale={0}

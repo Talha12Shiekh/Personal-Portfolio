@@ -11,12 +11,13 @@ const BannerAndContact = ({children}) => {
     const [currentScreen,setcurrentScreen] = useState("")
   
     useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" })
       let currentPath = pathname.slice(1);
 
       import("../Helpers").then(({capitalizeFirstLetter}) => {
         setcurrentScreen(capitalizeFirstLetter(currentPath))
       })
-    },[pathname])
+    },[pathname]);
     
   return (
     <Suspense fallback={<Loading/>}>

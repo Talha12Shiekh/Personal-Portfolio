@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Typography,
   useTheme,
   useMediaQuery,
@@ -41,7 +40,10 @@ const ContactMe = () => {
         <Box>
           <CustomButton
             href=""
-            onClick={() => navigate("/contacts")}
+            onClick={() => {
+              navigate("/contacts");
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }}
             children={
               <Typography
                 textTransform="capitalize"

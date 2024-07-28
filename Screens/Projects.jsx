@@ -1,31 +1,12 @@
 import React from "react";
 import {
-  Box,
-  Button,
   Container,
-  Grid,
-  Typography,
-  Stack,
-  useTheme,
-  useMediaQuery,
-  Tabs,
-  Tab,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
 } from "@mui/material";
 import { useState, lazy, Suspense } from "react";
-import { motion } from "framer-motion";
 import Loading from "./Loading";
 import "../src/index.css";
 import {
-  ACCENT_COLOR,
-  BOXES_COLOR,
-  ICON_BACKGROUND_COLOR,
   TABS,
-  PROJECTS_ICONS_SIZE,
-  BACKGROUND_COLOR,
   MOBILE_PROJECTS,
   WEB_PROJECTS,
 } from "../Constants";
@@ -33,7 +14,7 @@ import {ReusableTabs,AnimatedGrid} from "../Components/ReusableTabsAndGrid";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
 );
-const ProjectCard = lazy(() => import("../Components/ProjectCard"));
+import ProjectCard from  "../Components/ProjectCard"
 const SmallProjects = lazy(() => import("../Components/SmallProjects"));
 const Projects = () => {
   

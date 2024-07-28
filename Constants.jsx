@@ -11,7 +11,7 @@ export const DOWNLOAD_BUTTON_COLOR = "#363e55";
 import { Box } from "@mui/material";
 import { center } from "./Helpers";
 import "./src/index.css";
-import { Instagram, LinkedIn, GitHub, YouTube } from "@mui/icons-material";
+import { Instagram, LinkedIn, GitHub, YouTube,Code } from "@mui/icons-material";
 import {HomeOutlined as Home ,CallRounded as CallIcon,LocalPostOfficeOutlined as MessageIcon} from '@mui/icons-material';
 import { LocationOn as LocationIcon,Call,Email } from "@mui/icons-material";
 
@@ -177,7 +177,6 @@ import FloatingButtonImage from "/SMALL-PROJECTS-IMAGES/FloatingButton.png";
 import HeartButtonImage from "/SMALL-PROJECTS-IMAGES/heartButton.gif";
 import ImageManipulatorImage from "/SMALL-PROJECTS-IMAGES/ImageManipulator.webp";
 import ParallaxSliderImage from "/SMALL-PROJECTS-IMAGES/parralaxslider.png";
-import QuestionarrieImage from "/SMALL-PROJECTS-IMAGES/Questionarrie.jpg";
 import TextEditorImage from "/SMALL-PROJECTS-IMAGES/texteditor.png";
 import TextToSpeechImage from "/SMALL-PROJECTS-IMAGES/textToSpeech.png";
 import TinderCardsImage from "/SMALL-PROJECTS-IMAGES/tindercards.png";
@@ -899,12 +898,6 @@ export const SMALL_MOBILE_PROJECTS = [
     downloadFile:"/SMALL-MOBILE-PROJECTS/ParallaxImageSlider.zip"
   },
   {
-    key:12,
-    title:"Questionarrie",
-    image:QuestionarrieImage,
-    downloadFile:"/SMALL-MOBILE-PROJECTS/Questionarre.zip"
-  },
-  {
     key:13,
     title:"Text Editor Animation",
     image:TextEditorImage,
@@ -947,18 +940,21 @@ export const CONTACTS_QUESTIONS = [
   key:1,
   icon:<LocationIcon sx={{ color: ACCENT_COLOR, fontSize: 25 }}/>,
   text:"222 G3 Johar Town Lahore, Pakistan",
-  alignItems:"flex-start"
+  alignItems:"flex-start",
+  path:"/contacts"
 },
 {
   key:2,
   icon:<Call sx={{ color: ACCENT_COLOR, fontSize: 25 }}/>,
   text:"+92 321-4946471",
-  alignItems:"center"
+  alignItems:"center",
+  path:"/contacts"
 },
 {
   key:3,
   icon:<Email sx={{ color: ACCENT_COLOR, fontSize: 25 }}/>,
   text:"tk.shiekh4567@gmail.com",
-  alignItems:"center"
+  alignItems:"center",
+  path:"/contacts"
 },
 ]

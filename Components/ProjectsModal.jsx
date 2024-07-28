@@ -70,6 +70,7 @@ const ProjectsModal = ({
     <Modal
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
+      aria-modal="true"
       open={open}
       className="projects_modal"
       disableAutoFocus

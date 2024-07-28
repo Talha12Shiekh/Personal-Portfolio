@@ -7,14 +7,13 @@ import {
   ICONS_ARRAY,
   SKILLS,
 } from "../Constants";
-import { ArrowRightAlt, LocationOn, Call, Email } from "@mui/icons-material";
+import { ArrowRightAlt } from "@mui/icons-material";
 import { NAVBAR_LINKS } from "./Navbar";
-import { BubblyLink } from "react-bubbly-transitions";
 import CustomBubblyLink from "./CustomBubblyLink";
 
 const FooterHeading = ({ text }) => {
   return (
-    <Typography variant="h5" fontWeight="bold" color="white" mb={6}>
+    <Typography variant="h5"  fontWeight="bold" color="white" my={6}>
       {text}
     </Typography>
   );
@@ -46,9 +45,9 @@ const ContactsLink = ({
 
 const Footer = () => {
   return (
-    <Box p={5}>
-      <Grid container p={5} justifyContent="space-between" spacing={3}>
-        <Grid item lg={3}>
+    <Box p={5} component="footer">
+      <Grid container>
+        <Grid item xs={12} sm={6} md={6} lg={3}>
           <FooterHeading text="About" />
           <Typography variant="h6" color={BOXES_COLOR}>
             A passionate frontend developer with 2 years of experience,
@@ -72,7 +71,7 @@ const Footer = () => {
             })}
           </Box>
         </Grid>
-        <Grid item lg={3}>
+        <Grid item xs={12} sm={6} md={6} lg={3}>
           <FooterHeading text="Links" />
           {[{ text: "Home", key: 7, path: "/" }, ...NAVBAR_LINKS].map(
             ({ text, key, path }) => (
@@ -80,22 +79,23 @@ const Footer = () => {
             )
           )}
         </Grid>
-        <Grid item lg={3}>
+        <Grid item  xs={12} sm={6}  md={6} lg={3}>
           <FooterHeading text="Services" />
           {SKILLS.map(({ key, heading, path }) => (
             <ContactsLink key={key} path={path} text={heading} />
           ))}
         </Grid>
-        <Grid item lg={3}>
+        <Grid item  xs={12} sm={6}  md={6} lg={3}>
           <FooterHeading text="Have a Question ?" />
-          {CONTACTS_QUESTIONS.map(({ icon, key, text, alignItems }) => (
+          {CONTACTS_QUESTIONS.map(({ icon, key, text, alignItems,path }) => (
             <ContactsLink
               icon={icon}
               alignItems={alignItems}
               key={key}
-              mt={4}
+              mt={1}
               text={text}
               gap={3}
+              path={path}
             />
           ))}
         </Grid>

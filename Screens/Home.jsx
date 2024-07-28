@@ -1,17 +1,15 @@
 import {
   Box,
-  Button,
   Container,
   Grid,
   Typography,
   IconButton,
 } from "@mui/material";
 import React, { lazy, Suspense } from "react";
-import { ACCENT_COLOR, ICONS_SIZE, ICONS_ARRAY } from "../Constants";
+import { ACCENT_COLOR, ICONS_ARRAY } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Loading from "../Screens/Loading";
-import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 const CustomButton = lazy(() => import("../Components/CustomButton"));
 import "../src/index.css";
@@ -39,6 +37,8 @@ const WritingText = () => {
 const Home = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesUP = useMediaQuery(theme.breakpoints.up("md"));
+
 
   return (
     <>
@@ -49,10 +49,12 @@ const Home = () => {
       >
         <Box width={"100%"}>
           <Grid
+            p={matchesUP ? 5 : 0}
             container
-            p={5}
             justifyContent="space-between"
+            alignItems={matches ? "center" : ""}
             spacing={2}
+            flexDirection={matches ? "column-reverse" : ""}
           >
             <Grid item xs={10} sm={10} md={7} lg={6}>
               <Typography
@@ -60,7 +62,9 @@ const Home = () => {
                 color="white"
                 gutterBottom
                 fontWeight="bold"
+                mb={2}
                 variant="h6"
+                textAlign={matches ? "center" : ""}
               >
                 Hello it's me
               </Typography>
@@ -69,27 +73,33 @@ const Home = () => {
                 color="white"
                 gutterBottom
                 fontWeight="bold"
-                variant={matches ? "h3" : "h2"}
+                variant={"h2"}
+                textAlign={matches ? "center" : ""}
+                mb={2}
               >
                 Talha Khurram
               </Typography>
               <Typography
+               
                 className="animate__animated animate__fadeInDown"
                 color="white"
                 display="flex"
+                justifyContent={matches ? "center" : ""}
                 gap={1}
                 gutterBottom
                 fontWeight="bold"
-                variant={matches ? "h5" : "h4"}                
+                mb={2}
+                variant={"h4"}
               >
                 I'm a <span style={{color:ACCENT_COLOR}}><WritingText /></span>
               </Typography>
-              <Box component="div" width="100%">
+              <Box component="div" textAlign={matches ? "center" : ""} width="100%">
                 <Typography
                   color="white"
                   gutterBottom
                   fontWeight="bold"
                   variant="body"
+                
                 >
                   I am an enthusiastic and adaptable frontend developer, always
                   ready to embrace new challenges. Driven by a love for
@@ -101,12 +111,12 @@ const Home = () => {
               </Box>
               <Box
                 display="flex"
-                justifyContent="space-between"
+                justifyContent={matches ? "center" : ""}
                 alignItems="center"
                 mt={2}
-                width={200}
-                height={50}
+                width={"100%"}
                 gap={3}
+                height={50}
               >
                 {ICONS_ARRAY.map(({ href, key, icon }) => {
                   return (
@@ -123,7 +133,8 @@ const Home = () => {
                 })}
               </Box>
               <Suspense fallback={<Loading />}>
-                <Box mt={3}>
+                
+                <Box mt={3} textAlign={matches ? "center" : ""} >
                   <CustomButton
                     href="./TalhaShiekhResume2.pdf"
                     onClick={() => {}}

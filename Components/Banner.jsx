@@ -1,10 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React, { lazy, Suspense } from "react";
-import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
+import { BOXES_COLOR } from "../Constants";
 const CustomBubblyLink = lazy(() => import("./CustomBubblyLink"));
 import { center } from "../Helpers";
 import Loading from "../Screens/Loading";
-
 
 const Banner = ({ heading, description }) => {
   return (
@@ -17,7 +16,7 @@ const Banner = ({ heading, description }) => {
       mb={10}
     >
       <Typography
-      className="animate__animated animate__bounceIn"
+        className="animate__animated animate__bounceIn"
         variant="h2"
         fontWeight="bold"
         color={"white"}

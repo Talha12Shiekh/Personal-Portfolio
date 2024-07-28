@@ -153,8 +153,9 @@ const Navbar = () => {
             alignItems={"center"}
             width={"100%"}
             height={NAVBAR_HEIGHT}
+            component="header"
           >
-            <Box component={"div"}>
+            <Box component={"nav"}>
               <CustomBubblyLink to={"/"}>
                 <Typography
                   style={{ cursor: "pointer" }}
@@ -168,7 +169,7 @@ const Navbar = () => {
             </Box>
             {matches ? (
               <>
-                <Box className="navbar_links" display="flex" gap={4} component={"div"}>
+                <Box className="navbar_links" display="flex" gap={4} component={"nav"}>
                   {NAVBAR_LINKS.map(({ text, key, path }) => {
                     return (
                         <CustomBubblyLink key={key} to={path}
@@ -195,6 +196,7 @@ const Navbar = () => {
                   onClick={() => setopenDrawer(true)}
                   color="info"
                   size="large"
+                  aria-hidden="false"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

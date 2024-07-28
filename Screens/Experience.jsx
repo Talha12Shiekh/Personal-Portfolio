@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography,useTheme,useMediaQuery } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import React, { lazy, Suspense } from "react";
 const HeadingAndDescription = lazy(() =>
   import("../Components/HeadingAndDescription")
