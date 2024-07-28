@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import 'animate.css';
