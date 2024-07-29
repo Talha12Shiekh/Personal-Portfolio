@@ -161,7 +161,7 @@ const Navbar = () => {
                   style={{ cursor: "pointer" }}
                   fontWeight={"bold"}
                   color={"white"}
-                  variant={checkMobile ? "h5" : "h4"}
+                  variant={"h5"}
                 >
                   {"<Talha Khurram />"}
                 </Typography>
