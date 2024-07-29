@@ -74,6 +74,7 @@ const Navbar = () => {
   const [openDrawer, setopenDrawer] = useState(false);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("lg"));
+  const checkMobile = useMediaQuery(theme.breakpoints.down("md"));
   const checkingWidthContainer = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
@@ -143,7 +144,7 @@ const Navbar = () => {
       <Box width="100%" bgcolor={BACKGROUND_COLOR}>
         <Container
           maxWidth={checkingWidthContainer ? "sm" : "lg"}
-          sx={{ height: "100%", padding: "0 !important" }}
+          sx={{ height: "100%", paddingInline:2 }}
           component={"section"}
         >
           <Box
@@ -160,7 +161,7 @@ const Navbar = () => {
                   style={{ cursor: "pointer" }}
                   fontWeight={"bold"}
                   color={"white"}
-                  variant="h4"
+                  variant={checkMobile ? "h5" : "h4"}
                 >
                   {"<Talha Khurram />"}
                 </Typography>
@@ -194,7 +195,7 @@ const Navbar = () => {
                 <IconButton
                   onClick={() => setopenDrawer(true)}
                   color="info"
-                  size="large"
+                  size={checkMobile ? "small" : "large"}
                   aria-hidden="false"
                 >
                   <svg
