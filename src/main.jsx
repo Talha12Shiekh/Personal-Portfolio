@@ -44,6 +44,8 @@ const router = createBrowserRouter([
             <Services />
             <Experience />
             <Education />
+            <Projects />
+            <Contacts/>
           </Suspense>
         ),
       },

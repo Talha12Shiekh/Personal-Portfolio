@@ -54,7 +54,6 @@ export const CustomTextInput = ({ label, value, onChange, type, ...rest }) => {
       value={value}
       onChange={onChange}
       autoComplete={type}
-      autoFocus
       {...rest}
     />
   );
