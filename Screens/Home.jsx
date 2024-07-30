@@ -63,7 +63,7 @@ const Home = () => {
                 gutterBottom
                 fontWeight="bold"
                 mb={2}
-                variant="h6"
+                variant="h4"
                 textAlign={matches ? "center" : ""}
               >
                 Hello it's me

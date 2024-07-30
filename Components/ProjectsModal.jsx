@@ -23,15 +23,20 @@ import { Carousel } from "react-responsive-carousel";
 import { CustomArrow } from "./CustomArrows";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const style = {
-  position: "absolute",
-  top: "50%",
+  maxWidth: '800px',
+width: '100%',
+borderRadius: '16px',
+height: 'min-content',
+margin:"50px 10px",
+backgroundColor: 'rgb(23, 23, 33)',
+color: 'rgb(242, 243, 244)',
+padding: '20px',
+display: 'flex',
+flexDirection: 'column',
+position: 'relative',
+ top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  bgcolor: BACKGROUND_COLOR,
-  boxShadow: 24,
-  p: 4,
-  borderWidth: 0,
-  borderRadius: 5,
 };
 
 const ProjectsModal = ({
@@ -58,12 +63,19 @@ const ProjectsModal = ({
   };
 
   const theme = useTheme();
-  const checkingImageforLargerScreens = useMediaQuery(
-    theme.breakpoints.down("xl")
-  );
   const checkingModalforSmallerScreens = useMediaQuery(
     theme.breakpoints.down("md")
   );
+
+  const ModalMarginObject = {
+    mobile : 30,
+    web: 20
+  };
+
+  if(checkingModalforSmallerScreens){
+    ModalMarginObject.mobile = 20;
+    ModalMarginObject.web = 0;
+  }
 
 
   return (
@@ -87,8 +99,7 @@ const ProjectsModal = ({
         <Box
           sx={{
             ...style,
-            width: checkingModalforSmallerScreens ? "90%" : "60%",
-            my: platform == "web" ? 15 : 25,
+            mt: platform == "web" ? ModalMarginObject.web : ModalMarginObject.mobile ,
           }}
         >
           <Box width="100%" mb={1} textAlign="right">
@@ -112,7 +123,7 @@ const ProjectsModal = ({
                       src={img}
                       loading="lazy"
                       style={{
-                        width: !checkingImageforLargerScreens ? "60%" : "100%",
+                        width:"100%",
                         height: "150%",
                       }}
                     />
