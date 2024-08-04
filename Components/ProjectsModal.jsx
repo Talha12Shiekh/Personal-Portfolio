@@ -121,7 +121,6 @@ const ProjectsModal = ({
                     <img
                       alt="Loading..."
                       src={img}
-                      loading="lazy"
                       style={{
                         width:"100%",
                         height: "150%",

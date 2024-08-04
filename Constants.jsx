@@ -415,7 +415,6 @@ export const EDUCATION = [
       <img
         className="skulImage"
         src="/EDUCATION-IMAGES/dareArqam.png"
-        loading="lazy"
         alt="Loading..."
       />
     ),
@@ -430,7 +429,6 @@ export const EDUCATION = [
       <img
         className="skulImage"
         src="/EDUCATION-IMAGES/college1.png"
-        loading="lazy"
         alt="Loading..."
       />
     ),

@@ -155,7 +155,6 @@ const Home = () => {
             <Grid item xs={10} sm={10} md={5} lg={4}>
               <img
                 className="animate__animated animate__bounceInRight talhaImage"
-                loading="lazy"
                 height={"420vh"}
                 width={"400vw"}
                 src="./Talha.png"
