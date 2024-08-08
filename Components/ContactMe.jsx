@@ -4,11 +4,10 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { BOXES_COLOR } from "../Constants";
 import { center } from "../Helpers";
-const CustomButton = lazy(() => import("./CustomButton"));
-import Loading from "../Screens/Loading";
+import CustomButton from "./CustomButton";
 import { useNavigate } from "react-router-dom";
 
 const ContactMe = () => {
@@ -36,7 +35,6 @@ const ContactMe = () => {
           Have a project on your mind
         </Typography>
       </Box>
-      <Suspense fallback={<Loading />}>
         <Box>
           <CustomButton
             href=""
@@ -56,7 +54,6 @@ const ContactMe = () => {
             }
           />
         </Box>
-      </Suspense>
     </Box>
   );
 };
