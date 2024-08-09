@@ -1,8 +1,8 @@
-import React, { useEffect, useState,lazy,Suspense } from 'react'
-const Banner = lazy(() => import("../Components/Banner"));
-const ContactMe = lazy(() => import("../Components/ContactMe"));
+import React, { useEffect, useState } from 'react'
+import Banner from '../Components/Banner';
+import ContactMe from '../Components/ContactMe';
 import { useLocation } from 'react-router-dom';
-import Loading from "../Screens/Loading";
+import { capitalizeFirstLetter } from '../Helpers';
 
 
 const BannerAndContact = ({children}) => {
@@ -13,17 +13,15 @@ const BannerAndContact = ({children}) => {
     useEffect(() => {
       window.scrollTo({ top: 0, behavior: "smooth" })
       let currentPath = pathname.slice(1);
-      import("../Helpers").then(({capitalizeFirstLetter}) => {
-        setcurrentScreen(capitalizeFirstLetter(currentPath))
-      })
+      setcurrentScreen(capitalizeFirstLetter(currentPath))
     },[pathname]);
     
   return (
-    <Suspense fallback={<Loading/>}>
+    <>
         <Banner heading={currentScreen} description={currentScreen} />
         {children}
         <ContactMe/>
-    </Suspense>
+    </>
   )
 }
 

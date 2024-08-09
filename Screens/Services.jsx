@@ -1,21 +1,14 @@
-import { lazy,Suspense } from "react";
-const HeadingAndDescription = lazy(() =>
-  import("../Components/HeadingAndDescription")
-);
-import Loading from "../Screens/Loading";
-
 import {
-  Container,
   Box,
   Grid,
   Typography,
-  Button,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { center } from "../Helpers";
 import { ICON_BACKGROUND_COLOR, SKILLS } from "../Constants";
 import "../src/index.css";
+import HeadingAndDescription from "../Components/HeadingAndDescription";
 
 
 const Services = () => {
@@ -25,12 +18,10 @@ const Services = () => {
   
   return (
     <Box>
-      <Suspense fallback={<Loading/>}>
       <HeadingAndDescription
         heading="Services"
         description="Here are the services that i provide to my clients"
       />
-      </Suspense>
       <Grid container {...center} columnSpacing={5}>
         {SKILLS.map(({ icon, heading, description, key }) => {
           return (

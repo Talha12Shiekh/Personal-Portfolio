@@ -53,7 +53,8 @@ const ExpAndEducationComp = ({icon,title,subtitle,description,date}) => {
           my={3}
           color={"white"}
           fontWeight="bold"
-          variant="h3"
+          // fontSize='2.4991rem'
+          variant="h4"
         >
           {title}
         </Typography>

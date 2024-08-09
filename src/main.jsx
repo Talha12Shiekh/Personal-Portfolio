@@ -16,11 +16,10 @@ const Experience = lazy(() => import("../Screens/Experience"));
 const Education = lazy(() => import("../Screens/Education"));
 const Projects = lazy(() => import("../Screens/Projects"));
 const Contacts = lazy(() => import("../Screens/Contacts"));
-const BannerAndContact = lazy(() =>
-  import("../Components/BannerAndContact.jsx")
-);
 import 'atropos/css'
 import Loading from "../Screens/Loading";
+import BannerAndContact from "../Components/BannerAndContact.jsx";
+const BigProjects = lazy(() => import("../Components/BigProjects.jsx"))
 
 let theme = createTheme({
   typography: {
@@ -44,7 +43,7 @@ const router = createBrowserRouter([
             <Services />
             <Experience />
             <Education />
-            <Projects />
+            <BigProjects />
             <Contacts/>
           </Suspense>
         ),
@@ -52,61 +51,49 @@ const router = createBrowserRouter([
       {
         path: "contacts",
         element: (
-          <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Contacts/>
             </BannerAndContact>
-          </Suspense>
         ),
       },
       {
         path: "skills",
         element: (
-          <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Skills />
             </BannerAndContact>
-          </Suspense>
         ),
       },
       {
         path: "experience",
         element: (
-          <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Experience />
             </BannerAndContact>
-          </Suspense>
         ),
       },
       {
         path: "services",
         element: (
-          <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Services />
             </BannerAndContact>
-          </Suspense>
         ),
       },
       {
         path: "education",
         element: (
-          <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Education />
             </BannerAndContact>
-          </Suspense>
         ),
       },
       {
         path: "projects",
         element: (
-          <Suspense fallback={<Loading/>}>
             <BannerAndContact>
               <Projects />
             </BannerAndContact>
-          </Suspense>
         ),
       },
     ],

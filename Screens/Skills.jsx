@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { lazy, Suspense, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   SKILLS_FIRST_ROW,
   SKILLS_SECOND_ROW,
@@ -14,11 +14,8 @@ import {
   SKILLS_FOURTH_ROW,
 } from "../Constants";
 import "../src/index.css";
-import Loading from "../Screens/Loading";
 import Atropos from "atropos/react";
-const HeadingAndDescription = lazy(() =>
-  import("../Components/HeadingAndDescription")
-);
+import HeadingAndDescription from "../Components/HeadingAndDescription";
 
 const BOXES_WIDTH = 200;
 const BOXES_HEIGHT = 180;
@@ -92,12 +89,10 @@ const Skills = () => {
       sx={{ padding: "0 !important" }}
       component={"section"}
     >
-      <Suspense fallback={<Loading />}>
         <HeadingAndDescription
           heading="Skills"
           description="Here are some of my skills on which I have been working on for the past 2 years."
         />
-      </Suspense>
       <Grid container px={matches ? 5 : 0}>
         <Grid
           my={5}

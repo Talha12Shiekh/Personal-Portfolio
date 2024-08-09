@@ -1,9 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { BOXES_COLOR } from "../Constants";
-const CustomBubblyLink = lazy(() => import("./CustomBubblyLink"));
+import CustomBubblyLink from "./CustomBubblyLink";
 import { center } from "../Helpers";
-import Loading from "../Screens/Loading";
 
 const Banner = ({ heading, description }) => {
   return (
@@ -24,9 +23,7 @@ const Banner = ({ heading, description }) => {
         {heading}
       </Typography>
       <Typography {...center} variant="h5" fontWeight="bold" color={"white"}>
-        <Suspense fallback={<Loading />}>
           <CustomBubblyLink to={"/"}>Home</CustomBubblyLink>{" "}
-        </Suspense>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"

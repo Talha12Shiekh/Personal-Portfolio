@@ -1,19 +1,9 @@
-import {
-  Box,
-  useMediaQuery,
-  useTheme,
-  Container,
-  Tabs,
-  Tab,
-} from "@mui/material";
-import React, { lazy, Suspense, useState } from "react";
+import React, { useState } from "react";
 import { SMALL_TABS, SMALL_WEB_PROJECTS,SMALL_MOBILE_PROJECTS } from "../Constants";
-import Loading from "../Screens/Loading";
-const SmallProjectCard = lazy(() => import("./SmallProjectCard"));
-const HeadingAndDescription = lazy(() =>
-  import("../Components/HeadingAndDescription")
-);
+import SmallProjectCard from "./SmallProjectCard"
+import HeadingAndDescription from "../Components/HeadingAndDescription";
 import { ReusableTabs, AnimatedGrid } from "./ReusableTabsAndGrid";
+import { Container } from "@mui/material";
 
 const SmallProjects = () => {
   const [value, setValue] = useState("Web");
@@ -29,7 +19,7 @@ const SmallProjects = () => {
     }
   };
   return (
-    <Suspense fallback={<Loading />}>
+    <Container maxWidth={"lg"} sx={{ padding: 5 }} component={"section"}>
       <HeadingAndDescription
         heading="Small Projects"
         description="I’ve completed several small projects, each demonstrating unique skills and innovative solutions"
@@ -47,7 +37,7 @@ const SmallProjects = () => {
           })
         }
       </AnimatedGrid>
-    </Suspense>
+    </Container>
   );
 };
 

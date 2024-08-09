@@ -1,14 +1,8 @@
 import { Box, Container } from "@mui/material";
-import React, { lazy, Suspense } from "react";
-const HeadingAndDescription = lazy(() =>
-  import("../Components/HeadingAndDescription")
-)
-const ExpAndEducationComp = lazy(() =>
-  import("../Components/ExpAndEducationComp")
-);
+import React from "react";
 import { EXPERIENCE } from "../Constants";
-
-import Loading from "../Screens/Loading";
+import HeadingAndDescription from "../Components/HeadingAndDescription";
+import ExpAndEducationComp from "../Components/ExpAndEducationComp";
 
 const Experience = () => {
     
@@ -18,12 +12,10 @@ const Experience = () => {
       sx={{ padding: "0 !important" }}
       component={"section"}
     >
-      <Suspense fallback={<Loading />}>
         <HeadingAndDescription
           heading="Experience"
           description="My working experience as a frontend developer"
         />
-      </Suspense>
       <Box overflow="hidden">
       {
         EXPERIENCE.map(({icon,title,subtitle,description,date,key}) => {

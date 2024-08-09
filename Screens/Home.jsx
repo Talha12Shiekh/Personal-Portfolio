@@ -5,13 +5,12 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { ACCENT_COLOR, ICONS_ARRAY } from "../Constants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Loading from "../Screens/Loading";
 import { TypeAnimation } from "react-type-animation";
-const CustomButton = lazy(() => import("../Components/CustomButton"));
+import CustomButton from "../Components/CustomButton";
 import "../src/index.css";
 
 const WritingText = () => {
@@ -132,7 +131,6 @@ const Home = () => {
                   );
                 })}
               </Box>
-              <Suspense fallback={<Loading />}>
                 
                 <Box mt={3} textAlign={matches ? "center" : ""} >
                   <CustomButton
@@ -150,7 +148,6 @@ const Home = () => {
                     }
                   />
                 </Box>
-              </Suspense>
             </Grid>
             <Grid item xs={10} sm={10} md={5} lg={4}>
               <img

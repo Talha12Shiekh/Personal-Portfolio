@@ -56,7 +56,7 @@ const HeadingAndDescription = ({ heading, description }) => {
         px={5}
         textAlign="center"
         mb={10}
-        variant={matches ? "h6" : "h5"}
+        variant={"h6"}
         color="white"
       >
         {description}
