@@ -3,7 +3,6 @@ const Banner = lazy(() => import("../Components/Banner"));
 const ContactMe = lazy(() => import("../Components/ContactMe"));
 import { useLocation } from 'react-router-dom';
 import Loading from "../Screens/Loading";
-import { capitalizeFirstLetter } from "../Helpers";
 
 
 const BannerAndContact = ({children}) => {
@@ -14,7 +13,9 @@ const BannerAndContact = ({children}) => {
     useEffect(() => {
       window.scrollTo({ top: 0, behavior: "smooth" })
       let currentPath = pathname.slice(1);
-      setcurrentScreen(capitalizeFirstLetter(currentPath))
+      import("../Helpers").then(({capitalizeFirstLetter}) => {
+        setcurrentScreen(capitalizeFirstLetter(currentPath))
+      })
     },[pathname]);
     
   return (
