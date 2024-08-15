@@ -10,7 +10,9 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import React from "react";
+import Loading from "../Screens/Loading";
+
+import React, { useState } from "react";
 import {
   BACKGROUND_COLOR,
   ACCENT_COLOR,
@@ -51,6 +53,9 @@ const ProjectsModal = ({
   viewImages,
   platform,
 }) => {
+
+  const [imgloaded,setimgloaded] = useState(false);
+
   const renderArrowNext = (clickHandler, hasNext) => {
     return (
       <CustomArrow direction="next" onClick={clickHandler} hasNext={hasNext} />
@@ -118,12 +123,15 @@ const ProjectsModal = ({
               {viewImages.map((img) => {
                 return (
                   <Box key={img} component="div">
+                    {!imgloaded && <Loading/>}
                     <img
                       alt="Loading..."
                       src={img}
+                      onLoad={() => setimgloaded(true)}
                       style={{
                         width:"100%",
                         height: "150%",
+                        display: imgloaded ? 'block' : 'none'
                       }}
                     />
                   </Box>
