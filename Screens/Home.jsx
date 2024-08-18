@@ -55,7 +55,7 @@ const Home = () => {
             spacing={2}
             flexDirection={matches ? "column-reverse" : ""}
           >
-            <Grid item xs={10} sm={10} md={7} lg={6}>
+            <Grid item xs={10} sm={10} md={7} lg={6} mt={matches ? 8 : 0}>
               <Typography
                 className="animate__animated animate__fadeInDown"
                 color="white"
