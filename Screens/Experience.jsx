@@ -18,8 +18,8 @@ const Experience = () => {
         />
       <Box overflow="hidden">
       {
-        EXPERIENCE.map(({icon,title,subtitle,description,date,key}) => {
-          const element = {icon,title,subtitle,description,date}
+        EXPERIENCE.map(({icon,title,subtitle,description,date,key,attachment}) => {
+          const element = {icon,title,subtitle,description,date,attachment}
           return <ExpAndEducationComp key={key} {...element}/>
         })
       }

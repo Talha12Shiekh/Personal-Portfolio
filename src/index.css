@@ -82,6 +82,7 @@ html {
 
 .projectsCard:hover,.sm_project_card:hover{
   box-shadow: 5px 5px 20px var(--ACCENT-COLOR) !important;
+  transform: scale(1.05);
 }
 
 

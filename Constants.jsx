@@ -66,29 +66,6 @@ import CLOTHWEBSITE6 from "/CLOTHING-WEBSITE-IMAGES/Clothing6.png";
 import CLOTHWEBSITE7 from "/CLOTHING-WEBSITE-IMAGES/Clothing7.png";
 import CLOTHWEBSITE8 from "/CLOTHING-WEBSITE-IMAGES/Clothing8.png";
 
-import NOTESAPP0 from "/NOTES-APP-IMAGES/NOTES-APP-0.jpeg";
-import NOTESAPP1 from "/NOTES-APP-IMAGES/NOTES-APP-1.png";
-import NOTESAPP2 from "/NOTES-APP-IMAGES/NOTES-APP-2.png";
-import NOTESAPP3 from "/NOTES-APP-IMAGES/NOTES-APP-3.png";
-import NOTESAPP4 from "/NOTES-APP-IMAGES/NOTES-APP-4.png";
-import NOTESAPP5 from "/NOTES-APP-IMAGES/NOTES-APP-5.png";
-import NOTESAPP6 from "/NOTES-APP-IMAGES/NOTES-APP-6.png";
-import NOTESAPP7 from "/NOTES-APP-IMAGES/NOTES-APP-7.png";
-import NOTESAPP8 from "/NOTES-APP-IMAGES/NOTES-APP-8.png";
-import NOTESAPP9 from "/NOTES-APP-IMAGES/NOTES-APP-9.png";
-
-import QUIZZAPP1 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-1.png";
-import QUIZZAPP0 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-0.jpg";
-import QUIZZAPP2 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-2.png";
-import QUIZZAPP3 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-3.png";
-import QUIZZAPP4 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-4.png";
-import QUIZZAPP5 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-5.png";
-import QUIZZAPP6 from "/QUIZZ-APP-IMAGES/QUIZZ-APP-6.png";
-
-import MPORTFOLIO1 from "/TYPING-IMAGES/material-ui-portfolio-1.png";
-import MPORTFOLIO2 from "/TYPING-IMAGES/material-ui-portfolio-2.png";
-import MPORTFOLIO3 from "/TYPING-IMAGES/material-ui-portfolio-3.png";
-
 import WORD0 from "/WORDPROCESSOR-IMAGES/WordProcessor0.jpeg";
 import WORD1 from "/WORDPROCESSOR-IMAGES/WordProcessor1.png";
 import WORD2 from "/WORDPROCESSOR-IMAGES/WordProcessor2.png";
@@ -197,9 +174,12 @@ import TextToSpeechImage from "/SMALL-PROJECTS-IMAGES/textToSpeech.png";
 import TinderCardsImage from "/SMALL-PROJECTS-IMAGES/tindercards.png";
 import FloatingHeartsImage from "/SMALL-PROJECTS-IMAGES/floatingHearts.png";
 
+import HiSkyOfferLetter from "/OFFER-LETTERS/HISkyTech_OfferLetter.png";
+import ZidioOfferLetter from "/OFFER-LETTERS/Zidio-Development-offer-letter.png";
 
-
-
+import MatricResult from "/EDUCATION-IMAGES/MATRIC-RESULT.png"
+import InterResult from "/EDUCATION-IMAGES/INTER-RESULT.png"
+import PUResult from "/EDUCATION-IMAGES/PU-RESULT.jpeg"
 
 export const ICONS_ARRAY = [
   {
@@ -387,39 +367,35 @@ export const EXPERIENCE = [
   {
     key: 1,
     icon: (
-      <Box
-        width={60}
-        height={60}
-        borderRadius={100}
-        bgcolor={BOXES_COLOR}
-        style={{ boxShadow: "3px 3px 20px rgb(5, 196, 188)" }}
-        {...center}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="2em"
-          height="2em"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="white"
-            d="M21 17v-6.9L12 15L1 9l11-6l11 6v8zm-9 4l-7-3.8v-5l7 3.8l7-3.8v5z"
-          ></path>
-        </svg>
-      </Box>
+      <img
+      className="skulImage"
+      src="/EXPERIENCE-IMAGES/HiSkyTech-logo.png"
+      alt="Loading..."
+      style={{backgroundColor:"white"}}
+    />
     ),
-    date: "2019 - 2024",
-    title: "Self Experience",
-    subtitle: "Seeking for oppurtunities",
-    description: `Driven Frontend and Mobile Applications Developer with a proven track
-          record of creating responsive, visually appealing web pages and mobile
-          apps using HTML5, CSS, and JavaScript, and react native Expertized in
-          React.js and Bootstrap framework, I excel in translating UX/UI designs
-          into functional applications.Over the past 2-3 years, I have
-          independently developed numerous projects, honing my skills and
-          gaining valuable self-experience. Although I haven't worked in a
-          company yet, I am eager to contribute, grow, and earn through
-          professional opportunities.`,
+    date: "Sep 2024 - Oct 2024",
+    attachment:HiSkyOfferLetter,
+    title: "Frontend Developer Internship",
+    subtitle: "HiSkyTech Company",
+    description: `Completed my first internship as a Frontend Web Developer at HiSkyTech (remote). During my time there, I developed an AI Tools showcasing website, which involved building a responsive interface and implementing interactive features to present various AI tools. It was a great learning experience that enhanced my skills in frontend development and working remotely in a professional environment`,
+    type:"experience"
+  },
+  {
+    key: 2,
+    icon: (
+      <img
+      className="skulImage"
+      src="/EXPERIENCE-IMAGES/zidio_development_logo.jpg"
+      alt="Loading..."
+    />
+    ),
+    date: "Sep 2024 - Nov 2024",
+    title: "Web Developer Internship",
+    attachment:ZidioOfferLetter,
+    subtitle: "Zidio Development",
+    description: `Completed a remote internship as a Frontend Developer at Zidio Development, where I worked on developing a job listing portal. The platform included features like adding and filtering jobs, applying for jobs, uploading resumes, and liking job posts, among many other functionalities. While the backend was handled by my group, I focused on creating a user-friendly interface that enhanced the overall user experience. This internship strengthened my frontend development skills and allowed me to contribute to a fully functional web platform.`,
+     type:"experience"
   },
 ];
 
@@ -434,9 +410,11 @@ export const EDUCATION = [
       />
     ),
     date: "2011 - 2022",
-    title: "Dar e Arqam School, Lahore, Pakistan",
-    subtitle: "Matriculation (X), Computer Science",
+    title: "Dar e Arqam School, Lahore",
+    subtitle: "Matriculation (X), in CS",
     description: `I studied at Dar-e-Arqam School in Lahore for 10 years, excelling in both Computer Science and various science subjects. I achieved top grades (81%)  in Matric and  (95%) in 9th Grade and frequently held the top position in my class. As a member of the school cricket team, I won several awards. This period marked the beginning of my journey as a web developer.`,
+    attachment:MatricResult,
+    type:"education"
   },
   {
     key: 2,
@@ -448,10 +426,14 @@ export const EDUCATION = [
       />
     ),
     date: "2022 - 2024",
-    title: "Punjab Group of Colleges, Lahore",
-    subtitle: "Fsc (XII), ICS with Computer, Physics, and Mathematics",
+    title: "Punjab College, Lahore",
+    subtitle: "Fsc (XII), ICS with CSP",
     description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved (83%) there and ranked 2nd in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
+    attachment:InterResult,
+    type:"education"
+
   },
+
   {
     key: 3,
     icon: (
@@ -463,8 +445,11 @@ export const EDUCATION = [
     ),
     date: "2024 - 2027",
     title: "University of Punjab, Lahore",
-    subtitle: "Bachelor Of Buisness and Information Technology (BBIT)",
-    description: `Currently pursuing a BBIT degree at Punjab University, Lahore. I worked hard to secure admission, giving the entrance test twice—first achieving an 82% aggregate and then improving to 83%. This determination highlights my commitment to reaching my academic and career goals. I am dedicated to my studies, continuing to work hard and striving for the best grades to achieve my academic and career goals.`,
+    subtitle: "BBIT",
+    description: `Currently pursuing a Bachelor of Buisness and Information Technology (BBIT) degree at Punjab University, Lahore. I worked hard to secure admission, giving the entrance test twice—first achieving an 82% aggregate and then improving to 83%. This determination highlights my commitment to reaching my academic and career goals. I am dedicated to my studies, continuing to work hard and striving for the best grades to achieve my academic and career goals.`,
+    attachment:PUResult,
+    type:"education"
+
   },
 ];
 
@@ -633,15 +618,15 @@ export const WEB_PROJECTS = [
     key: 15,
     image: AITOOLSWEB1,
     viewImages: [AITOOLSWEB1,AITOOLSWEB2, AITOOLSWEB3, AITOOLSWEB4, AITOOLSWEB5, AITOOLSWEB6,AITOOLSWEB7,AITOOLSWEB8,AITOOLSWEB9,AITOOLSWEB10,AITOOLSWEB11,AITOOLSWEB12,AITOOLSWEB13,AITOOLSWEB14],
-    title: "Text Processor",
+    title: "AI Tools Hub",
     platform:"web",
     description:
-      "My first React.js application, a word processor developed with Bootstrap, offers both light and dark modes for user preference. The home page features a textarea for text input, accompanied by buttons for various operations such as converting text to uppercase, lowercase, clearing text, copying text, and removing extra spaces. Below these buttons, the app displays real-time information about the text, including word and character counts. Additionally, it calculates the estimated reading time for the entered text, providing a comprehensive writing and editing experience.",
-    codeLink: "https://github.com/Talha12Shiekh/TextUtils-React-",
-    live: "",
-    liveDisabled: true,
+      "I developed an AI tools showcasing website features a smooth UI and seamless navigation without page loads. It includes various AI tools such as Text to Image, Text to Video, Text to Icons, Mockups Generation, PDF Conversion, Image Background Remover, and Background Generation. Additionally, users can easily download their processed content. This project was developed for HiSkyTech Company as my first internship project, and it was a rewarding experience to bring it to life!",
+    codeLink: "https://github.com/Talha12Shiekh/AI_Tools_Showcase_Website",
+    live: "https://tk-aitools.netlify.app/",
+    liveDisabled: false,
     status: "Completed",
-    skills: ["React Js", "JSX", "NPM", "JavaScript", "Bootstrap", "CSS"],
+    skills: ["React Js", "JSX", "NPM", "JavaScript", "Material UI", "CSS"],
   },
 ];
 

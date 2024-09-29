@@ -15,8 +15,8 @@ const Education = () => {
         heading="Education"
         description="My education has been a journey of self-discovery and growth. My educational details are as follows."
       />
-      {EDUCATION.map(({ icon, title, subtitle, description, date, key }) => {
-        const element = { icon, title, subtitle, description, date };
+      {EDUCATION.map(({ icon, title, subtitle, description, date, key,attachment,type }) => {
+        const element = { icon, title, subtitle, description, date,attachment,type };
         return <ExpAndEducationComp key={key} {...element} />;
       })}
     </Container>

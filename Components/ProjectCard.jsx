@@ -1,4 +1,3 @@
-import Atropos from "atropos/react";
 import React, { useState } from "react";
 import { ACCENT_COLOR, BOXES_COLOR } from "../Constants";
 import { VisibilityOutlined, Computer } from "@mui/icons-material";
@@ -48,12 +47,6 @@ const ProjectCard = ({
         platform={platform}
       />
 
-      <Atropos
-        shadow={false}
-        shadowScale={0}
-        highlight={false}
-        className="my-atropos"
-      >
         <motion.div layout>
           <Card
             onClick={handleOpen}
@@ -100,7 +93,7 @@ const ProjectCard = ({
               }}
             >
               <Button
-                data-atropos-offset="5"
+                data-atropos-offset="10"
                 startIcon={<GitHub className="projects_icon" />}
                 variant="text"
                 size="small"
@@ -145,7 +138,6 @@ const ProjectCard = ({
             </CardActions>
           </Card>
         </motion.div>
-      </Atropos>
     </>
   );
 };
