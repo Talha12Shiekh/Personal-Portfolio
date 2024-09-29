@@ -25,18 +25,18 @@ import { Carousel } from "react-responsive-carousel";
 import { CustomArrow } from "./CustomArrows";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const style = {
-  maxWidth: '800px',
-width: '100%',
-borderRadius: '16px',
-height: 'min-content',
-margin:"50px 10px",
-backgroundColor: 'rgb(23, 23, 33)',
-color: 'rgb(242, 243, 244)',
-padding: '20px',
-display: 'flex',
-flexDirection: 'column',
-position: 'relative',
- top: "50%",
+  maxWidth: "800px",
+  width: "100%",
+  borderRadius: "16px",
+  height: "min-content",
+  margin: "50px 10px",
+  backgroundColor: "rgb(23, 23, 33)",
+  color: "rgb(242, 243, 244)",
+  padding: "20px",
+  display: "flex",
+  flexDirection: "column",
+  position: "relative",
+  top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
 };
@@ -53,8 +53,7 @@ const ProjectsModal = ({
   viewImages,
   platform,
 }) => {
-
-  const [imgloaded,setimgloaded] = useState(false);
+  const [imgloaded, setimgloaded] = useState(false);
 
   const renderArrowNext = (clickHandler, hasNext) => {
     return (
@@ -73,15 +72,14 @@ const ProjectsModal = ({
   );
 
   const ModalMarginObject = {
-    mobile : 30,
-    web: 20
+    mobile: 30,
+    web: 20,
   };
 
-  if(checkingModalforSmallerScreens){
+  if (checkingModalforSmallerScreens) {
     ModalMarginObject.mobile = 20;
     ModalMarginObject.web = 0;
   }
-
 
   return (
     <Modal
@@ -104,7 +102,10 @@ const ProjectsModal = ({
         <Box
           sx={{
             ...style,
-            mt: platform == "web" ? ModalMarginObject.web : ModalMarginObject.mobile ,
+            mt:
+              platform == "web"
+                ? ModalMarginObject.web
+                : ModalMarginObject.mobile,
           }}
         >
           <Box width="100%" mb={1} textAlign="right">
@@ -123,15 +124,15 @@ const ProjectsModal = ({
               {viewImages.map((img) => {
                 return (
                   <Box key={img} component="div">
-                    {!imgloaded && <Loading/>}
+                    {!imgloaded && <Loading />}
                     <img
                       alt="Loading..."
                       src={img}
                       onLoad={() => setimgloaded(true)}
                       style={{
-                        width:"100%",
+                        width: "100%",
                         height: "150%",
-                        display: imgloaded ? 'block' : 'none'
+                        display: imgloaded ? "block" : "none",
                       }}
                     />
                   </Box>
@@ -171,29 +172,32 @@ const ProjectsModal = ({
             <Box my={3}>
               <Typography color="white">{description}</Typography>
             </Box>
-            <Box display="flex" justifyContent="space-between">
+            <Box display="flex" justifyContent={"space-between"} gap={2}>
               <Button
+                fullWidth
                 href={codeLink}
-                target="-blank"
+                target="_blank"
                 variant="contained"
-                sx={{ bgcolor: PROJECTS_SKILL_COLOR, width: "48%", p: 1 }}
+                sx={{ bgcolor: PROJECTS_SKILL_COLOR, p: 1 }}
               >
                 <Typography textTransform="capitalize" variant="h6">
                   View Code
                 </Typography>
               </Button>
-              <Button
-                href={live}
-                className="projects_modal_btn"
-                target="_blank"
-                disabled={liveDisabled}
-                variant="contained"
-                sx={{ bgcolor: ACCENT_COLOR, width: "48%", p: 1 }}
-              >
-                <Typography variant="h6" textTransform="capitalize">
-                  View Live
-                </Typography>
-              </Button>
+              {!liveDisabled && (
+                <Button
+                  fullWidth
+                  href={live}
+                  className="projects_modal_btn"
+                  target="_blank"
+                  variant="contained"
+                  sx={{ bgcolor: ACCENT_COLOR, p: 1 }}
+                >
+                  <Typography variant="h6" textTransform="capitalize">
+                    View Live
+                  </Typography>
+                </Button>
+              )}
             </Box>
           </Box>
         </Box>

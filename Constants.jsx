@@ -139,6 +139,21 @@ import WHAT38 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-38.jpeg";
 import WHAT39 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-39.jpeg";
 import WHAT40 from "/WHATSAPP_CLONE_IMAGES/WHATSAPP-40.jpeg";
 
+import AITOOLSWEB1 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-1.png";
+import AITOOLSWEB2 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-2.png";
+import AITOOLSWEB3 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-3.png";
+import AITOOLSWEB4 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-4.png";
+import AITOOLSWEB5 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-5.png";
+import AITOOLSWEB6 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-6.png";
+import AITOOLSWEB7 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-7.png";
+import AITOOLSWEB8 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-8.png";
+import AITOOLSWEB9 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOLS-WEB-9.png";
+import AITOOLSWEB10 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOL-WEB-10.png";
+import AITOOLSWEB11 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOL-WEB-11.png";
+import AITOOLSWEB12 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOL-WEB-12.png";
+import AITOOLSWEB13 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOL-WEB-13.png";
+import AITOOLSWEB14 from "/AI-TOOLS-WEBS-IMAGES/AI-TOOL-WEB-14.png";
+
 
 import AnalogClockImage from "/SMALL-PROJECTS-IMAGES/Analog-Clock-img.jpg"
 import BooksLibraryImage from "/SMALL-PROJECTS-IMAGES/Book-library.png";
@@ -435,7 +450,21 @@ export const EDUCATION = [
     date: "2022 - 2024",
     title: "Punjab Group of Colleges, Lahore",
     subtitle: "Fsc (XII), ICS with Computer, Physics, and Mathematics",
-    description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved (82%) marks in the first year and often held the top position in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
+    description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved (83%) there and ranked 2nd in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
+  },
+  {
+    key: 3,
+    icon: (
+      <img
+        className="skulImage"
+        src="/EDUCATION-IMAGES/PU-LOGO.png"
+        alt="Loading..."
+      />
+    ),
+    date: "2024 - 2027",
+    title: "University of Punjab, Lahore",
+    subtitle: "Bachelor Of Buisness and Information Technology (BBIT)",
+    description: `Currently pursuing a BBIT degree at Punjab University, Lahore. I worked hard to secure admission, giving the entrance test twice—first achieving an 82% aggregate and then improving to 83%. This determination highlights my commitment to reaching my academic and career goals. I am dedicated to my studies, continuing to work hard and striving for the best grades to achieve my academic and career goals.`,
   },
 ];
 
@@ -578,37 +607,13 @@ export const WEB_PROJECTS = [
       CLOTHWEBSITE8,
     ],
     platform:"web",
-    title: "Clothing Website",
+    title: "Ecommerce Website",
     description:
       "I developed a dynamic clothing website using React.js and Bootstrap. It features multiple pages: Home, Products, Trends, and Contact. The discount section includes a countdown timer, and the Products page allows easy filtering. The Trends page showcases trending designs in a grid layout with prices. The Contact section includes a login form, and the site supports seamless navigation without reloading.",
     codeLink: "https://github.com/Talha12Shiekh/ClothingWebsite",
     live: "https://khurramclothing.netlify.app/",
     liveDisabled: false,
     skills: ["React Js", "JSX", "NPM", "JavaScript", "Bootstrap", "Netlify"],
-  },
-  {
-    key: 7,
-    image: NOTESAPP0,
-    viewImages: [
-      NOTESAPP0,
-      NOTESAPP1,
-      NOTESAPP2,
-      NOTESAPP3,
-      NOTESAPP4,
-      NOTESAPP5,
-      NOTESAPP6,
-      NOTESAPP7,
-      NOTESAPP8,
-      NOTESAPP9,
-    ],
-    title: "Notes App",
-    platform:"web",
-    description:
-      "I created a feature-rich notes app using React and Redux, it consists of responsive design. Users can manage notes seamlessly with functions for adding, deleting, updating, and recovering notes. The app supports marking notes as important, pinning them for quick access, and includes a filtering feature for organization. Additionally, there's a convenient option to delete notes, enhancing user experience.",
-    codeLink: "https://github.com/Talha12Shiekh/REACT_NOTES_APP",
-    live: "https://tknotesapp.netlify.app/",
-    liveDisabled: false,
-    skills: ["React Js", "JSX", "NPM", "JavaScript", "Redux", "Netlify", "CSS"],
   },
   {
     key: 8,
@@ -625,40 +630,18 @@ export const WEB_PROJECTS = [
     skills: ["React Js", "JSX", "NPM", "JavaScript", "Bootstrap", "CSS"],
   },
   {
-    key: 9,
-    image: QUIZZAPP0,
-    viewImages: [
-      QUIZZAPP0,
-      QUIZZAPP1,
-      QUIZZAPP2,
-      QUIZZAPP3,
-      QUIZZAPP4,
-      QUIZZAPP5,
-      QUIZZAPP6,
-    ],
-    title: "Quizz App",
+    key: 15,
+    image: AITOOLSWEB1,
+    viewImages: [AITOOLSWEB1,AITOOLSWEB2, AITOOLSWEB3, AITOOLSWEB4, AITOOLSWEB5, AITOOLSWEB6,AITOOLSWEB7,AITOOLSWEB8,AITOOLSWEB9,AITOOLSWEB10,AITOOLSWEB11,AITOOLSWEB12,AITOOLSWEB13,AITOOLSWEB14],
+    title: "Text Processor",
     platform:"web",
     description:
-      "I created a quiz app using React.js with CSS styling. The app features a start button that initiates the quizzes, each comprising four options and a limited response time. If the user selects the wrong option or time expires, the correct answer is automatically highlighted. The app displays the current quiz number and the total number of quizzes. A settings page allows users to add, edit, delete quizzes, and customize the time for each quiz. Upon completion, the app shows the results, indicating how many answers were correct.",
-    codeLink: "https://github.com/Talha12Shiekh/REACT_QUIZZ_APP",
-    live: "https://tkquizzapp.netlify.app/",
-    liveDisabled: false,
-    status: "Completed",
-    skills: ["React Js", "JSX", "CSS", "NPM", "JavaScript", "Netlify"],
-  },
-  {
-    key: 10,
-    image: MPORTFOLIO2,
-    viewImages: [MPORTFOLIO1, MPORTFOLIO2,MPORTFOLIO3],
-    title: "Portfolio Website",
-    platform:"web",
-    description:
-      'I created a portfolio website using Material UI, which includes a landing page, portfolio page, about me section, and contacts section. This was my first project using Material UI, where I used complex grids for a neat layout. The website is fully responsive, so it looks good on all devices. This project helped me learn a lot about using Material UI for web development',
-    codeLink:
-      "https://github.com/Talha12Shiekh/Material-UI",
+      "My first React.js application, a word processor developed with Bootstrap, offers both light and dark modes for user preference. The home page features a textarea for text input, accompanied by buttons for various operations such as converting text to uppercase, lowercase, clearing text, copying text, and removing extra spaces. Below these buttons, the app displays real-time information about the text, including word and character counts. Additionally, it calculates the estimated reading time for the entered text, providing a comprehensive writing and editing experience.",
+    codeLink: "https://github.com/Talha12Shiekh/TextUtils-React-",
     live: "",
     liveDisabled: true,
-    skills: ["React js", "CSS", "JavaScript","Material UI","NPM","JSX"],
+    status: "Completed",
+    skills: ["React Js", "JSX", "NPM", "JavaScript", "Bootstrap", "CSS"],
   },
 ];
 

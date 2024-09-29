@@ -51,25 +51,6 @@ export const NAVBAR_LINKS = [
   },
 ];
 
-const GithubButton = () => {
-  return (
-    <Button
-      target="_blank"
-      href="https://github.com/Talha12Shiekh"
-      style={{
-        borderRadius: 50,
-        color: ACCENT_COLOR,
-        borderWidth: 2,
-      }}
-      variant="outlined"
-    >
-      <Typography variant="h6" textTransform={"capitalize"}>
-        Github Profile
-      </Typography>
-    </Button>
-  );
-};
-
 const Navbar = () => {
   const [openDrawer, setopenDrawer] = useState(false);
   const theme = useTheme();
@@ -136,9 +117,6 @@ const Navbar = () => {
               </List>
             );
           })}
-          <List sx={{mt:3}}>
-            <GithubButton />
-          </List>
         </Box>
       </SwipeableDrawer>
       <Box width="100%" bgcolor={BACKGROUND_COLOR}>
@@ -186,9 +164,6 @@ const Navbar = () => {
                     );
                   })}
                 </Box>
-                <Box component={"div"}>
-                  <GithubButton />
-                </Box>{" "}
               </>
             ) : (
               <Box display="flex" justifyContent="center" alignItems="center">
