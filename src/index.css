@@ -80,7 +80,7 @@ html {
 }
 
 
-.projectsCard:hover,.sm_project_card:hover{
+.projectsCard:hover{
   box-shadow: 5px 5px 20px var(--ACCENT-COLOR) !important;
   transform: scale(1.05);
 }
@@ -90,7 +90,7 @@ html {
   box-shadow: 2px 2px 10px var(--ACCENT-COLOR) !important; 
 }
 
-.projectsCard{
+.projectsCard,.sm_project_card{
   transition: all 0.3s linear !important;
 }
 .servicesBox:hover {

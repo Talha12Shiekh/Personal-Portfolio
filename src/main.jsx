@@ -16,6 +16,7 @@ const Experience = lazy(() => import("../Screens/Experience"));
 const Education = lazy(() => import("../Screens/Education"));
 const Projects = lazy(() => import("../Screens/Projects"));
 const Contacts = lazy(() => import("../Screens/Contacts"));
+const Certificates = lazy(() => import("../Screens/Certificates"));
 import 'atropos/css'
 import Loading from "../Screens/Loading";
 import BannerAndContact from "../Components/BannerAndContact.jsx";
@@ -93,6 +94,14 @@ const router = createBrowserRouter([
         element: (
             <BannerAndContact>
               <Projects />
+            </BannerAndContact>
+        ),
+      },
+      {
+        path: "certificates",
+        element: (
+            <BannerAndContact>
+              <Certificates />
             </BannerAndContact>
         ),
       },

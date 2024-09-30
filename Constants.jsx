@@ -177,9 +177,11 @@ import FloatingHeartsImage from "/SMALL-PROJECTS-IMAGES/floatingHearts.png";
 import HiSkyOfferLetter from "/OFFER-LETTERS/HISkyTech_OfferLetter.png";
 import ZidioOfferLetter from "/OFFER-LETTERS/Zidio-Development-offer-letter.png";
 
-import MatricResult from "/EDUCATION-IMAGES/MATRIC-RESULT.png"
-import InterResult from "/EDUCATION-IMAGES/INTER-RESULT.png"
-import PUResult from "/EDUCATION-IMAGES/PU-RESULT.jpeg"
+import HTMLCertificate from "/CERTIFICATES/HTML_CERTIFICATE.pdf"
+import CSSCertificate from "/CERTIFICATES/CSS_CERTIFICATE.pdf";
+
+import HTMLCertificateImg from "/CERTIFICATES/HTML-CERTIFICATE-IMG.png"
+import CSSCertificateImg from "/CERTIFICATES/CSS-CERTIFICATE-IMG.png"
 
 export const ICONS_ARRAY = [
   {
@@ -410,10 +412,9 @@ export const EDUCATION = [
       />
     ),
     date: "2011 - 2022",
-    title: "Dar e Arqam School, Lahore",
-    subtitle: "Matriculation (X), in CS",
+    title: "Secondary School Certificate",
+    subtitle: "Dar e Arqam School, Lahore",
     description: `I studied at Dar-e-Arqam School in Lahore for 10 years, excelling in both Computer Science and various science subjects. I achieved top grades (81%)  in Matric and  (95%) in 9th Grade and frequently held the top position in my class. As a member of the school cricket team, I won several awards. This period marked the beginning of my journey as a web developer.`,
-    attachment:MatricResult,
     type:"education"
   },
   {
@@ -426,10 +427,9 @@ export const EDUCATION = [
       />
     ),
     date: "2022 - 2024",
-    title: "Punjab College, Lahore",
-    subtitle: "Fsc (XII), ICS with CSP",
+    title: "Higher School diploma",
+    subtitle: "Punjab College Lahore",
     description: `I studied at Punjab Group of Colleges in Lahore, Pakistan, from 2022 to 2024, completing my Intermediate degree in Fsc (XII), ICS with a combination of Computer, Physics, and Maths. I achieved (83%) there and ranked 2nd in my class. It was during this time that I began studying computer languages practically, further advancing my skills as a web developer.`,
-    attachment:InterResult,
     type:"education"
 
   },
@@ -444,10 +444,9 @@ export const EDUCATION = [
       />
     ),
     date: "2024 - 2027",
-    title: "University of Punjab, Lahore",
-    subtitle: "BBIT",
+    title: "Bachelor of Business & Information Technology",
+    subtitle: "University of Punjab",
     description: `Currently pursuing a Bachelor of Buisness and Information Technology (BBIT) degree at Punjab University, Lahore. I worked hard to secure admission, giving the entrance test twice—first achieving an 82% aggregate and then improving to 83%. This determination highlights my commitment to reaching my academic and career goals. I am dedicated to my studies, continuing to work hard and striving for the best grades to achieve my academic and career goals.`,
-    attachment:PUResult,
     type:"education"
 
   },
@@ -923,4 +922,21 @@ export const CONTACTS_QUESTIONS = [
   alignItems:"center",
   path:"/contacts"
 },
+]
+
+export const CERTIFICATES = [
+  {
+    title:"Introduction to HTML",
+    downloadlink:HTMLCertificate,
+    key:1,
+    image:HTMLCertificateImg,
+    type: "certificates"
+  },
+  {
+    title:"Introduction to CSS",
+    downloadlink:CSSCertificate,
+    key:2,
+    image:CSSCertificateImg,
+    type: "certificates"
+  },
 ]

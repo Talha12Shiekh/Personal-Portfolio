@@ -45,6 +45,11 @@ export const NAVBAR_LINKS = [
     path: "/services",
   },
   {
+    text: "Certificates",
+    key: 7,
+    path: "/certificates",
+  },
+  {
     text: "Contacts",
     key: 1,
     path: "/contacts",

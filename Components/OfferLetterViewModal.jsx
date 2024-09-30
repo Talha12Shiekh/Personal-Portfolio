@@ -11,7 +11,7 @@ const OfferLetterViewModal = ({ open, handleClose, letter }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box p={5} display="flex" justifyContent="center" alignItems="center">
+        <Box p={5} display="flex" height="100vh" justifyContent="center" alignItems="center">
           <IconButton onClick={handleClose} sx={{ position: "absolute", top: "0", right: "0",m:1 }}>
             <CloseIcon style={{ color: "white",fontSize:35 }} />
           </IconButton>
