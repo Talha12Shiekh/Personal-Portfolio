@@ -45,6 +45,7 @@ const router = createBrowserRouter([
             <Experience />
             <Education />
             <BigProjects />
+            <Certificates />
             <Contacts/>
           </Suspense>
         ),

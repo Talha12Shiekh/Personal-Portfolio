@@ -179,9 +179,11 @@ import ZidioOfferLetter from "/OFFER-LETTERS/Zidio-Development-offer-letter.png"
 
 import HTMLCertificate from "/CERTIFICATES/HTML_CERTIFICATE.pdf"
 import CSSCertificate from "/CERTIFICATES/CSS_CERTIFICATE.pdf";
+import InternshipCertificate from "/CERTIFICATES/Internship-completion-certificate.pdf"
 
 import HTMLCertificateImg from "/CERTIFICATES/HTML-CERTIFICATE-IMG.png"
 import CSSCertificateImg from "/CERTIFICATES/CSS-CERTIFICATE-IMG.png"
+import InternshipCertificateImg from "/CERTIFICATES/Internship-completion-certificate.jpeg"
 
 export const ICONS_ARRAY = [
   {
@@ -937,6 +939,13 @@ export const CERTIFICATES = [
     downloadlink:CSSCertificate,
     key:2,
     image:CSSCertificateImg,
+    type: "certificates"
+  },
+  {
+    title:"Internship Completion",
+    downloadlink:InternshipCertificate,
+    key:3,
+    image:InternshipCertificateImg,
     type: "certificates"
   },
 ]
