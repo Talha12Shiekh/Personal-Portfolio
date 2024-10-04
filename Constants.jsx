@@ -179,11 +179,13 @@ import ZidioOfferLetter from "/OFFER-LETTERS/Zidio-Development-offer-letter.png"
 
 import HTMLCertificate from "/CERTIFICATES/HTML_CERTIFICATE.pdf"
 import CSSCertificate from "/CERTIFICATES/CSS_CERTIFICATE.pdf";
+import JSCertificate from "/CERTIFICATES/JAVASCRIPT_CERTIFICATE.pdf";
 import InternshipCertificate from "/CERTIFICATES/Internship-completion-certificate.pdf"
 
 import HTMLCertificateImg from "/CERTIFICATES/HTML-CERTIFICATE-IMG.png"
 import CSSCertificateImg from "/CERTIFICATES/CSS-CERTIFICATE-IMG.png"
 import InternshipCertificateImg from "/CERTIFICATES/Internship-completion-certificate.jpeg"
+import JSCertificateImg from "/CERTIFICATES/JAVASCRIPT_CERTIFICATE.png";
 
 export const ICONS_ARRAY = [
   {
@@ -942,9 +944,16 @@ export const CERTIFICATES = [
     type: "certificates"
   },
   {
+    title:"Introduction to JS",
+    downloadlink:JSCertificate,
+    key:3,
+    image:JSCertificateImg,
+    type: "certificates"
+  },
+  {
     title:"Internship Completion",
     downloadlink:InternshipCertificate,
-    key:3,
+    key:4,
     image:InternshipCertificateImg,
     type: "certificates"
   },
