@@ -176,16 +176,23 @@ import FloatingHeartsImage from "/SMALL-PROJECTS-IMAGES/floatingHearts.png";
 
 import HiSkyOfferLetter from "/OFFER-LETTERS/HISkyTech_OfferLetter.png";
 import ZidioOfferLetter from "/OFFER-LETTERS/Zidio-Development-offer-letter.png";
+import ProdigyOfferLetter from "/OFFER-LETTERS/Prodigy-offer-letter-img.png";
 
 import HTMLCertificate from "/CERTIFICATES/HTML_CERTIFICATE.pdf"
 import CSSCertificate from "/CERTIFICATES/CSS_CERTIFICATE.pdf";
 import JSCertificate from "/CERTIFICATES/JAVASCRIPT_CERTIFICATE.pdf";
 import InternshipCertificate from "/CERTIFICATES/Internship-completion-certificate.pdf"
+import ZidioTrainingCertificate from "/CERTIFICATES/Zidio-Tranning-Certificate.pdf"
+import ZidioInternshipCertificate from "/CERTIFICATES/Zidio-Internship-Certificate.pdf"
 
 import HTMLCertificateImg from "/CERTIFICATES/HTML-CERTIFICATE-IMG.png"
 import CSSCertificateImg from "/CERTIFICATES/CSS-CERTIFICATE-IMG.png"
 import InternshipCertificateImg from "/CERTIFICATES/Internship-completion-certificate.jpeg"
 import JSCertificateImg from "/CERTIFICATES/JAVASCRIPT_CERTIFICATE.png";
+import ZidioTrainingCertificateImg from "/CERTIFICATES/Zidio-Tranning-Certificate.jpg"
+import ZidioInternshipCertificateImg from "/CERTIFICATES/Zidio-Internship-Certificate.jpg"
+
+import ProdigyInfoTechLogo from "/EXPERIENCE-IMAGES/prodigy_infotech_logo.jpg";
 
 export const ICONS_ARRAY = [
   {
@@ -403,6 +410,22 @@ export const EXPERIENCE = [
     description: `Completed a remote internship as a Frontend Developer at Zidio Development, where I worked on developing a job listing portal. The platform included features like adding and filtering jobs, applying for jobs, uploading resumes, and liking job posts, among many other functionalities. While the backend was handled by my group, I focused on creating a user-friendly interface that enhanced the overall user experience. This internship strengthened my frontend development skills and allowed me to contribute to a fully functional web platform.`,
      type:"experience"
   },
+  {
+    key: 3,
+    icon: (
+      <img
+      className="skulImage"
+      src={ProdigyInfoTechLogo}
+      alt="Loading..."
+    />
+    ),
+    date: "Nov 2024 - Oct 2024",
+    title: "Android Development Internship",
+    attachment:ProdigyOfferLetter,
+    subtitle: "Prodigy InfoTech",
+    description: `Completed a one-month remote internship in Android development with Prodigy Intotech, where I built four applications using React Native: a mobile calculator, stopwatch, QR code scanner, and a todo list app. This experience allowed me to work on real-world projects, enhancing my skills in React Native and deepening my understanding of app functionality and design.`,
+     type:"experience"
+  },
 ];
 
 export const EDUCATION = [
@@ -443,14 +466,14 @@ export const EDUCATION = [
     icon: (
       <img
         className="skulImage"
-        src="/EDUCATION-IMAGES/PU-LOGO.png"
+        src="/EDUCATION-IMAGES/UCP-logo.png"
         alt="Loading..."
       />
     ),
     date: "2024 - 2027",
-    title: "Bachelor of Business & Information Technology",
-    subtitle: "University of Punjab",
-    description: `Currently pursuing a Bachelor of Buisness and Information Technology (BBIT) degree at Punjab University, Lahore. I worked hard to secure admission, giving the entrance test twice—first achieving an 82% aggregate and then improving to 83%. This determination highlights my commitment to reaching my academic and career goals. I am dedicated to my studies, continuing to work hard and striving for the best grades to achieve my academic and career goals.`,
+    title: "Bachelor of Science in Computer Science",
+    subtitle: "University of Central Punjab",
+    description: `I am currently pursuing a Bachelor’s degree in Computer Science (BSCS) from the University of Central Punjab. This program has provided me with a strong foundation in programming, software development, and problem-solving, and has equipped me with the skills to tackle real-world challenges in the tech industry.`,
     type:"education"
 
   },
@@ -883,7 +906,25 @@ export const SMALL_MOBILE_PROJECTS = [
     title:"Tinder Cards",
     image:TinderCardsImage,
     downloadFile:"/SMALL-MOBILE-PROJECTS/TinderCards.zip"
-  }
+  },
+  {
+    key:16,
+    title:"Stopwatch App",
+    image:StopWatchImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/Stopwatch-app.zip"
+  },
+  {
+    key:17,
+    title:"Todo App",
+    image:TodoListImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/Todo-App.zip"
+  },
+  {
+    key:18,
+    title:"QR Code Scanner App",
+    image:QRCodeImage,
+    downloadFile:"/SMALL-MOBILE-PROJECTS/QR-Code-Scanner-App.zip"
+  },
 ]
 
 export const CONTACTS_INFORMATION = [
@@ -957,4 +998,19 @@ export const CERTIFICATES = [
     image:InternshipCertificateImg,
     type: "certificates"
   },
+  {
+    title:"Training Certificate",
+    downloadlink:ZidioTrainingCertificate,
+    key:5,
+    image:ZidioTrainingCertificateImg,
+    type: "certificates"
+  },
+  {
+    title:"Internship Completion",
+    downloadlink:ZidioInternshipCertificate,
+    key:6,
+    image:ZidioInternshipCertificateImg,
+    type: "certificates"
+  },
+  
 ]
