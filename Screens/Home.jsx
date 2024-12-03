@@ -134,7 +134,7 @@ const Home = () => {
                 
                 <Box mt={3} textAlign={matches ? "center" : ""} >
                   <CustomButton
-                    href="/Talha_Frontend_Developer_Resume3.pdf"
+                    href="/Talha_Frontend_Developer_Resume.pdf"
                     onClick={() => {}}
                     children={
                       <Typography
