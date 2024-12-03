@@ -183,7 +183,8 @@ import CSSCertificate from "/CERTIFICATES/CSS_CERTIFICATE.pdf";
 import JSCertificate from "/CERTIFICATES/JAVASCRIPT_CERTIFICATE.pdf";
 import InternshipCertificate from "/CERTIFICATES/Internship-completion-certificate.pdf"
 import ZidioTrainingCertificate from "/CERTIFICATES/Zidio-Tranning-Certificate.pdf"
-import ZidioInternshipCertificate from "/CERTIFICATES/Zidio-Internship-Certificate.pdf"
+import ZidioInternshipCertificate from "/CERTIFICATES/Zidio-Internship-Certificate.pdf";
+import WebinarCertificatePDF from "/CERTIFICATES/Certificate-of-appreciation.pdf"
 
 import HTMLCertificateImg from "/CERTIFICATES/HTML-CERTIFICATE-IMG.png"
 import CSSCertificateImg from "/CERTIFICATES/CSS-CERTIFICATE-IMG.png"
@@ -191,8 +192,9 @@ import InternshipCertificateImg from "/CERTIFICATES/Internship-completion-certif
 import JSCertificateImg from "/CERTIFICATES/JAVASCRIPT_CERTIFICATE.png";
 import ZidioTrainingCertificateImg from "/CERTIFICATES/Zidio-Tranning-Certificate.jpg"
 import ZidioInternshipCertificateImg from "/CERTIFICATES/Zidio-Internship-Certificate.jpg"
+import WebinarCertificateImg from "/CERTIFICATES/Certificate-of-appreciation.png"
 
-import ProdigyInfoTechLogo from "/EXPERIENCE-IMAGES/prodigy_infotech_logo.jpg";
+
 
 export const ICONS_ARRAY = [
   {
@@ -409,23 +411,7 @@ export const EXPERIENCE = [
     subtitle: "Zidio Development",
     description: `Completed a remote internship as a Frontend Developer at Zidio Development, where I worked on developing a job listing portal. The platform included features like adding and filtering jobs, applying for jobs, uploading resumes, and liking job posts, among many other functionalities. While the backend was handled by my group, I focused on creating a user-friendly interface that enhanced the overall user experience. This internship strengthened my frontend development skills and allowed me to contribute to a fully functional web platform.`,
      type:"experience"
-  },
-  {
-    key: 3,
-    icon: (
-      <img
-      className="skulImage"
-      src={ProdigyInfoTechLogo}
-      alt="Loading..."
-    />
-    ),
-    date: "Nov 2024 - Oct 2024",
-    title: "Android Development Internship",
-    attachment:ProdigyOfferLetter,
-    subtitle: "Prodigy InfoTech",
-    description: `Completed a one-month remote internship in Android development with Prodigy Intotech, where I built four applications using React Native: a mobile calculator, stopwatch, QR code scanner, and a todo list app. This experience allowed me to work on real-world projects, enhancing my skills in React Native and deepening my understanding of app functionality and design.`,
-     type:"experience"
-  },
+  }
 ];
 
 export const EDUCATION = [
@@ -1010,6 +996,13 @@ export const CERTIFICATES = [
     downloadlink:ZidioInternshipCertificate,
     key:6,
     image:ZidioInternshipCertificateImg,
+    type: "certificates"
+  },
+  {
+    title:"Appreciation Certificate",
+    downloadlink:WebinarCertificatePDF,
+    key:7,
+    image:WebinarCertificateImg,
     type: "certificates"
   },
   
